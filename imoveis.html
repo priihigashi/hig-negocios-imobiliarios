@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Imóveis — Hig Negócios Imobiliários</title>
+<meta name="description" content="Encontre imóveis de alto padrão no Vale do Paraíba. São José dos Campos, Taubaté, Pindamonhangaba e região.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#f0e8d6;--sand-light:#faf6ef;--dark:#1c1409;--brown:#5b3c1f;--gold:#9a6b2f;--text:#3d2b1f;--muted:#8a7060;--white:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--sand-light);color:var(--text);overflow-x:hidden}
+
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 5%;display:flex;align-items:center;justify-content:space-between;transition:background .3s,padding .3s;background:rgba(28,20,9,.92);backdrop-filter:blur(8px)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--white);letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.logo span{color:#c9a96e}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.82);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--gold);color:var(--white);padding:.5rem 1.4rem;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+.nav-cta:hover{background:#7a5520}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:24px;height:1.5px;background:var(--white);display:block;transition:.3s}
+@media(max-width:768px){.nav-links,.nav-cta-wrap{display:none}.hamburger{display:flex}}
+
+/* PAGE HERO */
+.page-hero{padding:140px 5% 60px;background:var(--dark);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(154,107,47,.15) 0%,transparent 60%)}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:300;color:var(--white);letter-spacing:.05em;margin-bottom:.5rem}
+.page-hero p{color:rgba(255,255,255,.6);font-size:.9rem;letter-spacing:.08em}
+.breadcrumb{display:flex;gap:.5rem;align-items:center;margin-bottom:1.5rem;font-size:.78rem;color:rgba(255,255,255,.5);letter-spacing:.08em}
+.breadcrumb a{color:rgba(255,255,255,.5);text-decoration:none;text-transform:uppercase}
+.breadcrumb a:hover{color:var(--white)}
+.breadcrumb span{color:rgba(255,255,255,.3)}
+
+/* FILTERS */
+.filters-wrap{background:var(--white);border-bottom:1px solid rgba(154,107,47,.15);position:sticky;top:64px;z-index:50;box-shadow:0 2px 20px rgba(28,20,9,.06)}
+.filters{max-width:1200px;margin:0 auto;padding:1.2rem 5%;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.filter-group{display:flex;flex-direction:column;gap:.25rem}
+.filter-group label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.filter-group select,.filter-group input{font-family:'Inter',sans-serif;font-size:.82rem;color:var(--text);background:transparent;border:1px solid rgba(154,107,47,.25);padding:.4rem .8rem;outline:none;transition:border-color .2s;appearance:none;-webkit-appearance:none;cursor:pointer;min-width:140px}
+.filter-group select:focus,.filter-group input:focus{border-color:var(--gold)}
+.filter-btn{background:var(--gold);color:var(--white);border:none;padding:.6rem 1.4rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s;margin-top:1rem;align-self:flex-end}
+.filter-btn:hover{background:#7a5520}
+.filter-count{margin-left:auto;align-self:flex-end;font-size:.8rem;color:var(--muted);white-space:nowrap;margin-top:1rem}
+
+/* LISTINGS GRID */
+.listings-section{max-width:1200px;margin:0 auto;padding:3rem 5%}
+.sort-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
+.sort-row h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--brown)}
+.sort-select{font-family:'Inter',sans-serif;font-size:.8rem;color:var(--text);background:transparent;border:1px solid rgba(154,107,47,.25);padding:.4rem .8rem;outline:none;cursor:pointer;appearance:none;-webkit-appearance:none}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem}
+
+/* CARD */
+.card{background:var(--white);transition:transform .3s,box-shadow .3s;cursor:pointer}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(28,20,9,.12)}
+.card-img{position:relative;height:240px;overflow:hidden;background:linear-gradient(135deg,#d4c4a8,#b8a888)}
+.card-img img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .card-img img{transform:scale(1.04)}
+.card-badge{position:absolute;top:1rem;left:1rem;background:var(--gold);color:var(--white);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .8rem;z-index:2}
+.card-badge.destaque{background:var(--dark)}
+.card-fav{position:absolute;top:1rem;right:1rem;width:32px;height:32px;background:rgba(255,255,255,.9);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
+.card-fav:hover{background:var(--white)}
+.card-fav svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.card-body{padding:1.4rem}
+.card-type{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
+.card-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--dark);margin-bottom:.3rem;line-height:1.25}
+.card-loc{font-size:.8rem;color:var(--muted);margin-bottom:1rem;display:flex;align-items:center;gap:.3rem}
+.card-loc svg{width:12px;height:12px;stroke:var(--muted);fill:none;stroke-width:1.5;flex-shrink:0}
+.card-specs{display:flex;gap:1.2rem;padding:1rem 0;border-top:1px solid rgba(154,107,47,.12);border-bottom:1px solid rgba(154,107,47,.12);margin-bottom:1rem;flex-wrap:wrap}
+.card-spec{display:flex;align-items:center;gap:.3rem;font-size:.78rem;color:var(--muted)}
+.card-spec svg{width:14px;height:14px;stroke:var(--muted);fill:none;stroke-width:1.5}
+.card-footer{display:flex;align-items:center;justify-content:space-between}
+.card-price{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--gold)}
+.card-price small{font-family:'Inter',sans-serif;font-size:.7rem;color:var(--muted);display:block;font-weight:400}
+.card-cta{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(154,107,47,.3);padding-bottom:.1rem;transition:border-color .2s}
+.card-cta:hover{border-color:var(--gold)}
+
+/* PLACEHOLDER IMAGE (no real photos yet) */
+.card-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:rgba(91,60,31,.4);letter-spacing:.1em}
+
+/* PAGINATION */
+.pagination{display:flex;justify-content:center;align-items:center;gap:.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(154,107,47,.15)}
+.page-btn{width:36px;height:36px;border:1px solid rgba(154,107,47,.25);background:transparent;font-size:.82rem;color:var(--text);cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
+.page-btn.active{background:var(--gold);border-color:var(--gold);color:var(--white)}
+.page-btn:hover:not(.active){border-color:var(--gold);color:var(--gold)}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:2rem;right:2rem;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s;z-index:200}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:26px;height:26px;fill:var(--white)}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,.6);padding:3rem 5%;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+.footer-brand .logo{display:block;margin-bottom:1rem;font-size:1.4rem}
+.footer-brand p{font-size:.82rem;line-height:1.7;max-width:280px}
+footer h4{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--white);margin-bottom:1rem;font-weight:400;letter-spacing:.08em}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.5rem}
+footer ul a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.82rem;transition:color .2s}
+footer ul a:hover{color:var(--white)}
+.footer-bottom{background:rgba(0,0,0,.3);padding:.8rem 5%;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:rgba(255,255,255,.3)}
+@media(max-width:768px){footer{grid-template-columns:1fr;gap:2rem}.grid{grid-template-columns:1fr}.filters{flex-direction:column}.filter-group select,.filter-group input{min-width:100%}.filter-btn,.filter-count{margin-top:.5rem;width:100%;text-align:center}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="logo">HIG <span>Negócios Imob.</span></a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="imoveis.html" class="active">Imóveis</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+  <a href="contato.html" class="nav-cta nav-cta-wrap">Agendar Visita</a>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb">
+    <a href="index.html">Início</a>
+    <span>/</span>
+    <span>Imóveis</span>
+  </div>
+  <h1>Imóveis Disponíveis</h1>
+  <p>Vale do Paraíba · São Paulo · Alto Padrão</p>
+</div>
+
+<div class="filters-wrap">
+  <div class="filters">
+    <div class="filter-group">
+      <label>Finalidade</label>
+      <select>
+        <option>Comprar</option>
+        <option>Alugar</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Tipo</label>
+      <select>
+        <option value="">Todos os tipos</option>
+        <option>Casa</option>
+        <option>Apartamento</option>
+        <option>Cobertura</option>
+        <option>Terreno</option>
+        <option>Comercial</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Cidade</label>
+      <select>
+        <option value="">Todas as cidades</option>
+        <option>São José dos Campos</option>
+        <option>Taubaté</option>
+        <option>Pindamonhangaba</option>
+        <option>Guaratinguetá</option>
+        <option>Lorena</option>
+        <option>Jacareí</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Quartos</label>
+      <select>
+        <option value="">Qualquer</option>
+        <option>1+</option>
+        <option>2+</option>
+        <option>3+</option>
+        <option>4+</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Preço máximo</label>
+      <select>
+        <option value="">Sem limite</option>
+        <option>R$ 500.000</option>
+        <option>R$ 800.000</option>
+        <option>R$ 1.200.000</option>
+        <option>R$ 2.000.000</option>
+        <option>R$ 5.000.000+</option>
+      </select>
+    </div>
+    <button class="filter-btn">Buscar</button>
+    <span class="filter-count">18 imóveis encontrados</span>
+  </div>
+</div>
+
+<section class="listings-section">
+  <div class="sort-row">
+    <h2>Imóveis em Destaque</h2>
+    <select class="sort-select">
+      <option>Mais recentes</option>
+      <option>Menor preço</option>
+      <option>Maior preço</option>
+      <option>Maior área</option>
+    </select>
+  </div>
+
+  <div class="grid">
+
+    <!-- Card 1 -->
+    <div class="card" onclick="location.href='imovel.html'">
+      <div class="card-img">
+        <div class="card-img-placeholder">Casa de Alto Padrão</div>
+        <span class="card-badge destaque">Destaque</span>
+        <button class="card-fav" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="card-type">Casa · Residencial</div>
+        <h3 class="card-title">Villa Contemporânea com Piscina</h3>
+        <div class="card-loc">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Urbanova, São José dos Campos
+        </div>
+        <div class="card-specs">
+          <div class="card-spec">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            320 m²
+          </div>
+          <div class="card-spec">
+            <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>
+            4 quartos
+          </div>
+          <div class="card-spec">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
+            3 suítes
+          </div>
+          <div class="card-spec">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+            4 vagas
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="card-price">
+            R$ 2.850.000
+            <small>Ou consulte condições</small>
+          </div>
+          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" onclick="location.href='imovel.html'">
+      <div class="card-img">
+        <div class="card-img-placeholder">Apartamento Alto Padrão</div>
+        <span class="card-badge">Novo</span>
+        <button class="card-fav" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="card-type">Apartamento · Alto Padrão</div>
+        <h3 class="card-title">Cobertura Duplex Vista Panorâmica</h3>
+        <div class="card-loc">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Centro, São José dos Campos
+        </div>
+        <div class="card-specs">
+          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>210 m²</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>3 quartos</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>3 suítes</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>2 vagas</div>
+        </div>
+        <div class="card-footer">
+          <div class="card-price">R$ 1.980.000<small>Pronto para morar</small></div>
+          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" onclick="location.href='imovel.html'">
+      <div class="card-img">
+        <div class="card-img-placeholder">Casa em Condomínio</div>
+        <button class="card-fav" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="card-type">Casa · Condomínio Fechado</div>
+        <h3 class="card-title">Residência em Condomínio de Luxo</h3>
+        <div class="card-loc">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Taubaté
+        </div>
+        <div class="card-specs">
+          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>280 m²</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>4 quartos</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>2 suítes</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>3 vagas</div>
+        </div>
+        <div class="card-footer">
+          <div class="card-price">R$ 1.450.000<small>Aceita permuta parcial</small></div>
+          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card" onclick="location.href='imovel.html'">
+      <div class="card-img">
+        <div class="card-img-placeholder">Terreno Nobre</div>
+        <span class="card-badge">Oportunidade</span>
+        <button class="card-fav" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="card-type">Terreno · Residencial</div>
+        <h3 class="card-title">Terreno em Loteamento Nobre</h3>
+        <div class="card-loc">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Pindamonhangaba
+        </div>
+        <div class="card-specs">
+          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>800 m²</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>Frente 20m</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/></svg>Plano</div>
+        </div>
+        <div class="card-footer">
+          <div class="card-price">R$ 380.000<small>Documentação ok</small></div>
+          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card" onclick="location.href='imovel.html'">
+      <div class="card-img">
+        <div class="card-img-placeholder">Apartamento Garden</div>
+        <button class="card-fav" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="card-type">Apartamento · Garden</div>
+        <h3 class="card-title">Garden com Área Privativa e Churrasqueira</h3>
+        <div class="card-loc">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Jacareí
+        </div>
+        <div class="card-specs">
+          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>145 m²</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>3 quartos</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/></svg>1 suíte</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>2 vagas</div>
+        </div>
+        <div class="card-footer">
+          <div class="card-price">R$ 720.000<small>Financiável</small></div>
+          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card" onclick="location.href='imovel.html'">
+      <div class="card-img">
+        <div class="card-img-placeholder">Casa com Vista</div>
+        <span class="card-badge">Exclusivo</span>
+        <button class="card-fav" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="card-type">Casa · Vista para o Vale</div>
+        <h3 class="card-title">Casa com Vista Privilegiada para o Vale</h3>
+        <div class="card-loc">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Guaratinguetá
+        </div>
+        <div class="card-specs">
+          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>380 m²</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>5 quartos</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/></svg>3 suítes</div>
+          <div class="card-spec"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>4 vagas</div>
+        </div>
+        <div class="card-footer">
+          <div class="card-price">R$ 3.200.000<small>Exclusivo HIG</small></div>
+          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pagination">
+    <button class="page-btn active">1</button>
+    <button class="page-btn">2</button>
+    <button class="page-btn">3</button>
+    <button class="page-btn">→</button>
+  </div>
+</section>
+
+<a href="https://wa.me/5512999999999" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="logo">HIG <span>Negócios Imob.</span></a>
+    <p>Especialistas em imóveis de alto padrão no Vale do Paraíba, São Paulo. Conectando você ao lugar onde quer viver.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Regiões</h4>
+    <ul>
+      <li><a href="imoveis.html">São José dos Campos</a></li>
+      <li><a href="imoveis.html">Taubaté</a></li>
+      <li><a href="imoveis.html">Pindamonhangaba</a></li>
+      <li><a href="imoveis.html">Guaratinguetá</a></li>
+      <li><a href="imoveis.html">Lorena</a></li>
+      <li><a href="imoveis.html">Jacareí</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Contato</h4>
+    <ul>
+      <li><a href="https://wa.me/5512999999999">WhatsApp</a></li>
+      <li><a href="mailto:contato@hignegociosimobiliarios.com.br">E-mail</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 HIG Negócios Imobiliários. Todos os direitos reservados.</span>
+  <span>CRECI-SP</span>
+</div>
+
+<script>
+document.querySelector('.hamburger').addEventListener('click',function(){
+  document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contato — Hig Negócios Imobiliários</title>
+<meta name="description" content="Entre em contato com a HIG Negócios Imobiliários. Agende uma visita ou tire suas dúvidas sobre imóveis no Vale do Paraíba.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#f0e8d6;--sand-light:#faf6ef;--dark:#1c1409;--brown:#5b3c1f;--gold:#9a6b2f;--text:#3d2b1f;--muted:#8a7060;--white:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--sand-light);color:var(--text);overflow-x:hidden}
+
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(28,20,9,.92);backdrop-filter:blur(8px)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--white);letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.logo span{color:#c9a96e}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.82);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--gold);color:var(--white);padding:.5rem 1.4rem;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+.nav-cta:hover{background:#7a5520}
+
+/* HERO */
+.page-hero{padding:140px 5% 70px;background:var(--dark);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(154,107,47,.15) 0%,transparent 60%)}
+.hero-eyebrow{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block;position:relative;z-index:1}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:300;color:var(--white);line-height:1.15;margin-bottom:.8rem;position:relative;z-index:1}
+.page-hero p{color:rgba(255,255,255,.6);font-size:.9rem;max-width:500px;line-height:1.7;position:relative;z-index:1}
+
+/* CONTACT GRID */
+.contact-section{max-width:1100px;margin:0 auto;padding:5rem 5%;display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+
+/* LEFT INFO */
+.contact-info h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--dark);margin-bottom:1.5rem}
+.contact-methods{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:3rem}
+.contact-method{display:flex;gap:1rem;align-items:flex-start}
+.method-icon{width:44px;height:44px;background:rgba(154,107,47,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.method-icon svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.method-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.method-value{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--dark)}
+.method-value a{color:var(--dark);text-decoration:none;transition:color .2s}
+.method-value a:hover{color:var(--gold)}
+.method-note{font-size:.75rem;color:var(--muted);margin-top:.2rem}
+
+/* WA HIGHLIGHT */
+.wa-highlight{background:var(--dark);padding:1.5rem;display:flex;align-items:center;gap:1rem;margin-bottom:2rem;transition:.2s;text-decoration:none}
+.wa-highlight:hover{background:#2a1e0f}
+.wa-icon{width:48px;height:48px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wa-icon svg{width:24px;height:24px;fill:var(--white)}
+.wa-text-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.2rem}
+.wa-text-val{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white)}
+
+/* HOURS */
+.hours-title{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem}
+.hours-row{display:flex;justify-content:space-between;font-size:.82rem;padding:.4rem 0;border-bottom:1px solid rgba(154,107,47,.08)}
+.hours-row:last-child{border-bottom:none}
+.hours-day{color:var(--text)}
+.hours-time{color:var(--gold)}
+
+/* FORM */
+.contact-form-wrap{background:var(--white);padding:2.5rem;box-shadow:0 4px 30px rgba(28,20,9,.06)}
+.form-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--dark);margin-bottom:.4rem}
+.form-sub{font-size:.82rem;color:var(--muted);margin-bottom:2rem;line-height:1.6}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:.3rem;margin-bottom:1rem}
+.form-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.form-input,.form-select,.form-textarea{font-family:'Inter',sans-serif;font-size:.85rem;color:var(--text);background:transparent;border:1px solid rgba(154,107,47,.2);padding:.75rem 1rem;outline:none;transition:border-color .2s;width:100%;appearance:none;-webkit-appearance:none}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold)}
+.form-textarea{height:120px;resize:vertical}
+.form-submit{width:100%;background:var(--gold);color:var(--white);border:none;padding:1rem;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background .2s;margin-top:.5rem}
+.form-submit:hover{background:#7a5520}
+.form-note{font-size:.72rem;color:var(--muted);margin-top:.8rem;text-align:center;line-height:1.5}
+
+/* MAP */
+.map-section{background:var(--dark);padding:0}
+.map-placeholder{height:320px;background:linear-gradient(135deg,#2a1e10,#1c1409);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:rgba(255,255,255,.2);font-size:1.2rem;letter-spacing:.1em}
+
+/* FAQ */
+.faq-section{max-width:800px;margin:5rem auto;padding:0 5%}
+.faq-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem}
+.faq-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;color:var(--dark);margin-bottom:2.5rem}
+.faq-item{border-bottom:1px solid rgba(154,107,47,.15);padding:1.2rem 0}
+.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:.9rem;color:var(--dark);font-weight:500}
+.faq-q svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:1.5;transition:transform .3s;flex-shrink:0}
+.faq-a{font-size:.82rem;line-height:1.8;color:var(--muted);margin-top:.8rem;display:none}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-q svg{transform:rotate(45deg)}
+
+.wa-float{position:fixed;bottom:2rem;right:2rem;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s;z-index:200}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:26px;height:26px;fill:var(--white)}
+
+footer{background:var(--dark);color:rgba(255,255,255,.6);padding:3rem 5%;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+.footer-brand .logo{display:block;margin-bottom:1rem;font-size:1.4rem}
+.footer-brand p{font-size:.82rem;line-height:1.7;max-width:280px}
+footer h4{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--white);margin-bottom:1rem;font-weight:400;letter-spacing:.08em}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.5rem}
+footer ul a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.82rem;transition:color .2s}
+footer ul a:hover{color:var(--white)}
+.footer-bottom{background:rgba(0,0,0,.3);padding:.8rem 5%;display:flex;justify-content:space-between;font-size:.72rem;color:rgba(255,255,255,.3)}
+@media(max-width:900px){.contact-section{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}footer{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">HIG <span>Negócios Imob.</span></a>
+  <ul class="nav-links">
+    <li><a href="imoveis.html">Imóveis</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="contato.html" class="active">Contato</a></li>
+  </ul>
+  <a href="#form" class="nav-cta">Agendar Visita</a>
+</nav>
+
+<div class="page-hero">
+  <span class="hero-eyebrow">Fale conosco</span>
+  <h1>Vamos encontrar o imóvel certo para você</h1>
+  <p>Atendimento personalizado, sem pressa e sem pressão. Entre em contato da forma que preferir.</p>
+</div>
+
+<section class="contact-section">
+  <!-- LEFT -->
+  <div>
+    <h2>Como prefere se comunicar?</h2>
+    <div class="contact-methods">
+      <div class="contact-method">
+        <div class="method-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="method-label">Telefone</div>
+          <div class="method-value"><a href="tel:+5512999999999">(12) 9 9999-9999</a></div>
+          <div class="method-note">Seg–Sex 9h–18h · Sáb 9h–13h</div>
+        </div>
+      </div>
+      <div class="contact-method">
+        <div class="method-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="method-label">E-mail</div>
+          <div class="method-value"><a href="mailto:contato@hignegociosimobiliarios.com.br">contato@hig...</a></div>
+          <div class="method-note">Respondemos em até 24h</div>
+        </div>
+      </div>
+      <div class="contact-method">
+        <div class="method-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </div>
+        <div>
+          <div class="method-label">Instagram</div>
+          <div class="method-value"><a href="#">@hignegociosimobiliarios</a></div>
+          <div class="method-note">DM sempre aberta</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://wa.me/5512999999999?text=Olá! Gostaria de informações sobre imóveis." class="wa-highlight" target="_blank">
+      <div class="wa-icon">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      </div>
+      <div>
+        <div class="wa-text-label">Resposta mais rápida via</div>
+        <div class="wa-text-val">WhatsApp → (12) 9 9999-9999</div>
+      </div>
+    </a>
+
+    <div class="hours-title">Horário de atendimento</div>
+    <div class="hours-row"><span class="hours-day">Segunda – Sexta</span><span class="hours-time">9h – 18h</span></div>
+    <div class="hours-row"><span class="hours-day">Sábado</span><span class="hours-time">9h – 13h</span></div>
+    <div class="hours-row"><span class="hours-day">Domingo</span><span class="hours-time">Somente WhatsApp</span></div>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="contact-form-wrap" id="form">
+    <div class="form-title">Agendar Visita ou Tirar Dúvidas</div>
+    <div class="form-sub">Preencha o formulário e entro em contato em até 2 horas no horário comercial.</div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Nome completo *</label>
+        <input class="form-input" type="text" placeholder="Seu nome">
+      </div>
+      <div class="form-group">
+        <label class="form-label">WhatsApp *</label>
+        <input class="form-input" type="tel" placeholder="(12) 9 9999-9999">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">E-mail</label>
+      <input class="form-input" type="email" placeholder="seu@email.com">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Interesse</label>
+      <select class="form-select">
+        <option value="">Selecione uma opção</option>
+        <option>Comprar imóvel</option>
+        <option>Alugar imóvel</option>
+        <option>Vender meu imóvel</option>
+        <option>Investimento imobiliário</option>
+        <option>Outro assunto</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Cidade de interesse</label>
+        <select class="form-select">
+          <option value="">Qualquer cidade</option>
+          <option>São José dos Campos</option>
+          <option>Taubaté</option>
+          <option>Pindamonhangaba</option>
+          <option>Guaratinguetá</option>
+          <option>Lorena</option>
+          <option>Jacareí</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Faixa de valor</label>
+        <select class="form-select">
+          <option value="">Não definido</option>
+          <option>Até R$ 500.000</option>
+          <option>R$ 500k – R$ 1M</option>
+          <option>R$ 1M – R$ 2M</option>
+          <option>Acima de R$ 2M</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Mensagem</label>
+      <textarea class="form-textarea" placeholder="Conte mais sobre o que você procura..."></textarea>
+    </div>
+    <button class="form-submit">Enviar Mensagem</button>
+    <div class="form-note">Seus dados são tratados com total sigilo. Não compartilhamos informações com terceiros.</div>
+  </div>
+</section>
+
+<div class="map-placeholder">Mapa — Vale do Paraíba, São Paulo</div>
+
+<section class="faq-section">
+  <div class="faq-eyebrow">Perguntas frequentes</div>
+  <h2 class="faq-title">Dúvidas comuns</h2>
+
+  <div class="faq-item open">
+    <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">
+      Como funciona o processo de compra de um imóvel?
+      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </div>
+    <div class="faq-a">Começamos com uma conversa para entender suas necessidades. Depois selecionamos imóveis compatíveis, agendamos visitas e acompanhamos toda a negociação, documentação e financiamento até a entrega das chaves. Você nunca fica sozinho no processo.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">
+      Vocês trabalham com financiamento bancário?
+      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </div>
+    <div class="faq-a">Sim! Auxiliamos na simulação e escolha do melhor banco, além de acompanhar todo o processo de aprovação do crédito. Temos parcerias com os principais bancos e correspondentes bancários da região.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">
+      Vocês também ajudam quem quer vender um imóvel?
+      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </div>
+    <div class="faq-a">Com certeza. Fazemos avaliação gratuita do seu imóvel, criamos materiais de divulgação profissionais e cuidamos de todas as negociações. Nosso objetivo é obter o melhor valor no menor tempo possível.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">
+      Qual é a comissão cobrada?
+      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </div>
+    <div class="faq-a">Seguimos a tabela do CRECI-SP. A comissão padrão para venda é de 6% sobre o valor do imóvel, paga pelo vendedor. Para o comprador, não há custo adicional além do preço do imóvel e as taxas cartoriais normais.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">
+      Atendem quais cidades do Vale do Paraíba?
+      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </div>
+    <div class="faq-a">Atendemos São José dos Campos, Taubaté, Pindamonhangaba, Guaratinguetá, Lorena e Jacareí. Para outras cidades da região, consulte-nos — podemos indicar parceiros de confiança.</div>
+  </div>
+</section>
+
+<a href="https://wa.me/5512999999999" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="logo">HIG <span>Negócios Imob.</span></a>
+    <p>Especialistas em imóveis de alto padrão no Vale do Paraíba, São Paulo.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Regiões</h4>
+    <ul>
+      <li><a href="imoveis.html">São José dos Campos</a></li>
+      <li><a href="imoveis.html">Taubaté</a></li>
+      <li><a href="imoveis.html">Pindamonhangaba</a></li>
+      <li><a href="imoveis.html">Guaratinguetá</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Contato</h4>
+    <ul>
+      <li><a href="https://wa.me/5512999999999">WhatsApp</a></li>
+      <li><a href="mailto:contato@hignegociosimobiliarios.com.br">E-mail</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 HIG Negócios Imobiliários.</span>
+  <span>CRECI-SP</span>
+</div>
+</body>
+</html>

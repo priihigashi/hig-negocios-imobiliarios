@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sobre — Hig Negócios Imobiliários</title>
+<meta name="description" content="Conheça a HIG Negócios Imobiliários. Especialistas em imóveis de alto padrão no Vale do Paraíba, São Paulo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#f0e8d6;--sand-light:#faf6ef;--dark:#1c1409;--brown:#5b3c1f;--gold:#9a6b2f;--text:#3d2b1f;--muted:#8a7060;--white:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--sand-light);color:var(--text);overflow-x:hidden}
+
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 5%;display:flex;align-items:center;justify-content:space-between;transition:background .3s,padding .3s;background:rgba(28,20,9,.92);backdrop-filter:blur(8px)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--white);letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.logo span{color:#c9a96e}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.82);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--gold);color:var(--white);padding:.5rem 1.4rem;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+.nav-cta:hover{background:#7a5520}
+
+/* HERO */
+.page-hero{padding:140px 5% 80px;background:var(--dark);position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:100%}
+.page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(154,107,47,.2) 0%,transparent 70%)}
+.hero-text{position:relative;z-index:1}
+.hero-eyebrow{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;color:var(--white);line-height:1.15;margin-bottom:1.5rem}
+.page-hero p{color:rgba(255,255,255,.65);font-size:.9rem;line-height:1.8;max-width:480px}
+.hero-photo{position:relative;z-index:1;height:400px;background:linear-gradient(135deg,#c8b490,#8a6840);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:rgba(255,255,255,.3);font-size:1rem;letter-spacing:.1em}
+.hero-photo::after{content:'';position:absolute;bottom:-20px;right:-20px;width:80%;height:80%;border:1px solid rgba(154,107,47,.3);z-index:-1}
+
+/* STATS */
+.stats{background:var(--white);padding:3rem 5%;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;border-bottom:1px solid rgba(154,107,47,.1)}
+.stat-val{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--gold);line-height:1}
+.stat-lbl{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.4rem}
+
+/* ABOUT SECTION */
+.about-section{max-width:1100px;margin:5rem auto;padding:0 5%;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-photo{height:480px;background:linear-gradient(160deg,#d4c4a8,#a08060);position:relative;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:rgba(255,255,255,.3);font-size:1rem;letter-spacing:.1em}
+.about-photo::before{content:'';position:absolute;top:-16px;left:-16px;width:60%;height:60%;border:1px solid rgba(154,107,47,.25)}
+.eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;display:block}
+.about-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--dark);line-height:1.2;margin-bottom:1.5rem}
+.about-text{font-size:.88rem;line-height:1.85;color:var(--text);margin-bottom:1.2rem}
+.creci-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(154,107,47,.08);border:1px solid rgba(154,107,47,.2);padding:.5rem 1rem;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:.5rem}
+
+/* VALUES */
+.values-section{background:var(--dark);padding:5rem 5%;text-align:center}
+.values-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem}
+.values-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--white);margin-bottom:3rem}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1000px;margin:0 auto}
+.value-card{padding:2rem;border:1px solid rgba(154,107,47,.2);text-align:left;transition:border-color .3s}
+.value-card:hover{border-color:rgba(154,107,47,.5)}
+.value-icon{width:40px;height:40px;margin-bottom:1rem;stroke:var(--gold);fill:none;stroke-width:1}
+.value-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--white);margin-bottom:.6rem}
+.value-text{font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.5)}
+
+/* REGIONS */
+.regions-section{max-width:1100px;margin:5rem auto;padding:0 5%}
+.regions-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--dark);margin-bottom:.5rem}
+.regions-sub{font-size:.85rem;color:var(--muted);margin-bottom:3rem;line-height:1.6}
+.regions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.region-card{padding:1.8rem;background:var(--white);border-left:3px solid var(--gold);transition:box-shadow .3s}
+.region-card:hover{box-shadow:0 8px 30px rgba(28,20,9,.1)}
+.region-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--dark);margin-bottom:.4rem}
+.region-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
+
+/* CTA SECTION */
+.cta-section{background:linear-gradient(135deg,var(--brown),var(--dark));padding:5rem 5%;text-align:center}
+.cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--white);margin-bottom:1rem}
+.cta-sub{color:rgba(255,255,255,.6);font-size:.9rem;margin-bottom:2.5rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-light{background:var(--white);color:var(--dark);padding:.9rem 2rem;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:.2s}
+.btn-light:hover{background:var(--sand)}
+.btn-gold{background:var(--gold);color:var(--white);padding:.9rem 2rem;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:.2s}
+.btn-gold:hover{background:#7a5520}
+
+.wa-float{position:fixed;bottom:2rem;right:2rem;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s;z-index:200}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:26px;height:26px;fill:var(--white)}
+
+footer{background:var(--dark);color:rgba(255,255,255,.6);padding:3rem 5%;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+.footer-brand .logo{display:block;margin-bottom:1rem;font-size:1.4rem}
+.footer-brand p{font-size:.82rem;line-height:1.7;max-width:280px}
+footer h4{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--white);margin-bottom:1rem;font-weight:400;letter-spacing:.08em}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.5rem}
+footer ul a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.82rem;transition:color .2s}
+footer ul a:hover{color:var(--white)}
+.footer-bottom{background:rgba(0,0,0,.3);padding:.8rem 5%;display:flex;justify-content:space-between;font-size:.72rem;color:rgba(255,255,255,.3)}
+@media(max-width:900px){.page-hero,.about-section{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.values-grid,.regions-grid{grid-template-columns:1fr 1fr}.hero-photo,.about-photo{display:none}footer{grid-template-columns:1fr}}
+@media(max-width:600px){.values-grid,.regions-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">HIG <span>Negócios Imob.</span></a>
+  <ul class="nav-links">
+    <li><a href="imoveis.html">Imóveis</a></li>
+    <li><a href="sobre.html" class="active">Sobre</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+  <a href="contato.html" class="nav-cta">Agendar Visita</a>
+</nav>
+
+<div class="page-hero">
+  <div class="hero-text">
+    <span class="hero-eyebrow">Nossa história</span>
+    <h1>Conectando pessoas aos lugares onde querem viver</h1>
+    <p>A HIG Negócios Imobiliários nasceu da paixão pelo Vale do Paraíba e pelo compromisso de oferecer uma experiência imobiliária verdadeiramente personalizada e de alto padrão.</p>
+  </div>
+  <div class="hero-photo">Foto da Corretora</div>
+</div>
+
+<div class="stats">
+  <div><div class="stat-val">15+</div><div class="stat-lbl">Anos de experiência</div></div>
+  <div><div class="stat-val">300+</div><div class="stat-lbl">Imóveis negociados</div></div>
+  <div><div class="stat-val">6</div><div class="stat-lbl">Cidades atendidas</div></div>
+  <div><div class="stat-val">98%</div><div class="stat-lbl">Clientes satisfeitos</div></div>
+</div>
+
+<section class="about-section">
+  <div class="about-photo">Foto da Corretora</div>
+  <div>
+    <span class="eyebrow">Quem somos</span>
+    <h2 class="about-title">Especialistas com profundo conhecimento local</h2>
+    <p class="about-text">A HIG Negócios Imobiliários é uma empresa especializada em imóveis de alto padrão no Vale do Paraíba, São Paulo. Com mais de 15 anos de experiência na região, conhecemos cada bairro, cada condomínio e cada oportunidade que o mercado oferece.</p>
+    <p class="about-text">Nossa abordagem é completamente personalizada. Não vendemos imóveis — conectamos pessoas com o lugar ideal para o seu momento de vida. Cada cliente recebe atenção exclusiva, consultoria honesta e acompanhamento completo do início ao fim da negociação.</p>
+    <p class="about-text">Somos especializados em São José dos Campos, Taubaté, Pindamonhangaba, Guaratinguetá, Lorena e Jacareí — cidades que crescem, valorizam e oferecem uma qualidade de vida incomparável.</p>
+    <div class="creci-badge">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      CRECI-SP · Corretora Credenciada
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="values-eyebrow">Nossos valores</div>
+  <h2 class="values-title">Por que escolher a HIG</h2>
+  <div class="values-grid">
+    <div class="value-card">
+      <svg class="value-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="value-title">Transparência Total</div>
+      <div class="value-text">Nenhuma surpresa. Documentação completa, avaliações honestas e processo claro do início ao fim. Você toma decisões informadas.</div>
+    </div>
+    <div class="value-card">
+      <svg class="value-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      <div class="value-title">Agilidade</div>
+      <div class="value-text">Sabemos que o imóvel certo não espera. Respondemos rapidamente, agendamos visitas com flexibilidade e agilizamos toda a burocracia.</div>
+    </div>
+    <div class="value-card">
+      <svg class="value-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="value-title">Relacionamento</div>
+      <div class="value-text">Nossos clientes voltam e nos indicam. Construímos relações de longo prazo baseadas em confiança e resultado real.</div>
+    </div>
+  </div>
+</section>
+
+<section class="regions-section">
+  <span class="eyebrow">Onde atuamos</span>
+  <h2 class="regions-title">Especialistas no Vale do Paraíba</h2>
+  <p class="regions-sub">Conhecemos profundamente cada cidade, bairro e oportunidade da região. Esse conhecimento local é o nosso maior diferencial.</p>
+  <div class="regions-grid">
+    <div class="region-card">
+      <div class="region-name">São José dos Campos</div>
+      <div class="region-desc">Principal polo tecnológico da região, com bairros como Urbanova e Jardim Aquarius. Alto potencial de valorização.</div>
+    </div>
+    <div class="region-card">
+      <div class="region-name">Taubaté</div>
+      <div class="region-desc">Cidade industrial em crescimento, com condomínios de alto padrão e excelente infraestrutura para famílias.</div>
+    </div>
+    <div class="region-card">
+      <div class="region-name">Pindamonhangaba</div>
+      <div class="region-desc">Terrenos e casas com ótimo custo-benefício. Crescimento acelerado e proximidade com SJC e Taubaté.</div>
+    </div>
+    <div class="region-card">
+      <div class="region-name">Guaratinguetá</div>
+      <div class="region-desc">Casas com vistas privilegiadas para a Serra. Qualidade de vida e tranquilidade com toda a infraestrutura.</div>
+    </div>
+    <div class="region-card">
+      <div class="region-name">Lorena</div>
+      <div class="region-desc">Cidade universitária com grande demanda imobiliária. Imóveis para investimento com boa rentabilidade.</div>
+    </div>
+    <div class="region-card">
+      <div class="region-name">Jacareí</div>
+      <div class="region-desc">Porta de entrada do Vale. Proximidade com São Paulo e crescente oferta de condomínios e empreendimentos.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2 class="cta-title">Pronta para encontrar o seu imóvel?</h2>
+  <p class="cta-sub">Entre em contato agora e vamos conversar sobre o que você procura. Sem compromisso, com toda a nossa atenção.</p>
+  <div class="cta-btns">
+    <a href="imoveis.html" class="btn-light">Ver imóveis</a>
+    <a href="contato.html" class="btn-gold">Falar com corretora</a>
+  </div>
+</section>
+
+<a href="https://wa.me/5512999999999" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="logo">HIG <span>Negócios Imob.</span></a>
+    <p>Especialistas em imóveis de alto padrão no Vale do Paraíba, São Paulo.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Regiões</h4>
+    <ul>
+      <li><a href="imoveis.html">São José dos Campos</a></li>
+      <li><a href="imoveis.html">Taubaté</a></li>
+      <li><a href="imoveis.html">Pindamonhangaba</a></li>
+      <li><a href="imoveis.html">Guaratinguetá</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Contato</h4>
+    <ul>
+      <li><a href="https://wa.me/5512999999999">WhatsApp</a></li>
+      <li><a href="mailto:contato@hignegociosimobiliarios.com.br">E-mail</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 HIG Negócios Imobiliários.</span>
+  <span>CRECI-SP</span>
+</div>
+</body>
+</html>
