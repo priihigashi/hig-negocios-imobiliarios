@@ -49,7 +49,8 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 5%;display:flex;ali
 .prop-spec-val{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--dark);line-height:1}
 .prop-spec-lbl{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
 
-.section-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--brown);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(154,107,47,.15)}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--brown);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(154,107,47,.2);display:flex;align-items:center;gap:.7rem}
+.section-title::before{content:'';display:inline-block;width:3px;height:1.2em;background:var(--gold);flex-shrink:0}
 .prop-desc{font-size:.88rem;line-height:1.8;color:var(--text);margin-bottom:2rem}
 .prop-desc p{margin-bottom:.8rem}
 
@@ -57,7 +58,9 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 5%;display:flex;ali
 .feature-item{display:flex;align-items:center;gap:.6rem;font-size:.82rem;color:var(--text)}
 .feature-item svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5;flex-shrink:0}
 
-.map-placeholder{height:240px;background:linear-gradient(135deg,#e8dcc8,#d4c8b0);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);letter-spacing:.08em;margin-bottom:2rem;border:1px solid rgba(154,107,47,.15)}
+.map-placeholder{height:240px;background:linear-gradient(160deg,#ede4d4,#d8ccb8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);letter-spacing:.08em;margin-bottom:2rem;border:1px solid rgba(154,107,47,.18);position:relative;overflow:hidden}
+.map-placeholder::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(154,107,47,.04) 0,rgba(154,107,47,.04) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,rgba(154,107,47,.04) 0,rgba(154,107,47,.04) 1px,transparent 1px,transparent 40px)}
+.map-placeholder svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.2;opacity:.6}
 
 /* RIGHT - STICKY CARD */
 .contact-card{position:sticky;top:90px;background:var(--white);padding:2rem;box-shadow:0 4px 30px rgba(28,20,9,.08)}
@@ -78,6 +81,13 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 5%;display:flex;ali
 .agent-name{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--dark)}
 .agent-role{font-size:.72rem;color:var(--muted);letter-spacing:.06em}
 .agent-creci{font-size:.68rem;color:rgba(138,112,96,.6);margin-top:.1rem}
+
+/* VISIT CTA */
+.visit-cta{background:var(--dark);padding:2.5rem 5%;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.visit-cta-text{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--white)}
+.visit-cta-text span{color:#c9a96e}
+.visit-cta-btn{background:var(--gold);color:var(--white);padding:.8rem 2rem;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .2s;flex-shrink:0}
+.visit-cta-btn:hover{background:#7a5520}
 
 /* SIMILAR */
 .similar-section{max-width:1100px;margin:0 auto;padding:0 5% 4rem}
@@ -213,7 +223,10 @@ footer ul a:hover{color:var(--white)}
     </div>
 
     <h2 class="section-title">Localização</h2>
-    <div class="map-placeholder">Mapa — Urbanova, São José dos Campos</div>
+    <div class="map-placeholder">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Urbanova, São José dos Campos — SP
+    </div>
   </div>
 
   <!-- STICKY CONTACT CARD -->
@@ -243,6 +256,11 @@ footer ul a:hover{color:var(--white)}
       </div>
     </div>
   </div>
+</div>
+
+<div class="visit-cta">
+  <div class="visit-cta-text">Tem interesse? <span>Agende sua visita</span> sem compromisso.</div>
+  <a href="contato.html" class="visit-cta-btn">Agendar Visita</a>
 </div>
 
 <section class="similar-section">
