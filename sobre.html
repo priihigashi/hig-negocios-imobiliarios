@@ -92,11 +92,12 @@ footer ul a:hover{color:var(--white)}
 .footer-bottom{background:rgba(0,0,0,.3);padding:.8rem 5%;display:flex;justify-content:space-between;font-size:.72rem;color:rgba(255,255,255,.3)}
 @media(max-width:900px){.page-hero,.about-section{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.values-grid,.regions-grid{grid-template-columns:1fr 1fr}.hero-photo,.about-photo{display:none}footer{grid-template-columns:1fr}}
 @media(max-width:600px){.values-grid,.regions-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.nav-links,.nav-cta{display:none!important}.hamburger{display:flex!important}}
 </style>
 </head>
 <body>
 
-<nav>
+<nav id="nav">
   <a href="index.html" class="logo">HIG <span>Negócios Imob.</span></a>
   <ul class="nav-links">
     <li><a href="index.html">Início</a></li>
@@ -105,14 +106,17 @@ footer ul a:hover{color:var(--white)}
     <li><a href="contato.html">Contato</a></li>
   </ul>
   <a href="contato.html" class="nav-cta">Agendar Visita</a>
-</nav>
-<div class="mobile-drawer">
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-dropdown">
   <a href="index.html">Início</a>
   <a href="imoveis.html">Imóveis</a>
-  <a href="sobre.html">Sobre</a>
+  <a href="sobre.html" class="active">Sobre</a>
   <a href="contato.html">Contato</a>
-  <a href="contato.html" class="drawer-cta">Agendar Visita</a>
-</div>
+  <a href="contato.html" class="dropdown-cta">Agendar Visita</a>
+  </div>
+</nav>
 
 <div class="page-hero">
   <div class="hero-text">
@@ -243,23 +247,22 @@ footer ul a:hover{color:var(--white)}
   <span>© 2026 HIG Negócios Imobiliários.</span>
   <span>CRECI-SP</span>
 </div>
+
 <script>
 (function(){
   var btn=document.querySelector('.hamburger');
-  var drawer=document.querySelector('.mobile-drawer');
-  if(!btn||!drawer)return;
-  btn.addEventListener('click',function(){
+  var dd=document.querySelector('.nav-dropdown');
+  if(!btn||!dd)return;
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
     btn.classList.toggle('open');
-    drawer.classList.toggle('open');
-    document.body.style.overflow=drawer.classList.contains('open')?'hidden':'';
+    dd.classList.toggle('open');
   });
-  drawer.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){
-      btn.classList.remove('open');
-      drawer.classList.remove('open');
-      document.body.style.overflow='';
-    });
+  document.addEventListener('click',function(){
+    btn.classList.remove('open');
+    dd.classList.remove('open');
   });
+  dd.addEventListener('click',function(e){e.stopPropagation()});
 })();
 </script>
 </body>
