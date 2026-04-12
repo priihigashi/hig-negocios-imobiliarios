@@ -25,6 +25,8 @@ nav.scrolled{background:rgba(28,20,9,.92);backdrop-filter:blur(8px);padding:14px
 .nav-links a:hover,.nav-links a.active{color:var(--white)}
 .nav-cta{background:var(--gold);color:var(--white);padding:.5rem 1.4rem;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s;white-space:nowrap;text-decoration:none;display:inline-block}
 .nav-cta:hover{background:#7a5520}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:6px;width:48px;height:48px;min-width:48px;min-height:48px;cursor:pointer;background:none;border:none;padding:8px;z-index:201;-webkit-tap-highlight-color:transparent}
+.hamburger span{width:22px;height:2px;background:var(--white);display:block;transition:all .3s;transform-origin:center;border-radius:1px}
 .hamburger.open span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .hamburger.open span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
