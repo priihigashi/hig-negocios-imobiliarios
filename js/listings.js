@@ -103,57 +103,57 @@ window.LISTINGS = {
      ---------------------------------------------------------------------- */
   'refugio-natural': {
     slug: 'refugio-natural',
-    title: 'Refúgio Natural',
+    title: 'Casa em Condomínio · Reserva Guará',
     location: 'Guaratinguetá, SP',
     price: 'R$ 1.900.000',
-    area: '320', q: '3', b: '3', v: '2',
+    area: '320', terrain: '480', q: '3', b: '3', v: '2',
     badge: 'Oportunidade',
-    cover: 'images/site_listing_card_03.jpg',
+    cover: 'images/prop_refugio.jpg',
     photos: [],
-    desc: 'Casa cercada pela natureza, com materiais sustentáveis, painéis solares, captação de água da chuva e horta orgânica. Estilo vida interior em perfeita harmonia com o entorno natural.',
-    wa: 'Olá! Tenho interesse no Refúgio Natural em Guaratinguetá (R$ 1.900.000). Podemos agendar uma visita?',
+    desc: 'Casa de alto padrão no Condomínio Reserva Guará. 320 m² construídos · 480 m² de terreno · 3 suítes · cozinha gourmet · varanda com churrasqueira · piscina privativa · paisagismo tropical. Acabamento premium e localização privilegiada em Guaratinguetá.',
+    wa: 'Olá! Tenho interesse na casa do Condomínio Reserva Guará em Guaratinguetá (R$ 1.900.000). Podemos agendar uma visita?',
     listed: false
   },
 
   'mansao-horizonte': {
     slug: 'mansao-horizonte',
-    title: 'Mansão Horizonte',
+    title: 'Casa em Condomínio · Village Paineiras',
     location: 'Pindamonhangaba, SP',
     price: 'R$ 6.500.000',
-    area: '1.200', q: '6', b: '7', v: '5',
+    area: '850', terrain: '1200', q: '5', b: '6', v: '4',
     badge: 'Exclusivo',
-    cover: 'images/site_listing_card_10.jpg',
+    cover: 'images/prop_mansao.jpg',
     photos: [],
-    desc: 'Mansão icônica com arquitetura premiada, piscina de borda infinita, quadra de tênis, heliponto e vista de 360° para as montanhas do Vale do Paraíba.',
-    wa: 'Olá! Tenho interesse na Mansão Horizonte em Pindamonhangaba (R$ 6.500.000). Podemos agendar uma visita?',
+    desc: 'Residência de altíssimo padrão no Village Paineiras. 850 m² construídos · 1.200 m² de terreno · 5 suítes (master 120 m² com closet e hidromassagem) · sala com pé-direito duplo · home theater · piscina de borda infinita · quadra poliesportiva · vista para as montanhas do Vale do Paraíba.',
+    wa: 'Olá! Tenho interesse na residência do Village Paineiras em Pindamonhangaba (R$ 6.500.000). Podemos agendar uma visita?',
     listed: false
   },
 
   'casa-do-vale': {
     slug: 'casa-do-vale',
-    title: 'Casa do Vale',
+    title: 'Casa em Condomínio · Morada Lorena',
     location: 'Lorena, SP',
     price: 'R$ 3.100.000',
-    area: '520', q: '4', b: '4', v: '3',
+    area: '420', terrain: '650', q: '4', b: '4', v: '3',
     badge: 'Novo',
-    cover: 'images/site_listing_card_11.jpg',
+    cover: 'images/prop_vale.jpg',
     photos: [],
-    desc: 'Projeto moderno com fachada em pedra natural, cozinha gourmet integrada à sala, suíte master com closet e varanda privativos, piscina e quintal arborizado.',
-    wa: 'Olá! Tenho interesse na Casa do Vale em Lorena (R$ 3.100.000). Podemos agendar uma visita?',
+    desc: 'Casa contemporânea no Condomínio Morada Lorena. 420 m² construídos · 650 m² de terreno · 4 suítes · fachada em pedra natural e madeira · cozinha gourmet integrada · varanda coberta · piscina · jardim arborizado · 3 vagas cobertas. Acabamento impecável, pronta para morar.',
+    wa: 'Olá! Tenho interesse na casa do Condomínio Morada Lorena (R$ 3.100.000). Podemos agendar uma visita?',
     listed: false
   },
 
   'quinta-paraiba': {
     slug: 'quinta-paraiba',
-    title: 'Quinta Paraíba',
+    title: 'Casa em Condomínio · Mirante do Vale',
     location: 'Jacareí, SP',
     price: 'R$ 2.400.000',
-    area: '390', q: '4', b: '4', v: '2',
+    area: '390', terrain: '580', q: '4', b: '4', v: '2',
     badge: 'Oportunidade',
-    cover: 'images/site_listing_card_09.jpg',
+    cover: 'images/prop_quinta.jpg',
     photos: [],
-    desc: 'Quinta colonial com charme e modernidade, pomar próprio, celeiro restaurado para entretenimento, área de lazer completa e acesso direto à represa.',
-    wa: 'Olá! Tenho interesse na Quinta Paraíba em Jacareí (R$ 2.400.000). Podemos agendar uma visita?',
+    desc: 'Casa de alto padrão no Condomínio Mirante do Vale, com vista privilegiada para a Serra da Mantiqueira. 390 m² construídos · 580 m² de terreno · 4 suítes · sala de estar ampla com pé-direito duplo · varanda gourmet · piscina com deck · paisagismo completo.',
+    wa: 'Olá! Tenho interesse na casa do Condomínio Mirante do Vale em Jacareí (R$ 2.400.000). Podemos agendar uma visita?',
     listed: false
   }
 };
