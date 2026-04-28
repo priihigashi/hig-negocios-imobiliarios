@@ -41,7 +41,7 @@ window.LISTINGS = {
     q: '4', b: '6', v: '4',
     suites: '4',
     badge: 'Destaque · Mobiliada',
-    cover: 'images/site_listing_card_01.jpg',
+    cover: 'images/site_property_gallery_01.jpg',
     photos: [
       { src: 'images/site_property_gallery_01.jpg', caption: 'Fachada Principal' },
       { src: 'images/site_property_gallery_02.jpg', caption: 'Sala de Estar' },
@@ -89,9 +89,9 @@ window.LISTINGS = {
     terrain: '540',
     q: '3', b: '4', v: '4',
     badge: 'Mobiliada · Pronta',
-    cover: 'images/site_listing_card_02.jpg',
+    cover: 'images/site_listing_card_06.jpg',
     photos: [
-      { src: 'images/site_listing_card_02.jpg', caption: 'Fachada' }
+      { src: 'images/site_listing_card_06.jpg', caption: 'Fachada' }
     ],
     desc: 'Casa de alto padrão totalmente mobiliada no Condomínio Eco Park Bourbon. 257 m² construídos · 540 m² de terreno · 3 suítes (master com closet) · automação completa · piscina privativa · escritório · sala pé-direito duplo · cozinha moderna · área gourmet. Pronta para morar.',
     wa: 'Olá! Tenho interesse na Casa do Eco Park em Caçapava (R$ 3.000.000). Podemos agendar uma visita?',
