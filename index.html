@@ -241,14 +241,14 @@ footer{background:var(--dark);padding:4rem 6%;display:grid;grid-template-columns
     </div>
     <div class="featured-info">
       <div class="fi-tag">Residencial · Alto Padrão</div>
-      <div class="fi-title">Mansão Horizonte<br>Verde</div>
-      <div class="fi-location">📍 Pindamonhangaba, SP</div>
-      <div class="fi-price">R$ 6.500.000</div>
+      <div class="fi-title">Casa em Condomínio<br>Bosque das Colinas</div>
+      <div class="fi-location">📍 São José dos Campos, SP</div>
+      <div class="fi-price">Sob consulta</div>
       <div class="fi-specs">
-        <div class="fi-spec"><div class="fi-spec-val">1.200</div><div class="fi-spec-label">m² Área</div></div>
-        <div class="fi-spec"><div class="fi-spec-val">6</div><div class="fi-spec-label">Quartos</div></div>
-        <div class="fi-spec"><div class="fi-spec-val">7</div><div class="fi-spec-label">Banheiros</div></div>
-        <div class="fi-spec"><div class="fi-spec-val">5</div><div class="fi-spec-label">Vagas</div></div>
+        <div class="fi-spec"><div class="fi-spec-val">510</div><div class="fi-spec-label">m² Área</div></div>
+        <div class="fi-spec"><div class="fi-spec-val">4</div><div class="fi-spec-label">Quartos</div></div>
+        <div class="fi-spec"><div class="fi-spec-val">6</div><div class="fi-spec-label">Banheiros</div></div>
+        <div class="fi-spec"><div class="fi-spec-val">4</div><div class="fi-spec-label">Vagas</div></div>
       </div>
       <div class="fi-divider"></div>
       <button class="btn-light" onclick="openFeaturedModal()">Ver Detalhes</button>
@@ -408,12 +408,12 @@ function closeModal(){
 function openFeaturedModal(){
   document.getElementById('modal-img').src='images/site_home_featured.jpg';
   document.getElementById('modal-badge').textContent='Exclusivo';
-  document.getElementById('modal-title').textContent='Mansão Horizonte Verde';
-  document.getElementById('modal-price').textContent='R$ 6.500.000';
-  document.getElementById('modal-desc').textContent='Residência de altíssimo padrão no Village Paineiras. 850 m² construídos · 1.200 m² de terreno · 5 suítes (master 120 m² com closet e hidromassagem) · sala com pé-direito duplo · home theater · piscina de borda infinita · quadra poliesportiva · vista para as montanhas do Vale do Paraíba.';
-  document.getElementById('modal-wa').href='https://wa.me/5512999999999?text='+encodeURIComponent('Olá! Tenho interesse na residência do Village Paineiras em Pindamonhangaba (R$ 6.500.000). Podemos agendar uma visita?');
+  document.getElementById('modal-title').textContent='Casa em Condomínio · Bosque das Colinas';
+  document.getElementById('modal-price').textContent='Sob consulta';
+  document.getElementById('modal-desc').textContent='Residência de alto padrão no Condomínio Bosque das Colinas, em São José dos Campos. 510 m² construídos · 4 suítes · piscina privativa · área gourmet · garagem para 4 veículos. Entre em contato para mais informações.';
+  document.getElementById('modal-wa').href='https://wa.me/5512999999999?text='+encodeURIComponent('Olá! Tenho interesse na Casa em Condomínio Bosque das Colinas em São José dos Campos. Podemos agendar uma visita?');
   document.getElementById('modal-listing').style.display='none';
-  document.getElementById('modal-specs').innerHTML='<div class="modal-spec"><div class="modal-spec-val">1.200</div><div class="modal-spec-label">m² Total</div></div><div class="modal-spec"><div class="modal-spec-val">6</div><div class="modal-spec-label">Quartos</div></div><div class="modal-spec"><div class="modal-spec-val">7</div><div class="modal-spec-label">Banheiros</div></div><div class="modal-spec"><div class="modal-spec-val">5</div><div class="modal-spec-label">Vagas</div></div>';
+  document.getElementById('modal-specs').innerHTML='<div class="modal-spec"><div class="modal-spec-val">510</div><div class="modal-spec-label">m² Total</div></div><div class="modal-spec"><div class="modal-spec-val">4</div><div class="modal-spec-label">Quartos</div></div><div class="modal-spec"><div class="modal-spec-val">6</div><div class="modal-spec-label">Banheiros</div></div><div class="modal-spec"><div class="modal-spec-val">4</div><div class="modal-spec-label">Vagas</div></div>';
   document.querySelector('.modal-overlay').classList.add('open');
   document.body.style.overflow='hidden';
 }
