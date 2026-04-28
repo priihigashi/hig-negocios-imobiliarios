@@ -64,7 +64,7 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 5%;display:flex;ali
 .breadcrumb span{color:rgba(255,255,255,.3)}
 
 /* FILTERS */
-.filters-wrap{background:var(--white);border-bottom:1px solid rgba(154,107,47,.15);position:sticky;top:64px;z-index:50;box-shadow:0 2px 20px rgba(28,20,9,.06)}
+.filters-wrap{background:var(--sand);border-bottom:1px solid rgba(154,107,47,.2);position:sticky;top:64px;z-index:50;box-shadow:0 2px 16px rgba(28,20,9,.08)}
 .filters{max-width:1200px;margin:0 auto;padding:1.2rem 5%;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
 .filter-group{display:flex;flex-direction:column;gap:.25rem}
 .filter-group label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
@@ -305,7 +305,8 @@ footer ul a:hover{color:var(--white)}
     var href=L.listed?('imovel.html?id='+slug):'#';
     var onclick=L.listed?('location.href=\'imovel.html?id='+slug+'\''):'event.stopPropagation()';
     var badgeHtml=L.badge?('<span class="card-badge'+(L.badge.indexOf('Destaque')>-1?' destaque':'')+'">'+(L.listed?L.badge:'Consulte')+'</span>'):'';
-    var suiteSpec=L.suites?('<div class="card-spec">'+roomSvg+' '+L.suites+' suítes</div>'):('<div class="card-spec">'+roomSvg+' '+L.q+' quartos</div>');
+    var suiteSpec=L.suites?('<div class="card-spec">'+roomSvg+' '+L.suites+' suítes</div>'):'';
+
     var ctaHtml=L.listed
       ?('<a href="'+href+'" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>')
       :('<a href="https://wa.me/5512999999999?text='+encodeURIComponent(L.wa)+'" class="card-cta" target="_blank" onclick="event.stopPropagation()">Consultar</a>');
