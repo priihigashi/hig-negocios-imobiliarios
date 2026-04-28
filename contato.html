@@ -176,7 +176,7 @@ footer ul a:hover{color:var(--white)}
         </div>
         <div>
           <div class="method-label">E-mail</div>
-          <div class="method-value"><a href="mailto:contato@hignegociosimobiliarios.com.br">contato@hig...</a></div>
+          <div class="method-value"><a href="mailto:contato@hignegociosimobiliarios.com.br">contato@hignegociosimobiliarios.com.br</a></div>
           <div class="method-note">Respondemos em até 24h</div>
         </div>
       </div>
@@ -211,25 +211,25 @@ footer ul a:hover{color:var(--white)}
   <!-- RIGHT FORM -->
   <div class="contact-form-wrap" id="form">
     <div class="form-title">Agendar Visita ou Tirar Dúvidas</div>
-    <div class="form-sub">Preencha o formulário e entro em contato em até 2 horas no horário comercial.</div>
+    <div class="form-sub">Preencha o formulário e entraremos em contato em até 2 horas no horário comercial.</div>
 
     <div class="form-row">
       <div class="form-group">
         <label class="form-label">Nome completo *</label>
-        <input class="form-input" type="text" placeholder="Seu nome">
+        <input class="form-input" id="fc-nome" type="text" placeholder="Seu nome">
       </div>
       <div class="form-group">
         <label class="form-label">WhatsApp *</label>
-        <input class="form-input" type="tel" placeholder="(12) 9 9999-9999">
+        <input class="form-input" id="fc-wa" type="tel" placeholder="(12) 9 9999-9999">
       </div>
     </div>
     <div class="form-group">
       <label class="form-label">E-mail</label>
-      <input class="form-input" type="email" placeholder="seu@email.com">
+      <input class="form-input" id="fc-email" type="email" placeholder="seu@email.com">
     </div>
     <div class="form-group">
       <label class="form-label">Interesse</label>
-      <select class="form-select">
+      <select class="form-select" id="fc-interesse">
         <option value="">Selecione uma opção</option>
         <option>Comprar imóvel</option>
         <option>Alugar imóvel</option>
@@ -241,7 +241,7 @@ footer ul a:hover{color:var(--white)}
     <div class="form-row">
       <div class="form-group">
         <label class="form-label">Cidade de interesse</label>
-        <select class="form-select">
+        <select class="form-select" id="fc-cidade">
           <option value="">Qualquer cidade</option>
           <option>São José dos Campos</option>
           <option>Taubaté</option>
@@ -254,7 +254,7 @@ footer ul a:hover{color:var(--white)}
       </div>
       <div class="form-group">
         <label class="form-label">Faixa de valor</label>
-        <select class="form-select">
+        <select class="form-select" id="fc-valor">
           <option value="">Não definido</option>
           <option>Até R$ 500.000</option>
           <option>R$ 500k – R$ 1M</option>
@@ -265,10 +265,27 @@ footer ul a:hover{color:var(--white)}
     </div>
     <div class="form-group">
       <label class="form-label">Mensagem</label>
-      <textarea class="form-textarea" placeholder="Conte mais sobre o que você procura..."></textarea>
+      <textarea class="form-textarea" id="fc-msg" placeholder="Conte mais sobre o que você procura..."></textarea>
     </div>
-    <button class="form-submit">Enviar Mensagem</button>
+    <button class="form-submit" onclick="enviarFormContato()">Enviar pelo WhatsApp</button>
     <div class="form-note">Seus dados são tratados com total sigilo. Não compartilhamos informações com terceiros.</div>
+    <script>
+    function enviarFormContato(){
+      var nome=document.getElementById('fc-nome').value.trim();
+      var wa=document.getElementById('fc-wa').value.trim();
+      var interesse=document.getElementById('fc-interesse').value;
+      var cidade=document.getElementById('fc-cidade').value;
+      var valor=document.getElementById('fc-valor').value;
+      var msg=document.getElementById('fc-msg').value.trim();
+      if(!nome){alert('Por favor, informe seu nome.');return;}
+      var texto='Olá Alexandra! Meu nome é '+nome+(wa?' · WhatsApp: '+wa:'')+'.';
+      if(interesse) texto+='\nInteresse: '+interesse;
+      if(cidade) texto+='\nCidade: '+cidade;
+      if(valor) texto+='\nFaixa: '+valor;
+      if(msg) texto+='\n\n'+msg;
+      window.open('https://wa.me/5512999999999?text='+encodeURIComponent(texto),'_blank');
+    }
+    </script>
   </div>
 </section>
 

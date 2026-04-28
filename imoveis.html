@@ -246,202 +246,8 @@ footer ul a:hover{color:var(--white)}
     </select>
   </div>
 
-  <div class="grid">
+  <div class="grid" id="grid"></div>
 
-    <!-- Card 1 -->
-    <div class="card" onclick="location.href='imovel.html'">
-      <div class="card-img">
-        <img src="images/site_listing_card_04.jpg" alt="Villa Contemporânea" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
-        <span class="card-badge destaque">Destaque</span>
-        <button class="card-fav" onclick="event.stopPropagation()">
-          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
-      </div>
-      <div class="card-body">
-        <div class="card-type">Casa · Condomínio Fechado</div>
-        <h3 class="card-title">Casa em Condomínio · Colinas do Paratehy Sul</h3>
-        <div class="card-loc">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Urbanova, São José dos Campos
-        </div>
-        <div class="card-specs">
-          <div class="card-spec">
-            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            510 m²
-          </div>
-          <div class="card-spec">
-            <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>
-            4 quartos
-          </div>
-          <div class="card-spec">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
-            4 suítes
-          </div>
-          <div class="card-spec">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
-            4 vagas
-          </div>
-        </div>
-        <div class="card-footer">
-          <div class="card-price">
-            Sob consulta
-            <small>Mobiliada · Venda porteira fechada</small>
-          </div>
-          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="card" onclick="location.href='imovel.html'">
-      <div class="card-img">
-        <img src="images/site_listing_card_05.jpg" alt="Cobertura Duplex" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
-        <span class="card-badge">Novo</span>
-        <button class="card-fav" onclick="event.stopPropagation()">
-          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
-      </div>
-      <div class="card-body">
-        <div class="card-type">Casa · Alto Padrão Mobiliada</div>
-        <h3 class="card-title">Casa em Condomínio Eco Park</h3>
-        <div class="card-loc">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Eco Park, Caçapava
-        </div>
-        <div class="card-specs">
-          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>257 m²</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>3 quartos</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>3 suítes</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>540 m² terreno</div>
-        </div>
-        <div class="card-footer">
-          <div class="card-price">R$ 3.000.000<small>Mobiliada · Pronta para morar</small></div>
-          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card" onclick="location.href='imovel.html'">
-      <div class="card-img">
-        <img src="images/site_listing_card_06.jpg" alt="Casa em Condomínio" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
-        <button class="card-fav" onclick="event.stopPropagation()">
-          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
-      </div>
-      <div class="card-body">
-        <div class="card-type">Casa · Condomínio Fechado</div>
-        <h3 class="card-title">Residência em Condomínio de Luxo</h3>
-        <div class="card-loc">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Taubaté
-        </div>
-        <div class="card-specs">
-          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>280 m²</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>4 quartos</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>2 suítes</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>3 vagas</div>
-        </div>
-        <div class="card-footer">
-          <div class="card-price">R$ 1.450.000<small>Aceita permuta parcial</small></div>
-          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="card" onclick="location.href='imovel.html'">
-      <div class="card-img">
-        <img src="images/site_listing_card_07.jpg" alt="Terreno em Loteamento" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
-        <span class="card-badge">Oportunidade</span>
-        <button class="card-fav" onclick="event.stopPropagation()">
-          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
-      </div>
-      <div class="card-body">
-        <div class="card-type">Terreno · Residencial</div>
-        <h3 class="card-title">Terreno em Loteamento Nobre</h3>
-        <div class="card-loc">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Pindamonhangaba
-        </div>
-        <div class="card-specs">
-          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>800 m²</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>Frente 20m</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/></svg>Plano</div>
-        </div>
-        <div class="card-footer">
-          <div class="card-price">R$ 380.000<small>Documentação ok</small></div>
-          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="card" onclick="location.href='imovel.html'">
-      <div class="card-img">
-        <img src="images/site_listing_card_08.jpg" alt="Garden com Área Privativa" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
-        <button class="card-fav" onclick="event.stopPropagation()">
-          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
-      </div>
-      <div class="card-body">
-        <div class="card-type">Apartamento · Garden</div>
-        <h3 class="card-title">Garden com Área Privativa e Churrasqueira</h3>
-        <div class="card-loc">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Jacareí
-        </div>
-        <div class="card-specs">
-          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>145 m²</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>3 quartos</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/></svg>1 suíte</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>2 vagas</div>
-        </div>
-        <div class="card-footer">
-          <div class="card-price">R$ 720.000<small>Financiável</small></div>
-          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="card" onclick="location.href='imovel.html'">
-      <div class="card-img">
-        <img src="images/site_listing_card_09.jpg" alt="Casa com Vista para o Vale" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
-        <span class="card-badge">Exclusivo</span>
-        <button class="card-fav" onclick="event.stopPropagation()">
-          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
-      </div>
-      <div class="card-body">
-        <div class="card-type">Casa · Vista para o Vale</div>
-        <h3 class="card-title">Casa com Vista Privilegiada para o Vale</h3>
-        <div class="card-loc">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Guaratinguetá
-        </div>
-        <div class="card-specs">
-          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>380 m²</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>5 quartos</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/></svg>3 suítes</div>
-          <div class="card-spec"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>4 vagas</div>
-        </div>
-        <div class="card-footer">
-          <div class="card-price">R$ 3.200.000<small>Exclusivo HIG</small></div>
-          <a href="imovel.html" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="pagination">
-    <button class="page-btn active">1</button>
-    <button class="page-btn">2</button>
-    <button class="page-btn">3</button>
-    <button class="page-btn">→</button>
-  </div>
 </section>
 
 <a href="https://wa.me/5512999999999" class="wa-float" target="_blank" aria-label="WhatsApp">
@@ -480,10 +286,47 @@ footer ul a:hover{color:var(--white)}
   <span>CRECI-SP</span>
 </div>
 
+<script src="js/listings.js"></script>
 <script>
 (function(){
+  var favSvg='<svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
+  var locSvg='<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+  var areaSvg='<svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>';
+  var roomSvg='<svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>';
+  var vagaSvg='<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>';
+  var grid=document.getElementById('grid');
+  window.LISTINGS_ORDER.forEach(function(slug){
+    var L=window.LISTINGS[slug];
+    var href=L.listed?('imovel.html?id='+slug):'#';
+    var onclick=L.listed?('location.href=\'imovel.html?id='+slug+'\''):'event.stopPropagation()';
+    var badgeHtml=L.badge?('<span class="card-badge'+(L.badge.indexOf('Destaque')>-1?' destaque':'')+'">'+(L.listed?L.badge:'Consulte')+'</span>'):'';
+    var suiteSpec=L.suites?('<div class="card-spec">'+roomSvg+' '+L.suites+' suítes</div>'):('<div class="card-spec">'+roomSvg+' '+L.q+' quartos</div>');
+    var ctaHtml=L.listed
+      ?('<a href="'+href+'" class="card-cta" onclick="event.stopPropagation()">Ver imóvel</a>')
+      :('<a href="https://wa.me/5512999999999?text='+encodeURIComponent(L.wa)+'" class="card-cta" target="_blank" onclick="event.stopPropagation()">Consultar</a>');
+    grid.innerHTML+='<div class="card" onclick="'+onclick+'">'
+      +'<div class="card-img">'
+      +'<img src="'+L.cover+'" alt="'+L.title+'" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">'
+      +badgeHtml
+      +'<button class="card-fav" onclick="event.stopPropagation()">'+favSvg+'</button>'
+      +'</div>'
+      +'<div class="card-body">'
+      +'<h3 class="card-title">'+L.title+'</h3>'
+      +'<div class="card-loc">'+locSvg+' '+L.location+'</div>'
+      +'<div class="card-specs">'
+      +'<div class="card-spec">'+areaSvg+' '+L.area+' m²</div>'
+      +'<div class="card-spec">'+roomSvg+' '+L.q+' quartos</div>'
+      +suiteSpec
+      +'<div class="card-spec">'+vagaSvg+' '+L.v+' vagas</div>'
+      +'</div>'
+      +'<div class="card-footer">'
+      +'<div class="card-price">'+L.price+(L.priceNote?'<small>'+L.priceNote+'</small>':'')+'</div>'
+      +ctaHtml
+      +'</div></div></div>';
+  });
   var el=document.getElementById('filter-count');
-  if(el){var n=document.querySelectorAll('.grid .card').length;el.textContent=n+' '+(n===1?'imóvel encontrado':'imóveis encontrados');}
+  var n=window.LISTINGS_ORDER.length;
+  if(el){el.textContent=n+' '+(n===1?'imóvel encontrado':'imóveis encontrados');}
 })();
 (function(){
   var btn=document.querySelector('.hamburger');
