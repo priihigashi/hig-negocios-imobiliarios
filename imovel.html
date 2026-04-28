@@ -379,23 +379,47 @@ let zoomIdx = 0;
   /* WhatsApp deep-link with listing-specific message */
   $('btn-wa').href = 'https://wa.me/5512999999999?text=' + encodeURIComponent(LISTING.wa);
 
-  /* Hero gallery — main + 2 thumbs (whatever PHOTOS has, no padding from other listings) */
+  /* Hero gallery — main + up to 2 thumbs. Never duplicates a photo into multiple tiles. */
   const gallery = $('gallery');
   const totalPhotos = PHOTOS.length;
   const main = PHOTOS[0];
-  const thumb1 = PHOTOS[1] || PHOTOS[0];
-  const thumb2 = PHOTOS[2] || PHOTOS[1] || PHOTOS[0];
   const moreCount = Math.max(0, totalPhotos - 3);
-  gallery.innerHTML = `
-    <div class="gallery-main" onclick="openLightbox(0)">
-      <img src="${main.src}" alt="${main.caption}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
-      <button class="gallery-btn" onclick="event.stopPropagation();openLightbox(0)">Ver todas as fotos (${totalPhotos})</button>
-    </div>
-    <div class="gallery-thumb" onclick="openLightbox(${PHOTOS[1]?1:0})"><img src="${thumb1.src}" alt="${thumb1.caption}" style="width:100%;height:100%;object-fit:cover"></div>
-    <div class="gallery-thumb" onclick="openLightbox(${PHOTOS[2]?2:(PHOTOS[1]?1:0)})">
-      <img src="${thumb2.src}" alt="${thumb2.caption}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
-      ${moreCount > 0 ? `<div class="gallery-more">+ ${moreCount} fotos</div>` : ''}
-    </div>`;
+  const galleryBtnLabel = totalPhotos === 1 ? 'Ampliar foto' : `Ver todas as fotos (${totalPhotos})`;
+
+  if (totalPhotos === 1) {
+    /* Single-photo listings: full-bleed hero, no thumb tiles */
+    gallery.style.gridTemplateColumns = '1fr';
+    gallery.style.gridTemplateRows = '1fr';
+    gallery.innerHTML = `
+      <div class="gallery-main" onclick="openLightbox(0)" style="grid-row:1/2">
+        <img src="${main.src}" alt="${main.caption}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
+        <button class="gallery-btn" onclick="event.stopPropagation();openLightbox(0)">${galleryBtnLabel}</button>
+      </div>`;
+  } else if (totalPhotos === 2) {
+    /* Two photos: main + one thumb spanning both rows on the right */
+    gallery.style.gridTemplateRows = '1fr';
+    const thumb1 = PHOTOS[1];
+    gallery.innerHTML = `
+      <div class="gallery-main" onclick="openLightbox(0)">
+        <img src="${main.src}" alt="${main.caption}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
+        <button class="gallery-btn" onclick="event.stopPropagation();openLightbox(0)">${galleryBtnLabel}</button>
+      </div>
+      <div class="gallery-thumb" onclick="openLightbox(1)"><img src="${thumb1.src}" alt="${thumb1.caption}" style="width:100%;height:100%;object-fit:cover"></div>`;
+  } else {
+    /* 3+ photos: full grid — main + 2 thumbs (with +N overlay if more exist) */
+    const thumb1 = PHOTOS[1];
+    const thumb2 = PHOTOS[2];
+    gallery.innerHTML = `
+      <div class="gallery-main" onclick="openLightbox(0)">
+        <img src="${main.src}" alt="${main.caption}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
+        <button class="gallery-btn" onclick="event.stopPropagation();openLightbox(0)">${galleryBtnLabel}</button>
+      </div>
+      <div class="gallery-thumb" onclick="openLightbox(1)"><img src="${thumb1.src}" alt="${thumb1.caption}" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="gallery-thumb" onclick="openLightbox(2)">
+        <img src="${thumb2.src}" alt="${thumb2.caption}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
+        ${moreCount > 0 ? `<div class="gallery-more">+ ${moreCount} fotos</div>` : ''}
+      </div>`;
+  }
 
   /* Lightbox header */
   $('lightbox-title').innerHTML = `${LISTING.title}<small id="lightbox-subtitle">${LISTING.location} · ${totalPhotos} foto${totalPhotos !== 1 ? 's' : ''}</small>`;
