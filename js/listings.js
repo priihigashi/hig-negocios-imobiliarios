@@ -104,8 +104,16 @@ window.LISTINGS = {
     badge: 'Mobiliada · Pronta',
     cover: 'images/listings/eco-park-cacapava/01_fachada.jpg',
     photos: [
-      { src: 'images/listings/eco-park-cacapava/01_fachada.jpg', caption: 'Fachada Principal' },
-      { src: 'images/listings/eco-park-cacapava/03_quarto.jpg',  caption: 'Suíte Master' }
+      { src: 'images/listings/eco-park-cacapava/01_fachada.jpg',    caption: 'Fachada Principal' },
+      { src: 'images/listings/eco-park-cacapava/04_video_8572.jpg', caption: 'Área Interna' },
+      { src: 'images/listings/eco-park-cacapava/05_video_8573.jpg', caption: 'Ambientes' },
+      { src: 'images/listings/eco-park-cacapava/06_video_8575.jpg', caption: 'Área de Lazer' },
+      { src: 'images/listings/eco-park-cacapava/07_video_8576.jpg', caption: 'Área Externa' },
+      { src: 'images/listings/eco-park-cacapava/09_img8179.jpg',    caption: 'Detalhe' },
+      { src: 'images/listings/eco-park-cacapava/03_quarto.jpg',     caption: 'Suíte Master' },
+      { src: 'images/listings/eco-park-cacapava/10_quarto_2.jpg',   caption: 'Suíte' },
+      { src: 'images/listings/eco-park-cacapava/11_quarto_3.jpg',   caption: 'Suíte 3' },
+      { src: 'images/listings/eco-park-cacapava/08_video_8581.jpg', caption: 'Área de Serviço' }
     ],
     desc: 'Casa de alto padrão totalmente mobiliada no Condomínio Eco Park Bourbon. 257 m² construídos · 540 m² de terreno · 3 suítes (master com closet) · automação completa · piscina privativa · escritório · sala pé-direito duplo · cozinha moderna · área gourmet. Pronta para morar.',
     wa: 'Olá! Tenho interesse na Casa do Eco Park em Caçapava (R$ 3.000.000). Podemos agendar uma visita?',
