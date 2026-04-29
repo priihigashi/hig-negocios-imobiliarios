@@ -41,11 +41,18 @@ window.LISTINGS = {
     q: '4', b: '6', v: '4',
     suites: '4',
     badge: 'Destaque · Mobiliada',
-    cover: 'images/site_property_gallery_01.jpg',
+    cover: 'images/listings/urbanova-paratehy/01_fachada.jpg',
     photos: [
-      { src: 'images/site_property_gallery_01.jpg', caption: 'Fachada Principal' },
-      { src: 'images/site_property_gallery_02.jpg', caption: 'Sala de Estar' },
-      { src: 'images/site_property_gallery_03.jpg', caption: 'Área Externa' }
+      { src: 'images/listings/urbanova-paratehy/01_fachada.jpg',      caption: 'Fachada Principal' },
+      { src: 'images/listings/urbanova-paratehy/02_hall.jpg',         caption: 'Hall de Entrada' },
+      { src: 'images/listings/urbanova-paratehy/03_sala.jpg',         caption: 'Sala de Estar' },
+      { src: 'images/listings/urbanova-paratehy/04_sala_jantar.jpg',  caption: 'Sala de Jantar' },
+      { src: 'images/listings/urbanova-paratehy/05_cozinha.jpg',      caption: 'Cozinha Gourmet' },
+      { src: 'images/listings/urbanova-paratehy/06_banheiro.jpg',     caption: 'Banheiro Suíte' },
+      { src: 'images/listings/urbanova-paratehy/07_escritorio.jpg',   caption: 'Escritório' },
+      { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',       caption: 'Sala de Cinema' },
+      { src: 'images/listings/urbanova-paratehy/09_piscina.jpg',      caption: 'Piscina' },
+      { src: 'images/listings/urbanova-paratehy/10_varanda.jpg',      caption: 'Varanda' }
     ],
     desc: 'Casa de alto padrão em condomínio fechado nas Colinas do Paratehy Sul. 510 m² construídos · 600 m² de terreno · 4 suítes (master 88 m² com closet e banheira dupla) · sala cinema · lareira suspensa · cozinha gourmet · piscina · biometria · cisterna 8.000L. Mobiliada · venda porteira fechada.',
     descParas: [
@@ -89,9 +96,13 @@ window.LISTINGS = {
     terrain: '540',
     q: '3', b: '4', v: '4',
     badge: 'Mobiliada · Pronta',
-    cover: 'images/site_listing_card_06.jpg',
+    cover: 'images/listings/eco-park-cacapava/01_fachada.jpg',
     photos: [
-      { src: 'images/site_listing_card_06.jpg', caption: 'Fachada' }
+      { src: 'images/listings/eco-park-cacapava/01_fachada.jpg',    caption: 'Fachada Principal' },
+      { src: 'images/listings/eco-park-cacapava/02_fachada_2.jpg',  caption: 'Fachada · Varanda' },
+      { src: 'images/listings/eco-park-cacapava/03_quarto.jpg',     caption: 'Suíte Master' },
+      { src: 'images/listings/eco-park-cacapava/04_quarto_2.jpg',   caption: 'Suíte 2' },
+      { src: 'images/listings/eco-park-cacapava/05_quarto_3.jpg',   caption: 'Suíte 3' }
     ],
     desc: 'Casa de alto padrão totalmente mobiliada no Condomínio Eco Park Bourbon. 257 m² construídos · 540 m² de terreno · 3 suítes (master com closet) · automação completa · piscina privativa · escritório · sala pé-direito duplo · cozinha moderna · área gourmet. Pronta para morar.',
     wa: 'Olá! Tenho interesse na Casa do Eco Park em Caçapava (R$ 3.000.000). Podemos agendar uma visita?',
