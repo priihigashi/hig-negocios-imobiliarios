@@ -44,7 +44,7 @@ window.LISTINGS = {
     cover: 'images/listings/urbanova-paratehy/01_fachada.jpg',
     photos: [
       { src: 'images/listings/urbanova-paratehy/01_fachada.jpg',          caption: 'Fachada Principal' },
-      { src: 'images/listings/urbanova-paratehy/11_fachada_2.jpg',         caption: 'Fachada · Vista Lateral' },
+      { src: 'images/listings/urbanova-paratehy/11_fachada_2.jpg',         caption: 'Fachada · Vista Frontal 2' },
       { src: 'images/listings/urbanova-paratehy/02_hall.jpg',              caption: 'Hall de Entrada' },
       { src: 'images/listings/urbanova-paratehy/03_sala.jpg',              caption: 'Sala de Estar' },
       { src: 'images/listings/urbanova-paratehy/12_sala_2.jpg',            caption: 'Sala de Estar · Ângulo 2' },
@@ -74,7 +74,6 @@ window.LISTINGS = {
       { src: 'images/listings/urbanova-paratehy/07_escritorio.jpg',        caption: 'Escritório' },
       { src: 'images/listings/urbanova-paratehy/30_escritorio_armarios.jpg', caption: 'Escritório · Armários' },
       { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',            caption: 'Sala de Cinema' },
-      { src: 'images/listings/urbanova-paratehy/33_sala_escada.jpg',       caption: 'Sala de Estar · Escada Flutuante' },
       { src: 'images/listings/urbanova-paratehy/19_transicao_piscina.jpg', caption: 'Área Externa · Transição para Piscina' }
     ],
     desc: 'Casa de alto padrão em condomínio fechado nas Colinas do Paratehy Sul. 510 m² construídos · 600 m² de terreno · 4 suítes (master 88 m² com closet e banheira dupla) · sala cinema · lareira suspensa · cozinha gourmet · piscina · biometria · cisterna 8.000L. Mobiliada · venda porteira fechada.',
