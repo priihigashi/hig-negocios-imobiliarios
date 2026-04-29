@@ -48,13 +48,12 @@ window.LISTINGS = {
       { src: 'images/listings/urbanova-paratehy/02_hall.jpg',              caption: 'Hall de Entrada' },
       { src: 'images/listings/urbanova-paratehy/03_sala.jpg',              caption: 'Sala de Estar' },
       { src: 'images/listings/urbanova-paratehy/12_sala_2.jpg',            caption: 'Sala de Estar · Ângulo 2' },
-      { src: 'images/listings/urbanova-paratehy/04_sala_jantar.jpg',       caption: 'Sala de Jantar' },
       { src: 'images/listings/urbanova-paratehy/10_varanda.jpg',           caption: 'Vista da Varanda · Saída da Sala' },
+      { src: 'images/listings/urbanova-paratehy/04_sala_jantar.jpg',       caption: 'Sala de Jantar' },
       { src: 'images/listings/urbanova-paratehy/05_cozinha.jpg',           caption: 'Cozinha Gourmet · Área Externa' },
       { src: 'images/listings/urbanova-paratehy/18_cozinha_2.jpg',         caption: 'Cozinha Interna · Integração com Sala' },
       { src: 'images/listings/urbanova-paratehy/24_cozinha_interna_pia.jpg', caption: 'Cozinha Interna · Pia e Bancada' },
       { src: 'images/listings/urbanova-paratehy/25_cozinha_interna_fornos.jpg', caption: 'Cozinha Interna · Fornos Embutidos' },
-      { src: 'images/listings/urbanova-paratehy/26_cozinha_interna_ilha.jpg', caption: 'Cozinha Interna · Ilha Central' },
       { src: 'images/listings/urbanova-paratehy/16_area_gourmet.jpg',      caption: 'Área Gourmet' },
       { src: 'images/listings/urbanova-paratehy/17_varanda_2.jpg',         caption: 'Varanda · Pergolado' },
       { src: 'images/listings/urbanova-paratehy/27_varanda_jantar.jpg',    caption: 'Varanda · Mesa de Jantar' },
@@ -72,8 +71,7 @@ window.LISTINGS = {
       { src: 'images/listings/urbanova-paratehy/31_quarto_kids.jpg',       caption: 'Quarto Infantil' },
       { src: 'images/listings/urbanova-paratehy/07_escritorio.jpg',        caption: 'Escritório' },
       { src: 'images/listings/urbanova-paratehy/30_escritorio_armarios.jpg', caption: 'Escritório · Armários' },
-      { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',            caption: 'Sala de Cinema' },
-      { src: 'images/listings/urbanova-paratehy/19_transicao_piscina.jpg', caption: 'Área Externa · Transição para Piscina' }
+      { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',            caption: 'Sala de Cinema' }
     ],
     desc: 'Casa de alto padrão em condomínio fechado nas Colinas do Paratehy Sul. 510 m² construídos · 600 m² de terreno · 4 suítes (master 88 m² com closet e banheira dupla) · sala cinema · lareira suspensa · cozinha gourmet · piscina · biometria · cisterna 8.000L. Mobiliada · venda porteira fechada.',
     descParas: [
