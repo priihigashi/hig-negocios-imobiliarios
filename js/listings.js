@@ -49,8 +49,8 @@ window.LISTINGS = {
       { src: 'images/listings/urbanova-paratehy/03_sala.jpg',              caption: 'Sala de Estar' },
       { src: 'images/listings/urbanova-paratehy/12_sala_2.jpg',            caption: 'Sala de Estar · Ângulo 2' },
       { src: 'images/listings/urbanova-paratehy/04_sala_jantar.jpg',       caption: 'Sala de Jantar' },
-      { src: 'images/listings/urbanova-paratehy/05_cozinha.jpg',           caption: 'Cozinha Gourmet' },
-      { src: 'images/listings/urbanova-paratehy/18_cozinha_2.jpg',         caption: 'Cozinha · Integração Gourmet' },
+      { src: 'images/listings/urbanova-paratehy/05_cozinha.jpg',           caption: 'Cozinha Gourmet · Área Externa' },
+      { src: 'images/listings/urbanova-paratehy/18_cozinha_2.jpg',         caption: 'Cozinha Interna · Integração com Sala' },
       { src: 'images/listings/urbanova-paratehy/16_area_gourmet.jpg',      caption: 'Área Gourmet' },
       { src: 'images/listings/urbanova-paratehy/17_varanda_2.jpg',         caption: 'Varanda · Pergolado' },
       { src: 'images/listings/urbanova-paratehy/09_piscina.jpg',           caption: 'Piscina' },
@@ -62,8 +62,10 @@ window.LISTINGS = {
       { src: 'images/listings/urbanova-paratehy/14_quarto.jpg',            caption: 'Suíte' },
       { src: 'images/listings/urbanova-paratehy/10_varanda.jpg',           caption: 'Varanda · Suíte' },
       { src: 'images/listings/urbanova-paratehy/20_quarto_2.jpg',          caption: 'Suíte 2' },
+      { src: 'images/listings/urbanova-paratehy/21_quarto_3.jpg',          caption: 'Suíte 3' },
       { src: 'images/listings/urbanova-paratehy/07_escritorio.jpg',        caption: 'Escritório' },
-      { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',            caption: 'Sala de Cinema' }
+      { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',            caption: 'Sala de Cinema' },
+      { src: 'images/listings/urbanova-paratehy/19_transicao_piscina.jpg', caption: 'Área Externa · Transição para Piscina' }
     ],
     desc: 'Casa de alto padrão em condomínio fechado nas Colinas do Paratehy Sul. 510 m² construídos · 600 m² de terreno · 4 suítes (master 88 m² com closet e banheira dupla) · sala cinema · lareira suspensa · cozinha gourmet · piscina · biometria · cisterna 8.000L. Mobiliada · venda porteira fechada.',
     descParas: [
@@ -112,10 +114,19 @@ window.LISTINGS = {
       { src: 'images/listings/eco-park-cacapava/01_fachada.jpg',    caption: 'Fachada Principal' },
       { src: 'images/listings/eco-park-cacapava/04_video_8572.jpg', caption: 'Área Gourmet' },
       { src: 'images/listings/eco-park-cacapava/05_video_8573.jpg', caption: 'Piscina' },
+      { src: 'images/listings/eco-park-cacapava/06_video_8575.jpg', caption: 'Área Gourmet · Ângulo 2' },
       { src: 'images/listings/eco-park-cacapava/07_video_8576.jpg', caption: 'Piscina · Vista Lateral' },
       { src: 'images/listings/eco-park-cacapava/08_video_8581.jpg', caption: 'Banheiro' },
+      { src: 'images/listings/eco-park-cacapava/09_img8179.jpg',    caption: 'Área Social Integrada' },
+      { src: 'images/listings/eco-park-cacapava/10_quarto_2.jpg',   caption: 'Suíte 2' },
       { src: 'images/listings/eco-park-cacapava/03_quarto.jpg',     caption: 'Suíte Master' },
-      { src: 'images/listings/eco-park-cacapava/11_quarto_3.jpg',   caption: 'Suíte Master · Ângulo 2' }
+      { src: 'images/listings/eco-park-cacapava/11_quarto_3.jpg',   caption: 'Suíte Master · Ângulo 2' },
+      { src: 'images/listings/eco-park-cacapava/12_interior_a.jpg', caption: 'Interior · Ambiente A' },
+      { src: 'images/listings/eco-park-cacapava/13_interior_b.jpg', caption: 'Interior · Ambiente B' },
+      { src: 'images/listings/eco-park-cacapava/14_interior_c.jpg', caption: 'Interior · Ambiente C' },
+      { src: 'images/listings/eco-park-cacapava/15_interior_d.jpg', caption: 'Interior · Ambiente D' },
+      { src: 'images/listings/eco-park-cacapava/16_interior_8573.jpg', caption: 'Interior · Detalhe 8573' },
+      { src: 'images/listings/eco-park-cacapava/17_interior_8576.jpg', caption: 'Interior · Detalhe 8576' }
     ],
     desc: 'Casa de alto padrão totalmente mobiliada no Condomínio Eco Park Bourbon. 257 m² construídos · 540 m² de terreno · 3 suítes (master com closet) · automação completa · piscina privativa · escritório · sala pé-direito duplo · cozinha moderna · área gourmet. Pronta para morar.',
     wa: 'Olá! Tenho interesse na Casa do Eco Park em Caçapava (R$ 3.000.000). Podemos agendar uma visita?',
