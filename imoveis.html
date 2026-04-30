@@ -46,7 +46,7 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 5%;display:flex;ali
 
 /* PAGE HERO */
 .page-hero{padding:200px 5% 110px;background:url('images/site_home_featured.jpg') center 30%/cover no-repeat;position:relative;overflow:hidden;min-height:480px;display:flex;flex-direction:column;justify-content:center}
-.page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(115deg,rgba(28,20,9,.78) 0%,rgba(28,20,9,.55) 60%,rgba(28,20,9,.30) 100%)}
+.page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(115deg,rgba(28,20,9,.45) 0%,rgba(28,20,9,.28) 60%,rgba(28,20,9,.12) 100%)}
 .page-hero::after{content:'';position:absolute;left:5%;bottom:46px;width:60px;height:1px;background:var(--gold);z-index:1}
 .page-hero .breadcrumb,.page-hero h1,.page-hero p,.page-hero .hero-tag{position:relative;z-index:1}
 .page-hero .hero-tag{display:inline-block;font-size:.72rem;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;font-weight:500}
@@ -231,7 +231,7 @@ footer ul a:hover{color:var(--white)}
       </select>
     </div>
     <button class="filter-btn">Buscar</button>
-    <span class="filter-count">18 imóveis encontrados</span>
+    <span class="filter-count" id="listing-count">0 imóveis encontrados</span>
   </div>
 </div>
 
@@ -249,9 +249,9 @@ footer ul a:hover{color:var(--white)}
   <div class="grid">
 
     <!-- Card 1 -->
-    <div class="card" onclick="location.href='imovel.html'">
+    <div class="card" onclick="location.href='imovel.html?id=urbanova-paratehy'">
       <div class="card-img">
-        <img src="images/site_listing_card_04.jpg" alt="Villa Contemporânea" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
+        <img src="images/urb_cover.jpg" alt="Casa em Condomínio · Colinas do Paratehy Sul" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
         <span class="card-badge destaque">Destaque</span>
         <button class="card-fav" onclick="event.stopPropagation()">
           <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -495,6 +495,12 @@ footer ul a:hover{color:var(--white)}
     dd.classList.remove('open');
   });
   dd.addEventListener('click',function(e){e.stopPropagation()});
+})();
+(function(){
+  var el=document.getElementById('listing-count');
+  if(!el)return;
+  var n=document.querySelectorAll('.grid .card').length;
+  el.textContent=n+(n===1?' imóvel encontrado':' imóveis encontrados');
 })();
 </script>
 </body>

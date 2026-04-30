@@ -41,11 +41,23 @@ window.LISTINGS = {
     q: '4', b: '6', v: '4',
     suites: '4',
     badge: 'Destaque · Mobiliada',
-    cover: 'images/site_listing_card_01.jpg',
+    cover: 'images/urb_cover.jpg',
     photos: [
-      { src: 'images/site_property_gallery_01.jpg', caption: 'Fachada Principal' },
-      { src: 'images/site_property_gallery_02.jpg', caption: 'Sala de Estar' },
-      { src: 'images/site_property_gallery_03.jpg', caption: 'Área Externa' }
+      { src: 'images/urb_01_fachada.jpg',        caption: 'Fachada Principal' },
+      { src: 'images/urb_02_sala.jpg',            caption: 'Sala de Estar' },
+      { src: 'images/urb_03_sala_2.jpg',          caption: 'Sala de Estar · Vista 2' },
+      { src: 'images/urb_04_sala_jantar.jpg',     caption: 'Sala de Jantar' },
+      { src: 'images/urb_05_cozinha.jpg',         caption: 'Cozinha Gourmet' },
+      { src: 'images/urb_06_cozinha_2.jpg',       caption: 'Cozinha · Appliances' },
+      { src: 'images/urb_07_varanda.jpg',         caption: 'Varanda' },
+      { src: 'images/urb_08_varanda_jantar.jpg',  caption: 'Área de Jantar Externa' },
+      { src: 'images/urb_09_piscina_noturna.jpg', caption: 'Piscina · Vista Noturna' },
+      { src: 'images/urb_10_banheiro_spa.jpg',    caption: 'Banheiro Spa' },
+      { src: 'images/urb_11_banheiro_master.jpg', caption: 'Banheiro Master · Banheira' },
+      { src: 'images/urb_12_escritorio.jpg',      caption: 'Escritório' },
+      { src: 'images/urb_13_closet.jpg',          caption: 'Closet · Armários' },
+      { src: 'images/urb_14_cinema.jpg',          caption: 'Sala de Cinema' }
+      /* Suíte Master (3 ângulos) + Quarto Kids — aguardando versão com roupa de cama (NB2 staging em andamento) */
     ],
     desc: 'Casa de alto padrão em condomínio fechado nas Colinas do Paratehy Sul. 510 m² construídos · 600 m² de terreno · 4 suítes (master 88 m² com closet e banheira dupla) · sala cinema · lareira suspensa · cozinha gourmet · piscina · biometria · cisterna 8.000L. Mobiliada · venda porteira fechada.',
     descParas: [
