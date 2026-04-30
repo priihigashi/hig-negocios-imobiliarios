@@ -56,8 +56,16 @@ window.LISTINGS = {
       { src: 'images/urb_11_banheiro_master.jpg', caption: 'Banheiro Master · Banheira' },
       { src: 'images/urb_12_escritorio.jpg',      caption: 'Escritório' },
       { src: 'images/urb_13_closet.jpg',          caption: 'Closet · Armários' },
-      { src: 'images/urb_14_cinema.jpg',          caption: 'Sala de Cinema' }
-      /* Suíte Master (3 ângulos) + Quarto Kids — aguardando versão com roupa de cama (NB2 staging em andamento) */
+      { src: 'images/urb_14_cinema.jpg',          caption: 'Sala de Cinema' },
+      { src: 'images/urb_15_suite_master_1.jpg', caption: 'Suíte Master · Ângulo 1' },
+      { src: 'images/urb_16_suite_master_2.jpg', caption: 'Suíte Master · Ângulo 2' },
+      { src: 'images/urb_17_suite_master_3.jpg', caption: 'Suíte Master · Ângulo 3' },
+      { src: 'images/urb_18_quarto_kids.jpg',    caption: 'Quarto Kids' },
+      { src: 'images/urb_19_extra_01.jpg',       caption: '' },
+      { src: 'images/urb_20_extra_02.jpg',       caption: '' },
+      { src: 'images/urb_21_extra_03.jpg',       caption: '' },
+      { src: 'images/urb_22_extra_04.jpg',       caption: '' },
+      { src: 'images/urb_23_extra_05.jpg',       caption: '' }
     ],
     desc: 'Casa de alto padrão em condomínio fechado nas Colinas do Paratehy Sul. 510 m² construídos · 600 m² de terreno · 4 suítes (master 88 m² com closet e banheira dupla) · sala cinema · lareira suspensa · cozinha gourmet · piscina · biometria · cisterna 8.000L. Mobiliada · venda porteira fechada.',
     descParas: [
