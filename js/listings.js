@@ -136,22 +136,18 @@ window.LISTINGS = {
     badge: 'Mobiliada · Pronta',
     cover: 'images/listings/eco-park-cacapava/01_fachada.jpg',
     photos: [
-      { src: 'images/listings/eco-park-cacapava/01_fachada.jpg',    caption: 'Fachada Principal' },
-      { src: 'images/listings/eco-park-cacapava/04_video_8572.jpg', caption: 'Área Gourmet' },
-      { src: 'images/listings/eco-park-cacapava/05_video_8573.jpg', caption: 'Piscina' },
-      { src: 'images/listings/eco-park-cacapava/06_video_8575.jpg', caption: 'Área Gourmet · Ângulo 2' },
-      { src: 'images/listings/eco-park-cacapava/07_video_8576.jpg', caption: 'Piscina · Vista Lateral' },
-      { src: 'images/listings/eco-park-cacapava/08_video_8581.jpg', caption: 'Banheiro' },
-      { src: 'images/listings/eco-park-cacapava/09_img8179.jpg',    caption: 'Área Social Integrada' },
-      { src: 'images/listings/eco-park-cacapava/10_quarto_2.jpg',   caption: 'Suíte 2' },
-      { src: 'images/listings/eco-park-cacapava/03_quarto.jpg',     caption: 'Suíte Master' },
-      { src: 'images/listings/eco-park-cacapava/11_quarto_3.jpg',   caption: 'Suíte Master · Ângulo 2' },
-      { src: 'images/listings/eco-park-cacapava/12_interior_a.jpg', caption: 'Interior · Ambiente A' },
-      { src: 'images/listings/eco-park-cacapava/13_interior_b.jpg', caption: 'Interior · Ambiente B' },
-      { src: 'images/listings/eco-park-cacapava/14_interior_c.jpg', caption: 'Interior · Ambiente C' },
-      { src: 'images/listings/eco-park-cacapava/15_interior_d.jpg', caption: 'Interior · Ambiente D' },
-      { src: 'images/listings/eco-park-cacapava/16_interior_8573.jpg', caption: 'Interior · Detalhe 8573' },
-      { src: 'images/listings/eco-park-cacapava/17_interior_8576.jpg', caption: 'Interior · Detalhe 8576' }
+      /* — FACHADA — */
+      { src: 'images/listings/eco-park-cacapava/01_fachada.jpg',       caption: 'Fachada Principal' },
+      /* — ÁREA GOURMET — */
+      { src: 'images/listings/eco-park-cacapava/04_video_8572.jpg',    caption: 'Área Gourmet' },
+      /* — PISCINA — */
+      { src: 'images/listings/eco-park-cacapava/05_video_8573.jpg',    caption: 'Piscina · Paisagismo' },
+      { src: 'images/listings/eco-park-cacapava/07_video_8576.jpg',    caption: 'Piscina · Vista Geral' },
+      { src: 'images/listings/eco-park-cacapava/16_interior_8573.jpg', caption: 'Piscina · Área de Lazer' },
+      { src: 'images/listings/eco-park-cacapava/17_interior_8576.jpg', caption: 'Piscina · Vista Exterior' },
+      /* — SUÍTES — */
+      { src: 'images/listings/eco-park-cacapava/10_quarto_2.jpg',      caption: 'Suíte Master' },
+      { src: 'images/listings/eco-park-cacapava/11_quarto_3.jpg',      caption: 'Suíte' }
     ],
     desc: 'Casa de alto padrão totalmente mobiliada no Condomínio Eco Park Bourbon. 257 m² construídos · 540 m² de terreno · 3 suítes (master com closet) · automação completa · piscina privativa · escritório · sala pé-direito duplo · cozinha moderna · área gourmet. Pronta para morar.',
     wa: 'Olá! Tenho interesse na Casa do Eco Park em Caçapava (R$ 3.000.000). Podemos agendar uma visita?',
