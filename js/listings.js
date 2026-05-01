@@ -50,19 +50,17 @@ window.LISTINGS = {
       /* — HALL DE ENTRADA — */
       { src: 'images/listings/urbanova-paratehy/02_hall.jpg',              caption: 'Hall de Entrada' },
 
-      /* — SALA DE JANTAR — */
-      { src: 'images/listings/urbanova-paratehy/04_sala_jantar.jpg',       caption: 'Sala de Jantar' },
-
       /* — COZINHA INTERNA — */
       { src: 'images/listings/urbanova-paratehy/18_cozinha_2.jpg',         caption: 'Cozinha Interna · Integração com Sala' },
       { src: 'images/listings/urbanova-paratehy/24_cozinha_interna_pia.jpg', caption: 'Cozinha Interna · Pia e Bancada' },
       { src: 'images/listings/urbanova-paratehy/25_cozinha_interna_fornos.jpg', caption: 'Cozinha Interna · Fornos Embutidos' },
+      { src: 'images/listings/urbanova-paratehy/04_sala_jantar.jpg',       caption: 'Sala de Jantar' },
 
       /* — ÁREA GOURMET EXTERNA — */
       { src: 'images/listings/urbanova-paratehy/05_cozinha.jpg',           caption: 'Área Gourmet · Cozinha Externa' },
       { src: 'images/listings/urbanova-paratehy/16_area_gourmet.jpg',      caption: 'Área Gourmet' },
-      { src: 'images/listings/urbanova-paratehy/17_varanda_2.jpg',         caption: 'Varanda · Pergolado' },
       { src: 'images/listings/urbanova-paratehy/27_varanda_jantar.jpg',    caption: 'Varanda · Mesa de Jantar' },
+      { src: 'images/listings/urbanova-paratehy/17_varanda_2.jpg',         caption: 'Varanda · Pergolado' },
 
       /* — PISCINA — */
       { src: 'images/listings/urbanova-paratehy/09_piscina.jpg',           caption: 'Piscina' },
@@ -74,10 +72,8 @@ window.LISTINGS = {
       { src: 'images/listings/urbanova-paratehy/12_sala_2.jpg',            caption: 'Suíte Master · Painel TV' },
       { src: 'images/listings/urbanova-paratehy/13_banheiro_master.jpg',   caption: 'Suíte Master · Banheira' },
       { src: 'images/listings/urbanova-paratehy/28_banheiro_master_passagem.jpg', caption: 'Banheiro Master · Acesso' },
-      { src: 'images/listings/urbanova-paratehy/29_banheiro_3d.jpg',       caption: 'Banheiro · Detalhes' },
       { src: 'images/listings/urbanova-paratehy/22_banheiro_spa.jpg',      caption: 'Banheiro · Spa' },
       { src: 'images/listings/urbanova-paratehy/23_banheiro_jacuzzi.jpg',  caption: 'Suíte · Jacuzzi' },
-      { src: 'images/listings/urbanova-paratehy/06_banheiro.jpg',          caption: 'Banheiro Suíte' },
 
       /* — QUARTOS — */
       { src: 'images/listings/urbanova-paratehy/14_quarto.jpg',            caption: 'Suíte' },
@@ -86,6 +82,8 @@ window.LISTINGS = {
       { src: 'images/listings/urbanova-paratehy/31_quarto_kids.jpg',       caption: 'Quarto Infantil' },
 
       /* — OUTROS AMBIENTES — */
+      { src: 'images/listings/urbanova-paratehy/29_banheiro_3d.jpg',       caption: 'Banheiro · Detalhes' },
+      { src: 'images/listings/urbanova-paratehy/06_banheiro.jpg',          caption: 'Banheiro Suíte' },
       { src: 'images/listings/urbanova-paratehy/07_escritorio.jpg',        caption: 'Escritório' },
       { src: 'images/listings/urbanova-paratehy/30_escritorio_armarios.jpg', caption: 'Escritório · Armários' },
       { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',            caption: 'Sala de Cinema' }
