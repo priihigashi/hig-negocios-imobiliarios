@@ -41,11 +41,51 @@ window.LISTINGS = {
     q: '4', b: '6', v: '4',
     suites: '4',
     badge: 'Destaque · Mobiliada',
-    cover: 'images/site_property_gallery_01.jpg',
+    cover: 'images/urb_cover.jpg',
     photos: [
-      { src: 'images/site_property_gallery_01.jpg', caption: 'Fachada Principal' },
-      { src: 'images/site_property_gallery_02.jpg', caption: 'Sala de Estar' },
-      { src: 'images/site_property_gallery_03.jpg', caption: 'Área Externa' }
+      /* — FACHADA — */
+      { src: 'images/urb_01_fachada.jpg',        caption: 'Fachada Principal' },
+      { src: 'images/urb_00_fachada_2.jpg',       caption: 'Fachada · Ângulo 2' },
+
+      /* — HALL DE ENTRADA — double-height entry hall + crystal chandelier */
+      { src: 'images/urb_21_extra_03.jpg',        caption: 'Hall de Entrada · Pé Direito Duplo' },
+      { src: 'images/urb_20_extra_02.jpg',        caption: 'Hall de Entrada · Lustre de Cristal' },
+
+      /* — SALA DE JANTAR — */
+      { src: 'images/urb_04_sala_jantar.jpg',     caption: 'Sala de Jantar' },
+
+      /* — COZINHA + ÁREA GOURMET EXTERNA (all grouped) — */
+      { src: 'images/urb_05_cozinha.jpg',         caption: 'Cozinha Gourmet' },
+      { src: 'images/urb_25_cozinha_pia.jpg',     caption: 'Cozinha · Vista Ampla' },
+      { src: 'images/urb_06_cozinha_2.jpg',       caption: 'Cozinha · Appliances' },
+      { src: 'images/urb_26_cozinha_fornos.jpg',  caption: 'Cozinha · Fornos' },
+      { src: 'images/urb_07_varanda.jpg',         caption: 'Área Gourmet · Pergolado' },
+      { src: 'images/urb_08_varanda_jantar.jpg',  caption: 'Área Gourmet · Mesa de Jantar' },
+      { src: 'images/urb_24_area_gourmet.jpg',    caption: 'Área Gourmet · Churrasqueira e Forno de Pizza' },
+
+      /* — PISCINA (all pool shots together) — */
+      { src: 'images/urb_09_piscina_noturna.jpg', caption: 'Piscina · Vista Noturna' },
+      { src: 'images/urb_23_extra_05.jpg',        caption: 'Piscina · Vista Crepuscular' },
+
+      /* — SUÍTE MASTER + BANHEIROS (all together: empty suite, bathrooms, then staged beds) — */
+      { src: 'images/urb_02_sala.jpg',            caption: 'Suíte Master · Ambiente' },
+      { src: 'images/urb_03_sala_2.jpg',          caption: 'Suíte Master · Painel TV' },
+      { src: 'images/urb_24_banheiro_shower_spa.jpg', caption: 'Banheiro · Acesso e Shower Spa' },
+      { src: 'images/urb_11_banheiro_master.jpg', caption: 'Suíte Master · Banheiro · Banheira' },
+      { src: 'images/urb_10_banheiro_spa.jpg',    caption: 'Banheiro Spa · Banheira + Área Molhada' },
+      { src: 'images/urb_22_extra_04.jpg',        caption: 'Lavabo em Ônix' },
+      { src: 'images/urb_15_suite_master_1.jpg',  caption: 'Suíte Master · Cama · Ângulo 1' },
+      { src: 'images/urb_16_suite_master_2.jpg',  caption: 'Suíte Master · Cama · Ângulo 2' },
+      { src: 'images/urb_17_suite_master_3.jpg',  caption: 'Suíte Master · Cama · Ângulo 3' },
+
+      /* — QUARTO KIDS — */
+      { src: 'images/urb_18_quarto_kids.jpg',     caption: 'Quarto Kids' },
+
+      /* — OUTROS AMBIENTES — */
+      { src: 'images/urb_12_escritorio.jpg',      caption: 'Escritório' },
+      { src: 'images/urb_13_closet.jpg',          caption: 'Closet · Armários' },
+      { src: 'images/urb_14_cinema.jpg',          caption: 'Sala de Cinema' },
+      { src: 'images/urb_19_extra_01.jpg',        caption: 'Detalhe · Claraboia' }
     ],
     desc: 'Casa de alto padrão em condomínio fechado nas Colinas do Paratehy Sul. 510 m² construídos · 600 m² de terreno · 4 suítes (master 88 m² com closet e banheira dupla) · sala cinema · lareira suspensa · cozinha gourmet · piscina · biometria · cisterna 8.000L. Mobiliada · venda porteira fechada.',
     descParas: [
