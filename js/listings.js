@@ -49,6 +49,7 @@ window.LISTINGS = {
 
       /* — HALL DE ENTRADA — */
       { src: 'images/listings/urbanova-paratehy/02_hall.jpg',              caption: 'Hall de Entrada' },
+      { src: 'images/listings/urbanova-paratehy/32_extra_03_nb2.jpg',      caption: 'Sala de Estar · Vista Geral' },
 
       /* — COZINHA INTERNA — */
       { src: 'images/listings/urbanova-paratehy/18_cozinha_2.jpg',         caption: 'Cozinha Interna · Integração com Sala' },
@@ -65,6 +66,7 @@ window.LISTINGS = {
       /* — PISCINA — */
       { src: 'images/listings/urbanova-paratehy/09_piscina.jpg',           caption: 'Piscina' },
       { src: 'images/listings/urbanova-paratehy/15_piscina_noturna.jpg',   caption: 'Fachada Posterior · Piscina' },
+      { src: 'images/listings/urbanova-paratehy/34_extra_05_nb2.jpg',      caption: 'Piscina · Vista Exterior' },
 
       /* — SUÍTE MASTER + BANHEIROS — */
       { src: 'images/listings/urbanova-paratehy/10_varanda.jpg',           caption: 'Suíte Master · Varanda' },
@@ -86,6 +88,7 @@ window.LISTINGS = {
       { src: 'images/listings/urbanova-paratehy/06_banheiro.jpg',          caption: 'Banheiro Suíte' },
       { src: 'images/listings/urbanova-paratehy/07_escritorio.jpg',        caption: 'Escritório' },
       { src: 'images/listings/urbanova-paratehy/30_escritorio_armarios.jpg', caption: 'Escritório · Armários' },
+      { src: 'images/listings/urbanova-paratehy/33_extra_04_nb2.jpg',      caption: 'Lavabo · Ônix Importado' },
       { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',            caption: 'Sala de Cinema' }
 
     ],
