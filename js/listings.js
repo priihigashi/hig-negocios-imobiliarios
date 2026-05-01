@@ -35,12 +35,12 @@ window.LISTINGS = {
     location: 'São José dos Campos, SP',
     locationFull: 'Urbanova, São José dos Campos — SP',
     price: 'Sob consulta',
-    priceNote: 'Entre em contato para informações · Mobiliada · Venda porteira fechada',
+    priceNote: 'Entre em contato para informações · Venda porteira fechada',
     area: '510',
     terrain: '600',
     q: '4', b: '6', v: '4',
     suites: '4',
-    badge: 'Destaque · Mobiliada',
+    badge: 'Destaque',
     cover: 'images/listings/urbanova-paratehy/01_fachada.jpg',
     photos: [
       /* — FACHADA — */
@@ -92,7 +92,7 @@ window.LISTINGS = {
       { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',            caption: 'Sala de Cinema' }
 
     ],
-    desc: 'Casa de alto padrão em condomínio fechado nas Colinas do Paratehy Sul. 510 m² construídos · 600 m² de terreno · 4 suítes (master 88 m² com closet e banheira dupla) · sala cinema · lareira suspensa · cozinha gourmet · piscina · biometria · cisterna 8.000L. Mobiliada · venda porteira fechada.',
+    desc: 'Casa de alto padrão em condomínio fechado nas Colinas do Paratehy Sul. 510 m² construídos · 600 m² de terreno · 4 suítes (master 88 m² com closet e banheira dupla) · sala cinema · lareira suspensa · cozinha gourmet · piscina · biometria · cisterna 8.000L. Venda porteira fechada.',
     descParas: [
       'Casa em condomínio localizada no Urbanova, em São José dos Campos — bairro estrategicamente próximo a comércios, escolas, shoppings e às principais vias de acesso da cidade.',
       'Projeto de alto padrão com 600m² de terreno, 510m² de área construída e 50m² de terraço. Quatro suítes com varandas, sendo a master de 88m² com closet e banheira dupla. Sala de estar com pé direito duplo de 7 metros, sala íntima, sala de jantar, sala de cinema, escritório e lareira suspensa.',
@@ -133,7 +133,7 @@ window.LISTINGS = {
     area: '257',
     terrain: '540',
     q: '3', b: '4', v: '4',
-    badge: 'Mobiliada · Pronta',
+    badge: 'Pronta',
     cover: 'images/listings/eco-park-cacapava/01_fachada.jpg',
     photos: [
       /* — FACHADA — */
@@ -149,7 +149,7 @@ window.LISTINGS = {
       { src: 'images/listings/eco-park-cacapava/10_quarto_2.jpg',      caption: 'Suíte Master' },
       { src: 'images/listings/eco-park-cacapava/11_quarto_3.jpg',      caption: 'Suíte' }
     ],
-    desc: 'Casa de alto padrão totalmente mobiliada no Condomínio Eco Park Bourbon. 257 m² construídos · 540 m² de terreno · 3 suítes (master com closet) · automação completa · piscina privativa · escritório · sala pé-direito duplo · cozinha moderna · área gourmet. Pronta para morar.',
+    desc: 'Casa de alto padrão no Condomínio Eco Park Bourbon. 257 m² construídos · 540 m² de terreno · 3 suítes (master com closet) · automação completa · piscina privativa · escritório · sala pé-direito duplo · cozinha moderna · área gourmet. Pronta para morar.',
     wa: 'Olá! Tenho interesse na Casa do Eco Park em Caçapava (R$ 3.000.000). Podemos agendar uma visita?',
     listed: true
   },
