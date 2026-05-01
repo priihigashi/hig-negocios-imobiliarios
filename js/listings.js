@@ -50,8 +50,7 @@ window.LISTINGS = {
       /* — HALL DE ENTRADA — */
       { src: 'images/listings/urbanova-paratehy/02_hall.jpg',              caption: 'Hall de Entrada' },
 
-      /* — SALA DE JANTAR + VARANDA — */
-      { src: 'images/listings/urbanova-paratehy/10_varanda.jpg',           caption: 'Vista da Varanda · Saída da Sala' },
+      /* — SALA DE JANTAR — */
       { src: 'images/listings/urbanova-paratehy/04_sala_jantar.jpg',       caption: 'Sala de Jantar' },
 
       /* — COZINHA INTERNA — */
@@ -70,6 +69,7 @@ window.LISTINGS = {
       { src: 'images/listings/urbanova-paratehy/15_piscina_noturna.jpg',   caption: 'Fachada Posterior · Piscina' },
 
       /* — SUÍTE MASTER + BANHEIROS — */
+      { src: 'images/listings/urbanova-paratehy/10_varanda.jpg',           caption: 'Suíte Master · Varanda' },
       { src: 'images/listings/urbanova-paratehy/03_sala.jpg',              caption: 'Suíte Master · Ambiente' },
       { src: 'images/listings/urbanova-paratehy/12_sala_2.jpg',            caption: 'Suíte Master · Painel TV' },
       { src: 'images/listings/urbanova-paratehy/13_banheiro_master.jpg',   caption: 'Suíte Master · Banheira' },
