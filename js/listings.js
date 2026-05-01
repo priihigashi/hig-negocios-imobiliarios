@@ -41,51 +41,55 @@ window.LISTINGS = {
     q: '4', b: '6', v: '4',
     suites: '4',
     badge: 'Destaque · Mobiliada',
-    cover: 'images/urb_cover.jpg',
+    cover: 'images/listings/urbanova-paratehy/01_fachada.jpg',
     photos: [
       /* — FACHADA — */
-      { src: 'images/urb_01_fachada.jpg',        caption: 'Fachada Principal' },
-      { src: 'images/urb_00_fachada_2.jpg',       caption: 'Fachada · Ângulo 2' },
+      { src: 'images/listings/urbanova-paratehy/01_fachada.jpg',          caption: 'Fachada Principal' },
+      { src: 'images/listings/urbanova-paratehy/11_fachada_2.jpg',         caption: 'Fachada · Vista Frontal 2' },
 
-      /* — HALL DE ENTRADA — double-height entry hall + crystal chandelier */
-      { src: 'images/urb_21_extra_03.jpg',        caption: 'Hall de Entrada · Pé Direito Duplo' },
-      { src: 'images/urb_20_extra_02.jpg',        caption: 'Hall de Entrada · Lustre de Cristal' },
+      /* — HALL DE ENTRADA — */
+      { src: 'images/listings/urbanova-paratehy/02_hall.jpg',              caption: 'Hall de Entrada' },
 
-      /* — SALA DE JANTAR — */
-      { src: 'images/urb_04_sala_jantar.jpg',     caption: 'Sala de Jantar' },
+      /* — SALA DE JANTAR + VARANDA — */
+      { src: 'images/listings/urbanova-paratehy/10_varanda.jpg',           caption: 'Vista da Varanda · Saída da Sala' },
+      { src: 'images/listings/urbanova-paratehy/04_sala_jantar.jpg',       caption: 'Sala de Jantar' },
 
-      /* — COZINHA + ÁREA GOURMET EXTERNA (all grouped) — */
-      { src: 'images/urb_05_cozinha.jpg',         caption: 'Cozinha Gourmet' },
-      { src: 'images/urb_25_cozinha_pia.jpg',     caption: 'Cozinha · Vista Ampla' },
-      { src: 'images/urb_06_cozinha_2.jpg',       caption: 'Cozinha · Appliances' },
-      { src: 'images/urb_26_cozinha_fornos.jpg',  caption: 'Cozinha · Fornos' },
-      { src: 'images/urb_07_varanda.jpg',         caption: 'Área Gourmet · Pergolado' },
-      { src: 'images/urb_08_varanda_jantar.jpg',  caption: 'Área Gourmet · Mesa de Jantar' },
-      { src: 'images/urb_24_area_gourmet.jpg',    caption: 'Área Gourmet · Churrasqueira e Forno de Pizza' },
+      /* — COZINHA INTERNA — */
+      { src: 'images/listings/urbanova-paratehy/18_cozinha_2.jpg',         caption: 'Cozinha Interna · Integração com Sala' },
+      { src: 'images/listings/urbanova-paratehy/24_cozinha_interna_pia.jpg', caption: 'Cozinha Interna · Pia e Bancada' },
+      { src: 'images/listings/urbanova-paratehy/25_cozinha_interna_fornos.jpg', caption: 'Cozinha Interna · Fornos Embutidos' },
 
-      /* — PISCINA (all pool shots together) — */
-      { src: 'images/urb_09_piscina_noturna.jpg', caption: 'Piscina · Vista Noturna' },
-      { src: 'images/urb_23_extra_05.jpg',        caption: 'Piscina · Vista Crepuscular' },
+      /* — ÁREA GOURMET EXTERNA — */
+      { src: 'images/listings/urbanova-paratehy/05_cozinha.jpg',           caption: 'Área Gourmet · Cozinha Externa' },
+      { src: 'images/listings/urbanova-paratehy/16_area_gourmet.jpg',      caption: 'Área Gourmet' },
+      { src: 'images/listings/urbanova-paratehy/17_varanda_2.jpg',         caption: 'Varanda · Pergolado' },
+      { src: 'images/listings/urbanova-paratehy/27_varanda_jantar.jpg',    caption: 'Varanda · Mesa de Jantar' },
 
-      /* — SUÍTE MASTER + BANHEIROS (all together: empty suite, bathrooms, then staged beds) — */
-      { src: 'images/urb_02_sala.jpg',            caption: 'Suíte Master · Ambiente' },
-      { src: 'images/urb_03_sala_2.jpg',          caption: 'Suíte Master · Painel TV' },
-      { src: 'images/urb_24_banheiro_shower_spa.jpg', caption: 'Banheiro · Acesso e Shower Spa' },
-      { src: 'images/urb_11_banheiro_master.jpg', caption: 'Suíte Master · Banheiro · Banheira' },
-      { src: 'images/urb_10_banheiro_spa.jpg',    caption: 'Banheiro Spa · Banheira + Área Molhada' },
-      { src: 'images/urb_22_extra_04.jpg',        caption: 'Lavabo em Ônix' },
-      { src: 'images/urb_15_suite_master_1.jpg',  caption: 'Suíte Master · Cama · Ângulo 1' },
-      { src: 'images/urb_16_suite_master_2.jpg',  caption: 'Suíte Master · Cama · Ângulo 2' },
-      { src: 'images/urb_17_suite_master_3.jpg',  caption: 'Suíte Master · Cama · Ângulo 3' },
+      /* — PISCINA — */
+      { src: 'images/listings/urbanova-paratehy/09_piscina.jpg',           caption: 'Piscina' },
+      { src: 'images/listings/urbanova-paratehy/15_piscina_noturna.jpg',   caption: 'Fachada Posterior · Piscina' },
 
-      /* — QUARTO KIDS — */
-      { src: 'images/urb_18_quarto_kids.jpg',     caption: 'Quarto Kids' },
+      /* — SUÍTE MASTER + BANHEIROS — */
+      { src: 'images/listings/urbanova-paratehy/03_sala.jpg',              caption: 'Suíte Master · Ambiente' },
+      { src: 'images/listings/urbanova-paratehy/12_sala_2.jpg',            caption: 'Suíte Master · Painel TV' },
+      { src: 'images/listings/urbanova-paratehy/13_banheiro_master.jpg',   caption: 'Suíte Master · Banheira' },
+      { src: 'images/listings/urbanova-paratehy/28_banheiro_master_passagem.jpg', caption: 'Banheiro Master · Acesso' },
+      { src: 'images/listings/urbanova-paratehy/29_banheiro_3d.jpg',       caption: 'Banheiro · Detalhes' },
+      { src: 'images/listings/urbanova-paratehy/22_banheiro_spa.jpg',      caption: 'Banheiro · Spa' },
+      { src: 'images/listings/urbanova-paratehy/23_banheiro_jacuzzi.jpg',  caption: 'Suíte · Jacuzzi' },
+      { src: 'images/listings/urbanova-paratehy/06_banheiro.jpg',          caption: 'Banheiro Suíte' },
+
+      /* — QUARTOS — */
+      { src: 'images/listings/urbanova-paratehy/14_quarto.jpg',            caption: 'Suíte' },
+      { src: 'images/listings/urbanova-paratehy/20_quarto_2.jpg',          caption: 'Suíte 2' },
+      { src: 'images/listings/urbanova-paratehy/21_quarto_3.jpg',          caption: 'Suíte 3' },
+      { src: 'images/listings/urbanova-paratehy/31_quarto_kids.jpg',       caption: 'Quarto Infantil' },
 
       /* — OUTROS AMBIENTES — */
-      { src: 'images/urb_12_escritorio.jpg',      caption: 'Escritório' },
-      { src: 'images/urb_13_closet.jpg',          caption: 'Closet · Armários' },
-      { src: 'images/urb_14_cinema.jpg',          caption: 'Sala de Cinema' },
-      { src: 'images/urb_19_extra_01.jpg',        caption: 'Detalhe · Claraboia' }
+      { src: 'images/listings/urbanova-paratehy/07_escritorio.jpg',        caption: 'Escritório' },
+      { src: 'images/listings/urbanova-paratehy/30_escritorio_armarios.jpg', caption: 'Escritório · Armários' },
+      { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',            caption: 'Sala de Cinema' }
+
     ],
     desc: 'Casa de alto padrão em condomínio fechado nas Colinas do Paratehy Sul. 510 m² construídos · 600 m² de terreno · 4 suítes (master 88 m² com closet e banheira dupla) · sala cinema · lareira suspensa · cozinha gourmet · piscina · biometria · cisterna 8.000L. Mobiliada · venda porteira fechada.',
     descParas: [
@@ -129,9 +133,24 @@ window.LISTINGS = {
     terrain: '540',
     q: '3', b: '4', v: '4',
     badge: 'Mobiliada · Pronta',
-    cover: 'images/site_listing_card_06.jpg',
+    cover: 'images/listings/eco-park-cacapava/01_fachada.jpg',
     photos: [
-      { src: 'images/site_listing_card_06.jpg', caption: 'Fachada' }
+      { src: 'images/listings/eco-park-cacapava/01_fachada.jpg',    caption: 'Fachada Principal' },
+      { src: 'images/listings/eco-park-cacapava/04_video_8572.jpg', caption: 'Área Gourmet' },
+      { src: 'images/listings/eco-park-cacapava/05_video_8573.jpg', caption: 'Piscina' },
+      { src: 'images/listings/eco-park-cacapava/06_video_8575.jpg', caption: 'Área Gourmet · Ângulo 2' },
+      { src: 'images/listings/eco-park-cacapava/07_video_8576.jpg', caption: 'Piscina · Vista Lateral' },
+      { src: 'images/listings/eco-park-cacapava/08_video_8581.jpg', caption: 'Banheiro' },
+      { src: 'images/listings/eco-park-cacapava/09_img8179.jpg',    caption: 'Área Social Integrada' },
+      { src: 'images/listings/eco-park-cacapava/10_quarto_2.jpg',   caption: 'Suíte 2' },
+      { src: 'images/listings/eco-park-cacapava/03_quarto.jpg',     caption: 'Suíte Master' },
+      { src: 'images/listings/eco-park-cacapava/11_quarto_3.jpg',   caption: 'Suíte Master · Ângulo 2' },
+      { src: 'images/listings/eco-park-cacapava/12_interior_a.jpg', caption: 'Interior · Ambiente A' },
+      { src: 'images/listings/eco-park-cacapava/13_interior_b.jpg', caption: 'Interior · Ambiente B' },
+      { src: 'images/listings/eco-park-cacapava/14_interior_c.jpg', caption: 'Interior · Ambiente C' },
+      { src: 'images/listings/eco-park-cacapava/15_interior_d.jpg', caption: 'Interior · Ambiente D' },
+      { src: 'images/listings/eco-park-cacapava/16_interior_8573.jpg', caption: 'Interior · Detalhe 8573' },
+      { src: 'images/listings/eco-park-cacapava/17_interior_8576.jpg', caption: 'Interior · Detalhe 8576' }
     ],
     desc: 'Casa de alto padrão totalmente mobiliada no Condomínio Eco Park Bourbon. 257 m² construídos · 540 m² de terreno · 3 suítes (master com closet) · automação completa · piscina privativa · escritório · sala pé-direito duplo · cozinha moderna · área gourmet. Pronta para morar.',
     wa: 'Olá! Tenho interesse na Casa do Eco Park em Caçapava (R$ 3.000.000). Podemos agendar uma visita?',
