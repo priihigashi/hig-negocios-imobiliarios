@@ -43,54 +43,36 @@ window.LISTINGS = {
     badge: 'Destaque',
     cover: 'images/listings/urbanova-paratehy/01_fachada.jpg',
     photos: [
-      /* — FACHADA — */
       { src: 'images/listings/urbanova-paratehy/01_fachada.jpg',          caption: 'Fachada Principal' },
-      { src: 'images/listings/urbanova-paratehy/11_fachada_2.jpg',         caption: 'Fachada · Vista Frontal 2' },
-
-      /* — HALL DE ENTRADA — */
-      { src: 'images/listings/urbanova-paratehy/02_hall.jpg',              caption: 'Hall de Entrada' },
-      { src: 'images/listings/urbanova-paratehy/32_extra_03_nb2.jpg',      caption: 'Sala de Estar · Vista Geral' },
-
-      /* — COZINHA INTERNA — */
-      { src: 'images/listings/urbanova-paratehy/18_cozinha_2.jpg',         caption: 'Cozinha Interna · Integração com Sala' },
+      { src: 'images/listings/urbanova-paratehy/11_fachada_2.jpg',        caption: 'Fachada · Vista Frontal 2' },
+      { src: 'images/listings/urbanova-paratehy/02_hall.jpg',             caption: 'Hall de Entrada' },
+      { src: 'images/listings/urbanova-paratehy/03_sala.jpg',             caption: 'Sala de Estar' },
+      { src: 'images/listings/urbanova-paratehy/12_sala_2.jpg',           caption: 'Sala de Estar · Painel TV' },
+      { src: 'images/listings/urbanova-paratehy/27_varanda_jantar.jpg',   caption: 'Varanda · Vista da Sala (Porta Externa)' },
+      { src: 'images/listings/urbanova-paratehy/04_sala_jantar.jpg',      caption: 'Sala de Jantar' },
+      { src: 'images/listings/urbanova-paratehy/18_cozinha_2.jpg',        caption: 'Cozinha Interna · Integração com Sala' },
       { src: 'images/listings/urbanova-paratehy/24_cozinha_interna_pia.jpg', caption: 'Cozinha Interna · Pia e Bancada' },
       { src: 'images/listings/urbanova-paratehy/25_cozinha_interna_fornos.jpg', caption: 'Cozinha Interna · Fornos Embutidos' },
-      { src: 'images/listings/urbanova-paratehy/04_sala_jantar.jpg',       caption: 'Sala de Jantar' },
-
-      /* — ÁREA GOURMET EXTERNA — */
-      { src: 'images/listings/urbanova-paratehy/05_cozinha.jpg',           caption: 'Área Gourmet · Cozinha Externa' },
-      { src: 'images/listings/urbanova-paratehy/16_area_gourmet.jpg',      caption: 'Área Gourmet' },
-      { src: 'images/listings/urbanova-paratehy/27_varanda_jantar.jpg',    caption: 'Varanda · Mesa de Jantar' },
-      { src: 'images/listings/urbanova-paratehy/17_varanda_2.jpg',         caption: 'Varanda · Pergolado' },
-
-      /* — PISCINA — */
-      { src: 'images/listings/urbanova-paratehy/09_piscina.jpg',           caption: 'Piscina' },
-      { src: 'images/listings/urbanova-paratehy/15_piscina_noturna.jpg',   caption: 'Fachada Posterior · Piscina' },
-      { src: 'images/listings/urbanova-paratehy/34_extra_05_nb2.jpg',      caption: 'Piscina · Vista Exterior' },
-
-      /* — SUÍTE MASTER + BANHEIROS — */
-      { src: 'images/listings/urbanova-paratehy/10_varanda.jpg',           caption: 'Suíte Master · Varanda' },
-      { src: 'images/listings/urbanova-paratehy/03_sala.jpg',              caption: 'Suíte Master · Ambiente' },
-      { src: 'images/listings/urbanova-paratehy/12_sala_2.jpg',            caption: 'Suíte Master · Painel TV' },
-      { src: 'images/listings/urbanova-paratehy/13_banheiro_master.jpg',   caption: 'Suíte Master · Banheira' },
+      { src: 'images/listings/urbanova-paratehy/26_cozinha_interna_ilha.jpg', caption: 'Cozinha Interna · Ilha Central' },
+      { src: 'images/listings/urbanova-paratehy/05_cozinha.jpg',          caption: 'Área Gourmet · Cozinha Externa' },
+      { src: 'images/listings/urbanova-paratehy/16_area_gourmet.jpg',     caption: 'Área Gourmet' },
+      { src: 'images/listings/urbanova-paratehy/17_varanda_2.jpg',        caption: 'Varanda · Pergolado' },
+      { src: 'images/listings/urbanova-paratehy/09_piscina.jpg',          caption: 'Piscina' },
+      { src: 'images/listings/urbanova-paratehy/15_piscina_noturna.jpg',  caption: 'Fachada Posterior · Piscina' },
+      { src: 'images/listings/urbanova-paratehy/10_varanda.jpg',          caption: 'Suíte Master · Varanda' },
+      { src: 'images/listings/urbanova-paratehy/14_quarto.jpg',           caption: 'Suíte Master · Quarto' },
+      { src: 'images/listings/urbanova-paratehy/13_banheiro_master.jpg',  caption: 'Suíte Master · Banheira' },
       { src: 'images/listings/urbanova-paratehy/28_banheiro_master_passagem.jpg', caption: 'Banheiro Master · Acesso' },
-      { src: 'images/listings/urbanova-paratehy/22_banheiro_spa.jpg',      caption: 'Banheiro · Spa' },
-      { src: 'images/listings/urbanova-paratehy/23_banheiro_jacuzzi.jpg',  caption: 'Suíte · Jacuzzi' },
-
-      /* — QUARTOS — */
-      { src: 'images/listings/urbanova-paratehy/14_quarto.jpg',            caption: 'Suíte' },
-      { src: 'images/listings/urbanova-paratehy/20_quarto_2.jpg',          caption: 'Suíte 2' },
-      { src: 'images/listings/urbanova-paratehy/21_quarto_3.jpg',          caption: 'Suíte 3' },
-      { src: 'images/listings/urbanova-paratehy/31_quarto_kids.jpg',       caption: 'Quarto Infantil' },
-
-      /* — OUTROS AMBIENTES — */
-      { src: 'images/listings/urbanova-paratehy/29_banheiro_3d.jpg',       caption: 'Banheiro · Detalhes' },
-      { src: 'images/listings/urbanova-paratehy/06_banheiro.jpg',          caption: 'Banheiro Suíte' },
-      { src: 'images/listings/urbanova-paratehy/07_escritorio.jpg',        caption: 'Escritório' },
+      { src: 'images/listings/urbanova-paratehy/22_banheiro_spa.jpg',     caption: 'Banheiro · Spa' },
+      { src: 'images/listings/urbanova-paratehy/23_banheiro_jacuzzi.jpg', caption: 'Banheiro · Jacuzzi' },
+      { src: 'images/listings/urbanova-paratehy/20_quarto_2.jpg',         caption: 'Suíte 2' },
+      { src: 'images/listings/urbanova-paratehy/29_banheiro_3d.jpg',      caption: 'Banheiro · Detalhes' },
+      { src: 'images/listings/urbanova-paratehy/31_quarto_kids.jpg',      caption: 'Quarto Infantil · Vista TV' },
+      { src: 'images/listings/urbanova-paratehy/21_quarto_3.jpg',         caption: 'Quarto Infantil · Vista Cama' },
+      { src: 'images/listings/urbanova-paratehy/06_banheiro.jpg',         caption: 'Banheiro Suíte' },
+      { src: 'images/listings/urbanova-paratehy/07_escritorio.jpg',       caption: 'Escritório' },
       { src: 'images/listings/urbanova-paratehy/30_escritorio_armarios.jpg', caption: 'Escritório · Armários' },
-      { src: 'images/listings/urbanova-paratehy/33_extra_04_nb2.jpg',      caption: 'Lavabo · Ônix Importado' },
-      { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',            caption: 'Sala de Cinema' }
-
+      { src: 'images/listings/urbanova-paratehy/08_cinema.jpg',           caption: 'Sala de Cinema' }
     ],
     desc: 'Casa de alto padrão em condomínio fechado nas Colinas do Paratehy Sul. 510 m² construídos · 600 m² de terreno · 4 suítes (master 88 m² com closet e banheira dupla) · sala cinema · lareira suspensa · cozinha gourmet · piscina · biometria · cisterna 8.000L. Venda porteira fechada.',
     descParas: [
