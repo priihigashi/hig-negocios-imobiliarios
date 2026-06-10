@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Abertura — Hig Negócios Imobiliários</title>
+<meta name="description" content="Abertura animada (intro/loading) do site Hig Negócios Imobiliários — Vale do Paraíba.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* Intro / loading opening — inspo: Loft Garden (loading) + Studio Messa (video intro).
+   Ken-Burns hero (video feel) + brand mask-reveal + 0–100 counter + curtain lift.
+   Reduced-motion safe. Standalone Labs experiment. */
+:root{--ink:#100b04;--paper:#f3ead8;--gold:#c9a96e;--muted:#9a8a73}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--paper);overflow:hidden}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Cormorant Garamond',serif;font-weight:300}
+
+/* STAGE (the "video" — slow ken-burns hero) */
+.stage{position:fixed;inset:0;overflow:hidden}
+.stage-bg{position:absolute;inset:0;background:url('images/site_home_hero.jpg') center/cover;transform:scale(1.0);animation:kb 14s ease-out forwards}
+@keyframes kb{from{transform:scale(1.0)}to{transform:scale(1.12)}}
+.stage-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,11,4,.45),rgba(16,11,4,.30) 45%,rgba(16,11,4,.78))}
+
+/* CURTAIN (loader overlay that lifts away) */
+.curtain{position:fixed;inset:0;z-index:20;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform 1.1s cubic-bezier(.76,0,.24,1)}
+.curtain.lift{transform:translateY(-100%)}
+.brand-mask{overflow:hidden;padding:.1em 0}
+.brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.8rem,5vw,3.6rem);letter-spacing:.16em;text-transform:uppercase;color:var(--paper);transform:translateY(110%);animation:rise 1.1s cubic-bezier(.22,.61,.36,1) .25s forwards}
+.brand b{font-weight:300;color:var(--gold)}
+.brand-sub{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);opacity:0;animation:fade 1s ease 1s forwards}
+@keyframes rise{to{transform:translateY(0)}}
+@keyframes fade{to{opacity:1}}
+.loader{position:absolute;left:0;bottom:0;width:100%;padding:0 44px 34px;display:flex;align-items:flex-end;justify-content:space-between}
+.count{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,12vw,8rem);font-weight:300;line-height:.8;color:var(--paper)}
+.count small{font-size:.9rem;color:var(--gold);vertical-align:super}
+.loadbar{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--gold)}
+.loadword{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
+
+/* REVEALED CONTENT (after curtain lifts) */
+.reveal{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;justify-content:flex-end;padding:0 56px 12vh;opacity:0;transition:opacity 1s ease .4s}
+.reveal.show{opacity:1}
+.reveal .eyebrow{font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.reveal h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.4rem,6vw,5rem);line-height:1.05;max-width:760px;margin-bottom:1.6rem}
+.reveal h1 i{font-style:italic;color:#e0c894}
+.reveal-actions{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}
+.btn-fill{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ink);background:var(--paper);padding:1rem 2.2rem;border-radius:40px;transition:.25s}
+.btn-fill:hover{background:var(--gold)}
+.btn-line{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--paper);border-bottom:1px solid var(--gold);padding-bottom:4px}
+.skip{position:fixed;top:24px;right:34px;z-index:30;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(243,234,216,.6);cursor:pointer}
+.skip:hover{color:var(--paper)}
+@media(max-width:760px){.reveal{padding:0 22px 14vh}.loader{padding:0 22px 26px}}
+@media(prefers-reduced-motion:reduce){
+  .stage-bg{animation:none;transform:scale(1.08)}
+  .curtain{display:none}
+  .reveal{opacity:1}
+}
+</style>
+</head>
+<body>
+<div class="stage"><div class="stage-bg"></div></div>
+
+<div class="reveal" id="reveal">
+  <span class="eyebrow">Hig Negócios · Vale do Paraíba</span>
+  <h1>Encontre o lar que <i>merece</i> a sua história</h1>
+  <div class="reveal-actions">
+    <a href="index-b.html" class="btn-fill">Entrar no site →</a>
+    <a href="labs.html" class="btn-line">Ver versões (Labs)</a>
+  </div>
+</div>
+
+<div class="curtain" id="curtain">
+  <div class="brand-mask"><div class="brand">Hig <b>Negócios</b> Imobiliários</div></div>
+  <div class="brand-sub">São José dos Campos · Vale do Paraíba</div>
+  <div class="loader">
+    <div class="loadword">Carregando</div>
+    <div class="count"><span id="num">0</span><small>%</small></div>
+  </div>
+  <div class="loadbar" id="loadbar"></div>
+</div>
+<div class="skip" id="skip">Pular intro</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var curtain=document.getElementById('curtain'), reveal=document.getElementById('reveal');
+  var num=document.getElementById('num'), bar=document.getElementById('loadbar');
+  function finish(){ curtain.classList.add('lift'); reveal.classList.add('show'); num.textContent='100'; bar.style.width='100%'; }
+  if(reduce){ finish(); return; }
+  var n=0;
+  var t=setInterval(function(){
+    n += Math.max(1, Math.round((100-n)/9));
+    if(n>=100){n=100; clearInterval(t); num.textContent=n; bar.style.width='100%'; setTimeout(finish, 350);}
+    else { num.textContent=n; bar.style.width=n+'%'; }
+  }, 90);
+  document.getElementById('skip').addEventListener('click', function(){ clearInterval(t); finish(); });
+})();
+</script>
+</body>
+</html>

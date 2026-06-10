@@ -36,8 +36,9 @@ a{color:inherit;text-decoration:none}
 /* STAGE */
 .stage{flex:1;display:flex;align-items:center}
 .swiper{width:100%;overflow:visible}
-.swiper-slide{width:min(720px,82vw);opacity:.32;transform:scale(.92);transition:opacity .6s ease,transform .6s ease}
-.swiper-slide-active{opacity:1;transform:scale(1)}
+.swiper-slide{width:min(720px,82vw);transform-origin:center center}
+/* scale/opacity set per-slide by JS from progress: center = big & bright,
+   sides = smaller & dimmer, growing smoothly as dragged to the middle */
 .gallery-img__wrapper{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;border-radius:14px;background:#0c0a06;box-shadow:0 30px 80px rgba(0,0,0,.45)}
 /* RULE: property photos crop toward the BOTTOM (pool, floor, furniture matter
    more than sky/ceiling). Bias object-position low; trim a little off the top. */
@@ -108,11 +109,26 @@ a{color:inherit;text-decoration:none}
 
   var bar=document.getElementById('bar'), cur=document.getElementById('cur');
   function prog(sw){var n=sw.realIndex+1;cur.textContent=String(n).padStart(2,'0');bar.style.width=(n/photos.length*100)+'%';}
+  function scaleSlides(sw){
+    sw.slides.forEach(function(s){
+      var p = Math.min(Math.max(s.progress, -1), 1);     // -1 .. 0 .. 1
+      var d = Math.abs(p);
+      s.style.transform = 'scale(' + (1 - d*0.22) + ')';  // center 1.0, sides 0.78
+      s.style.opacity   = (1 - d*0.6);                    // center 1.0, sides 0.4
+      s.style.zIndex    = String(Math.round((1-d)*10));
+    });
+  }
   new Swiper('#gal',{
-    parallax:true, centeredSlides:true, slidesPerView:'auto', spaceBetween:42,
-    speed:700, grabCursor:true, keyboard:{enabled:true}, mousewheel:{forceToAxis:true},
+    parallax:true, centeredSlides:true, slidesPerView:'auto', spaceBetween:48,
+    speed:700, grabCursor:true, watchSlidesProgress:true,
+    keyboard:{enabled:true}, mousewheel:{forceToAxis:true},
     navigation:{nextEl:'#next',prevEl:'#prev'},
-    on:{ init:prog, slideChange:function(){prog(this);} }
+    on:{
+      init:function(){ prog(this); scaleSlides(this); },
+      progress:function(){ scaleSlides(this); },
+      setTransition:function(dur){ this.slides.forEach(function(s){ s.style.transitionDuration = dur+'ms'; }); },
+      slideChange:function(){ prog(this); }
+    }
   });
 })();
 </script>
