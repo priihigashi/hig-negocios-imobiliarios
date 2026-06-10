@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Versão E — Hig Negócios Imobiliários</title>
+<meta name="description" content="Versão E (Ikon Property inspired) — clean, light, premium. Hig Negócios Imobiliários, São José dos Campos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Versão E — Ikon Property DNA applied to Hig Negócios
+   Light, clean, premium. Photography-forward. Attention to detail.
+   Inspo: ikonproperty.co.uk / webflow ikon-property-4bd950
+   ============================================================ */
+:root{
+  --bg:#f8f6f2;
+  --bg2:#f0ece4;
+  --ink:#1c1814;
+  --ink2:#3d3830;
+  --muted:#7a7068;
+  --gold:#c9a96e;
+  --gold2:#b8935a;
+  --line:rgba(28,24,20,.1);
+  --line2:rgba(28,24,20,.06);
+  --r:2px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+.serif{font-family:'Cormorant Garamond',serif}
+
+/* ---- UTIL ---- */
+.eyebrow{font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.9rem}
+.tag{display:inline-block;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;padding:.35rem .75rem;border:1px solid var(--line);color:var(--muted);border-radius:20px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:.22s all}
+.btn-dark{color:var(--bg);background:var(--ink);padding:.9rem 2rem;border-radius:var(--r)}
+.btn-dark:hover{background:var(--ink2)}
+.btn-gold{color:var(--bg);background:var(--gold);padding:.9rem 2rem;border-radius:var(--r)}
+.btn-gold:hover{background:var(--gold2)}
+.btn-ghost{color:var(--ink);border:1px solid var(--line);padding:.85rem 1.9rem;border-radius:var(--r)}
+.btn-ghost:hover{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+
+/* ---- NAV ---- */
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;transition:.4s background,.4s box-shadow;padding:0 5vw}
+nav.scrolled{background:rgba(248,246,242,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.1rem;letter-spacing:.12em;text-transform:uppercase}
+.nav-logo i{font-style:normal;color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:2.2rem}
+.nav-links a{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);opacity:.7;transition:.2s}
+.nav-links a:hover{opacity:1}
+.nav-cta{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--bg);background:var(--ink);padding:.6rem 1.4rem;border-radius:var(--r);transition:.2s}
+.nav-cta:hover{background:var(--gold);color:var(--bg)}
+@media(max-width:768px){.nav-links{display:none}.nav-cta{display:none}}
+
+/* ---- HERO ---- */
+.hero{position:relative;height:100svh;min-height:560px;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 80%;transform:scale(1.03)}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(28,24,20,.72) 0%,rgba(28,24,20,.20) 55%,rgba(28,24,20,.05) 100%)}
+.hero-content{position:relative;z-index:2;width:100%;padding:0 6vw 8vh}
+.hero-content .eyebrow{color:rgba(248,246,242,.65);margin-bottom:1.4rem}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.8rem,6.5vw,6rem);line-height:1;color:#f8f6f2;max-width:800px;margin-bottom:2rem}
+.hero-h1 em{font-style:italic;color:#e0c894}
+.hero-actions{display:flex;gap:1.1rem;flex-wrap:wrap}
+.hero-scroll{position:absolute;right:5vw;bottom:6vh;z-index:2;display:flex;flex-direction:column;align-items:center;gap:.7rem;color:rgba(248,246,242,.5);font-size:.52rem;letter-spacing:.24em;text-transform:uppercase}
+.hero-scroll span{width:1px;height:48px;background:linear-gradient(to bottom,rgba(201,169,110,.8),transparent);display:block}
+
+/* ---- BRAND STATEMENT ---- */
+.statement{padding:9rem 6vw;background:var(--bg);display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start;border-bottom:1px solid var(--line)}
+.statement-left .eyebrow{margin-bottom:0}
+.statement-right h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.9rem,3.8vw,3.4rem);line-height:1.15;color:var(--ink);margin-bottom:2rem}
+.statement-right h2 em{font-style:italic;color:var(--gold2)}
+.statement-right p{font-size:.9rem;line-height:1.8;color:var(--muted);max-width:520px}
+@media(max-width:768px){.statement{grid-template-columns:1fr;gap:2rem;padding:5rem 6vw}}
+
+/* ---- FEATURED PROPERTY ---- */
+.featured{background:var(--bg);padding:0 6vw 8rem}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;padding-top:5rem;border-top:1px solid var(--line)}
+.section-head h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.6rem,2.8vw,2.4rem)}
+.section-head a{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:3px;transition:.2s}
+.section-head a:hover{color:var(--gold);border-color:var(--gold)}
+.feat-card{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border:1px solid var(--line);overflow:hidden;border-radius:4px}
+.feat-img{position:relative;aspect-ratio:4/3;overflow:hidden}
+.feat-img img{width:100%;height:100%;object-fit:cover;object-position:center 80%;transition:transform .8s ease}
+.feat-card:hover .feat-img img{transform:scale(1.04)}
+.feat-body{padding:4rem 3.5rem;background:var(--bg2);display:flex;flex-direction:column;justify-content:space-between}
+.feat-tag{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.4rem}
+.feat-h{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.4rem,2.2vw,2rem);line-height:1.2;margin-bottom:.8rem}
+.feat-location{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:2.2rem}
+.feat-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;border-top:1px solid var(--line);padding-top:1.8rem;margin-bottom:2.4rem}
+.feat-spec-label{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.feat-spec-val{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300}
+.feat-price{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.8rem}
+@media(max-width:900px){.feat-card{grid-template-columns:1fr}.feat-img{aspect-ratio:16/9}.feat-body{padding:2.2rem}}
+
+/* ---- GRID ---- */
+.grid-section{padding:0 6vw 8rem;background:var(--bg)}
+.prop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+.prop-card{border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:.3s border-color}
+.prop-card:hover{border-color:rgba(201,169,110,.5)}
+.prop-img{position:relative;aspect-ratio:4/3;overflow:hidden}
+.prop-img img{width:100%;height:100%;object-fit:cover;object-position:center 80%;transition:transform .7s ease}
+.prop-card:hover .prop-img img{transform:scale(1.05)}
+.prop-img-tag{position:absolute;bottom:14px;left:14px}
+.prop-body{padding:1.6rem 1.4rem 1.8rem}
+.prop-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.12rem;line-height:1.25;margin-bottom:.4rem}
+.prop-loc{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
+.prop-meta{display:flex;gap:1.2rem;border-top:1px solid var(--line2);padding-top:.9rem}
+.prop-meta-item{font-size:.62rem;color:var(--muted)}
+.prop-meta-item b{color:var(--ink);font-weight:500}
+.prop-cta{display:flex;justify-content:space-between;align-items:center;margin-top:1.1rem;padding-top:.8rem;border-top:1px solid var(--line2)}
+.prop-price{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:var(--gold2)}
+.prop-link{font-size:.57rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);transition:.2s}
+.prop-link:hover{color:var(--ink)}
+@media(max-width:900px){.prop-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.prop-grid{grid-template-columns:1fr}}
+
+/* ---- STATS ---- */
+.stats{background:var(--ink);padding:5rem 6vw}
+.stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.stat-item{text-align:center}
+.stat-num{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.4rem,5vw,4rem);color:var(--bg);line-height:1}
+.stat-label{font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(248,246,242,.45);margin-top:.6rem}
+@media(max-width:700px){.stats-inner{grid-template-columns:1fr 1fr}}
+
+/* ---- BAIRROS ---- */
+.bairros{padding:7rem 6vw;border-bottom:1px solid var(--line)}
+.bairros-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3.5rem}
+.bairro-card{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:4px;cursor:default}
+.bairro-card img{width:100%;height:100%;object-fit:cover;object-position:center 80%;transition:transform .7s ease}
+.bairro-card:hover img{transform:scale(1.06)}
+.bairro-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(28,24,20,.7) 0%,rgba(28,24,20,.05) 60%)}
+.bairro-info{position:absolute;bottom:0;left:0;right:0;padding:1.4rem 1.2rem;z-index:1}
+.bairro-name{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.1rem;color:#f8f6f2;line-height:1.2}
+.bairro-desc{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(248,246,242,.6);margin-top:.3rem}
+@media(max-width:900px){.bairros-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.bairros-grid{grid-template-columns:1fr 1fr;gap:.8rem}.bairro-card{aspect-ratio:3/3.5}}
+
+/* ---- PROCESS ---- */
+.process{padding:7rem 6vw;background:var(--bg2);border-bottom:1px solid var(--line)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:4rem}
+.step{padding:2rem 0;border-top:2px solid var(--line)}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:1.1rem}
+.step-title{font-size:.78rem;font-weight:500;letter-spacing:.08em;margin-bottom:.7rem}
+.step-desc{font-size:.78rem;line-height:1.75;color:var(--muted)}
+@media(max-width:800px){.process-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.process-steps{grid-template-columns:1fr}}
+
+/* ---- AGENT ---- */
+.agent{padding:7rem 6vw;background:var(--bg);display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;border-bottom:1px solid var(--line)}
+.agent-img{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:4px}
+.agent-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.agent-body .eyebrow{margin-bottom:1.2rem}
+.agent-body h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.15;margin-bottom:1.4rem}
+.agent-body h2 em{font-style:italic;color:var(--gold2)}
+.agent-body p{font-size:.84rem;line-height:1.85;color:var(--muted);margin-bottom:2.5rem;max-width:420px}
+@media(max-width:768px){.agent{grid-template-columns:1fr}.agent-img{aspect-ratio:5/3}}
+
+/* ---- CTA STRIP ---- */
+.cta-strip{padding:7rem 6vw;background:var(--ink);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem}
+.cta-strip h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.6rem,3vw,2.8rem);color:var(--bg);max-width:520px;line-height:1.15}
+.cta-strip h2 em{font-style:italic;color:#e0c894}
+.cta-strip-actions{display:flex;gap:1rem;flex-wrap:wrap}
+
+/* ---- FOOTER ---- */
+footer{background:var(--ink2);padding:5rem 6vw 3rem;color:var(--bg)}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3.5rem;border-bottom:1px solid rgba(248,246,242,.1)}
+.footer-brand .nav-logo{font-size:1.05rem;margin-bottom:1rem;display:block}
+.footer-brand p{font-size:.74rem;line-height:1.8;color:rgba(248,246,242,.5);max-width:240px}
+.footer-col h3{font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(248,246,242,.4);margin-bottom:1.2rem}
+.footer-col a{display:block;font-size:.76rem;color:rgba(248,246,242,.65);margin-bottom:.6rem;transition:.2s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2.2rem;gap:1rem;flex-wrap:wrap}
+.footer-bottom p{font-size:.64rem;letter-spacing:.1em;color:rgba(248,246,242,.35)}
+@media(max-width:800px){.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:span 2}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+
+/* ---- REVEAL ANIMATION ---- */
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+[data-reveal].in{opacity:1;transform:none}
+[data-reveal="fade"]{transform:none}
+[data-reveal-delay="1"]{transition-delay:.1s}
+[data-reveal-delay="2"]{transition-delay:.2s}
+[data-reveal-delay="3"]{transition-delay:.3s}
+[data-reveal-delay="4"]{transition-delay:.4s}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index-e.html" class="nav-logo">Hig <i>Negócios</i></a>
+    <div class="nav-links">
+      <a href="#imoveis">Imóveis</a>
+      <a href="#bairros">Bairros</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#processo">Processo</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <a href="https://wa.me/5512999999999" class="nav-cta" target="_blank">Agendar visita</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="images/urb_cover.jpg" alt="Imóvel de alto padrão em São José dos Campos" loading="eager">
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow">São José dos Campos · Vale do Paraíba · SP</span>
+    <h1 class="hero-h1">Imóveis que contam <em>uma história</em><br>— a sua.</h1>
+    <div class="hero-actions">
+      <a href="#imoveis" class="btn btn-gold">Ver imóveis</a>
+      <a href="#sobre" class="btn btn-ghost" style="color:#f8f6f2;border-color:rgba(248,246,242,.3)">Quem somos →</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Explorar<span></span></div>
+</section>
+
+<!-- BRAND STATEMENT -->
+<section class="statement" id="sobre">
+  <div class="statement-left">
+    <span class="eyebrow">Nossa missão</span>
+  </div>
+  <div class="statement-right" data-reveal>
+    <h2>A Hig Negócios é uma imobiliária <em>orientada ao detalhe</em> — transformamos buscas em histórias de vida desde 2005.</h2>
+    <p>Atuamos com exclusividade no mercado de alto padrão de São José dos Campos e Vale do Paraíba. Cada imóvel é cuidadosamente curado, cada negociação é conduzida com transparência e cada cliente recebe atenção personalizada do primeiro contato ao fechamento.</p>
+  </div>
+</section>
+
+<!-- FEATURED PROPERTY -->
+<section class="featured" id="imoveis">
+  <div class="section-head" data-reveal>
+    <h2>Imóvel em destaque</h2>
+    <a href="imovel-b.html?id=urbanova-paratehy">Ver todos os imóveis →</a>
+  </div>
+  <div class="feat-card" data-reveal>
+    <div class="feat-img">
+      <img src="images/listings/urbanova-paratehy/01_fachada.jpg"
+           alt="Casa em Condomínio · Colinas do Paratehy Sul">
+    </div>
+    <div class="feat-body">
+      <div>
+        <div class="feat-tag">
+          <span class="tag">Residencial</span>
+          <span class="tag">Condomínio fechado</span>
+          <span class="tag">Venda</span>
+        </div>
+        <h3 class="feat-h">Casa em Condomínio<br>Colinas do Paratehy Sul</h3>
+        <p class="feat-location">Urbanova · São José dos Campos, SP</p>
+        <div class="feat-specs">
+          <div>
+            <p class="feat-spec-label">Área</p>
+            <p class="feat-spec-val">510<small style="font-size:.8rem;color:var(--muted)">m²</small></p>
+          </div>
+          <div>
+            <p class="feat-spec-label">Terreno</p>
+            <p class="feat-spec-val">600<small style="font-size:.8rem;color:var(--muted)">m²</small></p>
+          </div>
+          <div>
+            <p class="feat-spec-label">Quartos</p>
+            <p class="feat-spec-val">5</p>
+          </div>
+        </div>
+        <p class="feat-price">Preço sob consulta · Venda porteira fechada</p>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="imovel-b.html?id=urbanova-paratehy" class="btn btn-dark">Ver imóvel completo</a>
+        <a href="galeria-urbanova-2.html" class="btn btn-ghost">Galeria de fotos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTY GRID -->
+<section class="grid-section">
+  <div class="section-head" data-reveal>
+    <h2>Outros imóveis</h2>
+    <a href="imoveis-b.html">Ver catálogo completo →</a>
+  </div>
+  <div class="prop-grid" id="prop-grid">
+    <!-- populated by JS -->
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-item" data-reveal data-reveal-delay="1">
+      <p class="stat-num">20+</p>
+      <p class="stat-label">Anos no mercado</p>
+    </div>
+    <div class="stat-item" data-reveal data-reveal-delay="2">
+      <p class="stat-num">150+</p>
+      <p class="stat-label">Imóveis negociados</p>
+    </div>
+    <div class="stat-item" data-reveal data-reveal-delay="3">
+      <p class="stat-num">100+</p>
+      <p class="stat-label">Famílias atendidas</p>
+    </div>
+    <div class="stat-item" data-reveal data-reveal-delay="4">
+      <p class="stat-num">8</p>
+      <p class="stat-label">Bairros em SJC</p>
+    </div>
+  </div>
+</section>
+
+<!-- BAIRROS -->
+<section class="bairros" id="bairros">
+  <span class="eyebrow" data-reveal>Onde atuamos</span>
+  <h2 class="serif" style="font-weight:300;font-size:clamp(1.6rem,3vw,2.4rem);max-width:480px;line-height:1.2" data-reveal>Os bairros mais desejados de São José dos Campos</h2>
+  <div class="bairros-grid" data-reveal>
+    <div class="bairro-card">
+      <img src="images/prop_mansao.jpg" alt="Urbanova">
+      <div class="bairro-info"><p class="bairro-name">Urbanova</p><p class="bairro-desc">Colinas, vistas, condomínios fechados</p></div>
+    </div>
+    <div class="bairro-card">
+      <img src="images/prop_quinta.jpg" alt="Campos de São José">
+      <div class="bairro-info"><p class="bairro-name">Campos de São José</p><p class="bairro-desc">Tradição e exclusividade</p></div>
+    </div>
+    <div class="bairro-card">
+      <img src="images/prop_vale.jpg" alt="Vale dos Pinheiros">
+      <div class="bairro-info"><p class="bairro-name">Vale dos Pinheiros</p><p class="bairro-desc">Tranquilidade e natureza</p></div>
+    </div>
+    <div class="bairro-card">
+      <img src="images/prop_refugio.jpg" alt="Eugênio de Melo">
+      <div class="bairro-info"><p class="bairro-name">Eugênio de Melo</p><p class="bairro-desc">Em expansão, casas de charme</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="processo">
+  <span class="eyebrow" data-reveal>Como funciona</span>
+  <h2 class="serif" style="font-weight:300;font-size:clamp(1.6rem,3vw,2.4rem);max-width:480px;line-height:1.2" data-reveal>Quatro passos para o imóvel <em style="font-style:italic;color:var(--gold2)">certo</em></h2>
+  <div class="process-steps">
+    <div class="step" data-reveal data-reveal-delay="1">
+      <p class="step-num">01</p>
+      <p class="step-title">Consulta inicial</p>
+      <p class="step-desc">Entendemos o que você busca: perfil, localização, uso e orçamento. Sem pressa, com atenção total.</p>
+    </div>
+    <div class="step" data-reveal data-reveal-delay="2">
+      <p class="step-num">02</p>
+      <p class="step-title">Curadoria</p>
+      <p class="step-desc">Selecionamos apenas os imóveis que realmente fazem sentido para você — sem tempo perdido com visitas desnecessárias.</p>
+    </div>
+    <div class="step" data-reveal data-reveal-delay="3">
+      <p class="step-num">03</p>
+      <p class="step-title">Visita & análise</p>
+      <p class="step-desc">Acompanhamos cada visita. Avaliamos estrutura, documentação, potencial e valorizamos o que importa para você.</p>
+    </div>
+    <div class="step" data-reveal data-reveal-delay="4">
+      <p class="step-num">04</p>
+      <p class="step-title">Fechamento</p>
+      <p class="step-desc">Cuidamos da negociação e documentação. Nosso trabalho termina quando você está feliz na nova casa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT -->
+<section class="agent" id="contato">
+  <div class="agent-img" data-reveal="fade">
+    <img src="images/agent.jpg" alt="Alexandra Higashi — Hig Negócios Imobiliários">
+  </div>
+  <div class="agent-body" data-reveal>
+    <span class="eyebrow">Quem cuida do seu imóvel</span>
+    <h2>Alexandra Higashi — <em>20 anos</em> conectando famílias ao imóvel certo.</h2>
+    <p>Com mais de duas décadas de experiência exclusiva no mercado de alto padrão de São José dos Campos, Alexandra construiu uma reputação baseada em discrição, conhecimento profundo do mercado local e relacionamentos de longo prazo.</p>
+    <p style="font-size:.8rem;color:var(--muted);margin-bottom:0;margin-top:.4rem">CRECI · Atendimento por hora marcada</p>
+    <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
+      <a href="https://wa.me/5512999999999" class="btn btn-gold" target="_blank">WhatsApp</a>
+      <a href="sobre-b.html" class="btn btn-ghost">Saiba mais sobre nós</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <h2 data-reveal>Pronto para encontrar o imóvel que <em>merece a sua história</em>?</h2>
+  <div class="cta-strip-actions" data-reveal>
+    <a href="https://wa.me/5512999999999" class="btn btn-gold" target="_blank">Falar com Alexandra</a>
+    <a href="imoveis-b.html" class="btn btn-ghost" style="color:#f8f6f2;border-color:rgba(248,246,242,.25)">Ver catálogo</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo" style="color:#f8f6f2">Hig <i style="color:var(--gold)">Negócios</i></span>
+      <p>Imobiliária de alto padrão em São José dos Campos e Vale do Paraíba, SP. Atendimento exclusivo, curadoria cuidadosa.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Imóveis</h3>
+      <a href="imoveis-b.html">Ver catálogo</a>
+      <a href="imovel-b.html?id=urbanova-paratehy">Casa · Urbanova</a>
+      <a href="galeria-urbanova-2.html">Galeria de fotos</a>
+    </div>
+    <div class="footer-col">
+      <h3>Empresa</h3>
+      <a href="sobre-b.html">Sobre nós</a>
+      <a href="#processo">Como funciona</a>
+      <a href="contato-b.html">Contato</a>
+    </div>
+    <div class="footer-col">
+      <h3>Contato</h3>
+      <a href="https://wa.me/5512999999999" target="_blank">WhatsApp</a>
+      <a href="mailto:contato@hignegocios.com.br">E-mail</a>
+      <a href="#bairros">Bairros</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Hig Negócios Imobiliários · São José dos Campos, SP</p>
+    <p><a href="labs.html" style="color:rgba(248,246,242,.3);transition:.2s">Labs</a></p>
+  </div>
+</footer>
+
+<script src="js/listings.js"></script>
+<script>
+(function(){
+  /* NAV scroll */
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, {passive:true});
+
+  /* Property grid — show dummy cards from LISTINGS */
+  var grid = document.getElementById('prop-grid');
+  var order = window.LISTINGS_ORDER || Object.keys(window.LISTINGS);
+  var shown = 0;
+  order.forEach(function(slug){
+    if(shown >= 3) return;
+    var L = window.LISTINGS[slug];
+    if(!L) return;
+    shown++;
+    var card = document.createElement('div');
+    card.className = 'prop-card';
+    card.innerHTML =
+      '<div class="prop-img">'+
+        '<img src="'+(L.cover||'images/prop00.jpg')+'" alt="'+L.title+'" loading="lazy">'+
+        '<div class="prop-img-tag"><span class="tag">'+(L.category||'Residencial')+'</span></div>'+
+      '</div>'+
+      '<div class="prop-body">'+
+        '<h3 class="prop-title">'+L.title+'</h3>'+
+        '<p class="prop-loc">'+(L.location||'São José dos Campos')+'</p>'+
+        '<div class="prop-meta">'+
+          (L.area ? '<div class="prop-meta-item"><b>'+L.area+'</b> m²</div>' : '')+
+          (L.bedrooms ? '<div class="prop-meta-item"><b>'+L.bedrooms+'</b> quartos</div>' : '')+
+          (L.suites ? '<div class="prop-meta-item"><b>'+L.suites+'</b> suítes</div>' : '')+
+        '</div>'+
+        '<div class="prop-cta">'+
+          '<span class="prop-price">'+(L.price||'Sob consulta')+'</span>'+
+          (L.listed ? '<a class="prop-link" href="imovel-b.html?id='+slug+'">Ver detalhes →</a>' : '<a class="prop-link" href="https://wa.me/5512999999999" target="_blank">Consultar →</a>')+
+        '</div>'+
+      '</div>';
+    grid.appendChild(card);
+  });
+
+  /* Reveal on scroll */
+  var els = document.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.15});
+    els.forEach(function(el){io.observe(el);});
+  } else {
+    els.forEach(function(el){el.classList.add('in');});
+  }
+})();
+</script>
+</body>
+</html>
