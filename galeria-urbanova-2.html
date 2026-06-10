@@ -39,7 +39,9 @@ a{color:inherit;text-decoration:none}
 .swiper-slide{width:min(720px,82vw);opacity:.32;transform:scale(.92);transition:opacity .6s ease,transform .6s ease}
 .swiper-slide-active{opacity:1;transform:scale(1)}
 .gallery-img__wrapper{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;border-radius:14px;background:#0c0a06;box-shadow:0 30px 80px rgba(0,0,0,.45)}
-.gallery-img{position:absolute;top:0;left:-25%;width:150%;height:100%;object-fit:cover}
+/* RULE: property photos crop toward the BOTTOM (pool, floor, furniture matter
+   more than sky/ceiling). Bias object-position low; trim a little off the top. */
+.gallery-img{position:absolute;top:0;left:-25%;width:150%;height:100%;object-fit:cover;object-position:center 82%}
 .gallery-info{display:flex;align-items:center;justify-content:center;gap:.8rem;margin-top:1.4rem;opacity:0;transition:opacity .5s ease .1s}
 .swiper-slide-active .gallery-info{opacity:1}
 .eyebrow{flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:500}
