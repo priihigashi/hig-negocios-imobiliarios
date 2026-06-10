@@ -39,7 +39,7 @@ a{color:inherit;text-decoration:none}
 .swiper-slide{width:min(720px,82vw);transform-origin:center center}
 /* scale/opacity set per-slide by JS from progress: center = big & bright,
    sides = smaller & dimmer, growing smoothly as dragged to the middle */
-.gallery-img__wrapper{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;border-radius:14px;background:#0c0a06;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.gallery-img__wrapper{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;border-radius:14px;background:#0c0a06;box-shadow:0 30px 80px rgba(0,0,0,.45);transform-origin:center center}
 /* RULE: property photos crop toward the BOTTOM (pool, floor, furniture matter
    more than sky/ceiling). Bias object-position low; trim a little off the top. */
 .gallery-img{position:absolute;top:0;left:-25%;width:150%;height:100%;object-fit:cover;object-position:center 82%}
@@ -109,24 +109,27 @@ a{color:inherit;text-decoration:none}
 
   var bar=document.getElementById('bar'), cur=document.getElementById('cur');
   function prog(sw){var n=sw.realIndex+1;cur.textContent=String(n).padStart(2,'0');bar.style.width=(n/photos.length*100)+'%';}
+  // Match the original template: side image cards are 60% the size of the
+  // centered one (720x480 active vs 432x288 sides), full brightness, growing
+  // smoothly to 100% as a card is dragged to center. Scale the CARD, not the slide.
   function scaleSlides(sw){
     sw.slides.forEach(function(s){
-      var p = Math.min(Math.max(s.progress, -1), 1);     // -1 .. 0 .. 1
+      var p = Math.min(Math.max(s.progress, -1), 1);   // -1 .. 0 .. 1
       var d = Math.abs(p);
-      s.style.transform = 'scale(' + (1 - d*0.22) + ')';  // center 1.0, sides 0.78
-      s.style.opacity   = (1 - d*0.6);                    // center 1.0, sides 0.4
-      s.style.zIndex    = String(Math.round((1-d)*10));
+      var wrap = s.querySelector('.gallery-img__wrapper');
+      if(wrap) wrap.style.transform = 'scale(' + (1 - d*0.40) + ')'; // center 1.0 → sides 0.60
+      s.style.opacity = (1 - d*0.14);                   // stay bright like the original
     });
   }
   new Swiper('#gal',{
-    parallax:true, centeredSlides:true, slidesPerView:'auto', spaceBetween:48,
+    parallax:true, centeredSlides:true, slidesPerView:'auto', spaceBetween:24,
     speed:700, grabCursor:true, watchSlidesProgress:true,
     keyboard:{enabled:true}, mousewheel:{forceToAxis:true},
     navigation:{nextEl:'#next',prevEl:'#prev'},
     on:{
       init:function(){ prog(this); scaleSlides(this); },
       progress:function(){ scaleSlides(this); },
-      setTransition:function(dur){ this.slides.forEach(function(s){ s.style.transitionDuration = dur+'ms'; }); },
+      setTransition:function(dur){ this.slides.forEach(function(s){ var w=s.querySelector('.gallery-img__wrapper'); if(w) w.style.transitionDuration=dur+'ms'; s.style.transitionDuration=dur+'ms'; }); },
       slideChange:function(){ prog(this); }
     }
   });
