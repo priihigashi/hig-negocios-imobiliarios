@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Galeria — Casa em Condomínio · Colinas do Paratehy Sul | Hig Negócios</title>
+<meta name="description" content="Galeria imersiva com efeito parallax — Casa em Condomínio nas Colinas do Paratehy Sul, Urbanova, São José dos Campos. Hig Negócios Imobiliários.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<style>
+:root{--ink:#100b04;--paper:#f3ead8;--gold:#c9a96e;--muted:#9a8a73;--line:rgba(243,234,216,.16)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--paper);overflow:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Cormorant Garamond',serif;font-weight:300}
+
+/* TOP BAR */
+.topbar{position:fixed;top:0;left:0;width:100%;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;background:linear-gradient(180deg,rgba(16,11,4,.82),transparent)}
+.tb-left{display:flex;align-items:baseline;gap:1.2rem;min-width:0}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.logo i{font-style:normal;color:var(--gold)}
+.tb-prop{font-size:.74rem;letter-spacing:.06em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-prop b{color:var(--paper);font-weight:500}
+.tb-right{display:flex;align-items:center;gap:1.4rem;white-space:nowrap}
+.tb-link{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.tb-link:hover{color:var(--paper)}
+.tb-wa{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--ink);background:var(--gold);padding:.6rem 1.2rem;border-radius:40px;transition:.2s}
+.tb-wa:hover{background:var(--paper)}
+@media(max-width:760px){.topbar{padding:14px 18px}.tb-prop{display:none}.tb-link{display:none}}
+
+/* SWIPER */
+.swiper{width:100%;height:100vh}
+.swiper-slide{position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.slide-bg{position:absolute;top:0;left:0;width:130%;height:100%;background-size:cover;background-position:center}
+.slide-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,11,4,.30) 0%,rgba(16,11,4,.10) 40%,rgba(16,11,4,.82) 100%)}
+.slide-content{position:relative;z-index:2;padding:0 0 12vh 56px;max-width:760px}
+.slide-num{font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:.3em;color:var(--gold);margin-bottom:1rem}
+.slide-num b{font-size:2.4rem;color:var(--paper);font-weight:300}
+.slide-cap{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,5vw,4rem);line-height:1.05}
+@media(max-width:760px){.slide-content{padding:0 0 16vh 20px}}
+
+/* BOTTOM UI */
+.gal-ui{position:fixed;left:0;bottom:0;width:100%;z-index:30;padding:0 56px 30px;display:flex;align-items:center;justify-content:space-between;gap:2rem;pointer-events:none}
+.gal-progress{flex:1;height:2px;background:var(--line);position:relative;max-width:46vw}
+.gal-progress .bar{position:absolute;left:0;top:0;height:100%;background:var(--gold);width:0;transition:width .5s ease}
+.gal-count{font-size:.74rem;letter-spacing:.18em;color:var(--muted);white-space:nowrap}
+.gal-count b{color:var(--paper);font-family:'Cormorant Garamond',serif;font-size:1.1rem}
+.gal-nav{display:flex;gap:.7rem;pointer-events:auto}
+.gal-btn{width:52px;height:52px;border:1px solid var(--line);background:rgba(16,11,4,.4);color:var(--paper);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;transition:.2s;backdrop-filter:blur(4px)}
+.gal-btn:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.gal-hint{position:fixed;top:50%;right:40px;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;z-index:25;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);pointer-events:none;animation:fade 3s ease-in-out infinite}
+@keyframes fade{0%,100%{opacity:.3}50%{opacity:.8}}
+@media(max-width:760px){.gal-ui{padding:0 18px 22px}.gal-progress{max-width:30vw}.gal-hint{display:none}.gal-btn{width:46px;height:46px}}
+@media(prefers-reduced-motion:reduce){.gal-hint{animation:none}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="tb-left">
+    <a href="index-b.html" class="logo">HIG <i>Negócios</i></a>
+    <span class="tb-prop" id="tb-prop"></span>
+  </div>
+  <div class="tb-right">
+    <a class="tb-link" id="tb-back" href="imovel-b.html?id=urbanova-paratehy">← Voltar ao imóvel</a>
+    <a class="tb-link" href="labs.html">Labs</a>
+    <a class="tb-wa" id="tb-wa" href="#" target="_blank">Agendar visita</a>
+  </div>
+</div>
+
+<div class="swiper" id="gal">
+  <div class="swiper-wrapper" id="wrap"></div>
+</div>
+
+<div class="gal-hint">Arraste / role</div>
+
+<div class="gal-ui">
+  <div class="gal-count"><b id="cur">01</b> <span style="color:var(--muted)">/ <span id="tot">00</span></span></div>
+  <div class="gal-progress"><div class="bar" id="bar"></div></div>
+  <div class="gal-nav">
+    <button class="gal-btn" id="prev" aria-label="Anterior">‹</button>
+    <button class="gal-btn" id="next" aria-label="Próximo">›</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/listings.js"></script>
+<script>
+(function(){
+  var L = window.LISTINGS['urbanova-paratehy'];
+  var photos = (L && L.photos && L.photos.length) ? L.photos : [{src:L.cover,caption:L.title}];
+  document.getElementById('tb-prop').innerHTML = '<b>'+L.title+'</b> · '+(L.price||'Sob consulta');
+  document.getElementById('tb-wa').href = 'https://wa.me/5512999999999?text='+encodeURIComponent(L.wa||('Olá! Tenho interesse no imóvel: '+L.title));
+  document.getElementById('tot').textContent = String(photos.length).padStart(2,'0');
+
+  var wrap = document.getElementById('wrap');
+  photos.forEach(function(p,i){
+    var slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+    slide.innerHTML =
+      '<div class="slide-bg" data-swiper-parallax="-26%" style="background-image:url(\''+p.src+'\')"></div>'+
+      '<div class="slide-content">'+
+        '<div class="slide-num" data-swiper-parallax="-160"><b>'+String(i+1).padStart(2,'0')+'</b> &nbsp;—&nbsp; '+String(photos.length).padStart(2,'0')+'</div>'+
+        '<div class="slide-cap" data-swiper-parallax="-260">'+(p.caption||L.title)+'</div>'+
+      '</div>';
+    wrap.appendChild(slide);
+  });
+
+  var bar = document.getElementById('bar');
+  var cur = document.getElementById('cur');
+  function setProgress(sw){
+    var n = sw.realIndex+1, total = photos.length;
+    cur.textContent = String(n).padStart(2,'0');
+    bar.style.width = (n/total*100)+'%';
+  }
+  var swiper = new Swiper('#gal', {
+    parallax: true,
+    speed: 850,
+    grabCursor: true,
+    keyboard: { enabled: true },
+    mousewheel: { forceToAxis: true },
+    navigation: { nextEl: '#next', prevEl: '#prev' },
+    on: { init: setProgress, slideChange: function(){ setProgress(this); } }
+  });
+})();
+</script>
+</body>
+</html>
