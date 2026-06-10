@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hig Negócios Imobiliários — Vale do Paraíba</title>
+<meta name="description" content="Imóveis de alto padrão no Vale do Paraíba, SP. São José dos Campos, Caçapava, Pindamonhangaba e região. Hig Negócios Imobiliários — Alexandra Higashi, CRECI-SP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#f0e8d6;--paper:#f7f3ec;--paper-2:#efe7d9;--ink:#1c1409;--brown:#5b3c1f;
+  --gold:#9a6b2f;--muted:#8a7060;--line:rgba(28,20,9,.14);--white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Cormorant Garamond',serif;font-weight:300}
+.eyebrow{font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500}
+
+/* ===== LABS BADGE ===== */
+.labs-badge{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:300;background:var(--ink);color:#e9dcc4;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;padding:5px 16px;border-radius:0 0 4px 4px;text-decoration:none}
+.labs-badge b{color:var(--gold);font-weight:500}
+
+/* ===== SIDE RAILS ===== */
+.rail{position:fixed;top:0;bottom:0;width:46px;z-index:90;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.rail span{writing-mode:vertical-rl;font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:rgba(255,255,255,.55);pointer-events:auto}
+.rail.left{left:0}.rail.right{right:0}
+.rail.right span{transform:rotate(180deg)}
+.scrolled-rail span{color:var(--muted)!important}
+@media(max-width:1024px){.rail{display:none}}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:26px 60px;transition:padding .35s,background .35s,border-color .35s;border-bottom:1px solid transparent}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--white)}
+.logo b{font-weight:300}.logo i{font-style:normal;color:#d4b483}
+.nav-links{display:flex;gap:2.6rem;list-style:none}
+.nav-links a{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{display:inline-flex;align-items:center;gap:.6rem;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white);border:1px solid rgba(255,255,255,.45);border-radius:40px;padding:.7rem 1.4rem;transition:.25s}
+.nav-cta:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
+nav.scrolled{background:var(--paper);padding:16px 60px;border-bottom:1px solid var(--line)}
+nav.scrolled .logo{color:var(--ink)}
+nav.scrolled .nav-links a{color:var(--muted)}
+nav.scrolled .nav-links a:hover{color:var(--ink)}
+nav.scrolled .nav-cta{color:var(--ink);border-color:var(--line)}
+nav.scrolled .nav-cta:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.hamburger{display:none;flex-direction:column;gap:5px;width:44px;height:44px;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;z-index:201}
+.hamburger span{width:22px;height:1.5px;background:var(--white);transition:.3s}
+nav.scrolled .hamburger span{background:var(--ink)}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-dropdown{display:none;position:absolute;top:100%;right:40px;background:var(--ink);min-width:200px;padding:.6rem 0;border-top:2px solid var(--gold)}
+.nav-dropdown.open{display:block}
+.nav-dropdown a{display:block;padding:.75rem 1.4rem;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.nav-dropdown a:hover{background:rgba(154,107,47,.22);color:var(--white)}
+@media(max-width:900px){
+  nav,nav.scrolled{padding:16px 24px}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+}
+
+/* ===== HERO ===== */
+.hero{height:100vh;min-height:640px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/site_home_hero.jpg') center/cover;transform:scale(1.04)}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,20,9,.34) 0%,rgba(28,20,9,.08) 35%,rgba(28,20,9,.62) 100%)}
+.hero-idx{position:absolute;top:130px;left:60px;z-index:2;color:rgba(255,255,255,.6);font-size:.66rem;letter-spacing:.3em}
+.hero-idx::before{content:'';display:block;width:54px;height:1px;background:rgba(255,255,255,.4);margin-bottom:14px}
+.hero-inner{position:relative;z-index:2;padding:0 60px 9vh;max-width:900px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.8rem,6.4vw,5.6rem);line-height:1.04;color:var(--white);margin:1.2rem 0 1.6rem}
+.hero h1 i{font-style:italic;color:#d8bd92}
+.hero p{color:rgba(255,255,255,.78);font-size:1rem;line-height:1.75;max-width:440px;margin-bottom:2.4rem;font-weight:300}
+.hero-actions{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
+.btn-pill{display:inline-flex;align-items:center;gap:.7rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white);border:1px solid rgba(255,255,255,.5);border-radius:40px;padding:1rem 2rem;transition:.25s}
+.btn-pill:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
+.btn-underline{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--white);padding-bottom:4px;border-bottom:1px solid rgba(255,255,255,.4);transition:border-color .25s}
+.btn-underline:hover{border-color:var(--white)}
+.hero-meta{position:absolute;bottom:9vh;right:60px;z-index:2;text-align:right;color:rgba(255,255,255,.7)}
+.hero-meta .serif{font-size:1.4rem;color:var(--white)}
+.hero-meta small{display:block;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;margin-top:.3rem;color:#d4b483}
+@media(max-width:900px){.hero-idx,.hero-meta{display:none}.hero-inner{padding:0 24px 14vh}}
+
+/* ===== STRIP ===== */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.strip .cell{padding:3rem 2.4rem;border-right:1px solid var(--line)}
+.strip .cell:last-child{border-right:none}
+.strip .num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:var(--ink);line-height:1}
+.strip .lbl{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:.6rem}
+@media(max-width:760px){.strip{grid-template-columns:1fr 1fr}.strip .cell:nth-child(2){border-right:none}.strip .cell{border-bottom:1px solid var(--line)}}
+
+/* ===== SECTION HEAD ===== */
+.shead{display:flex;justify-content:space-between;align-items:flex-end;padding:6rem 60px 2.6rem;gap:2rem;flex-wrap:wrap}
+.shead h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;color:var(--ink);max-width:620px;margin-top:.8rem}
+.shead .right{text-align:right;color:var(--muted);font-size:.9rem;max-width:280px;font-weight:300;line-height:1.7}
+@media(max-width:900px){.shead{padding:4rem 24px 2rem}.shead .right{text-align:left}}
+
+/* ===== FEATURED ===== */
+.featured{display:grid;grid-template-columns:1.5fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.featured-img{position:relative;min-height:560px;overflow:hidden}
+.featured-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.featured-tag{position:absolute;top:1.6rem;left:1.6rem;background:rgba(247,243,236,.92);color:var(--ink);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;padding:.5rem 1rem}
+.featured-info{padding:4rem 3.4rem;display:flex;flex-direction:column;justify-content:center;background:var(--paper-2)}
+.featured-info .serif-title{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;line-height:1.15;margin:.9rem 0 .6rem}
+.featured-info .loc{font-size:.78rem;letter-spacing:.06em;color:var(--muted);margin-bottom:2rem}
+.spec-row{display:flex;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:2.2rem}
+.spec-row .s{flex:1;padding:1.2rem 0;text-align:center;border-right:1px solid var(--line)}
+.spec-row .s:last-child{border-right:none}
+.spec-row .v{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--ink)}
+.spec-row .k{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.2rem}
+.featured-price{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold);margin-bottom:1.8rem}
+.btn-ink{align-self:flex-start;display:inline-flex;align-items:center;gap:.7rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);border:1px solid var(--line);border-radius:40px;padding:.9rem 1.8rem;transition:.25s;background:none;cursor:pointer}
+.btn-ink:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+@media(max-width:900px){.featured{grid-template-columns:1fr}.featured-img{min-height:360px}.featured-info{padding:2.6rem 24px}}
+
+/* ===== GRID ===== */
+.collection{padding:0 60px 6rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem 2rem}
+.card{cursor:pointer;display:flex;flex-direction:column}
+.card-img{position:relative;height:300px;overflow:hidden}
+.card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.card:hover .card-img img{transform:scale(1.05)}
+.card-badge{position:absolute;top:1rem;left:1rem;background:rgba(247,243,236,.92);color:var(--ink);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;padding:.4rem .8rem}
+.card-head{display:flex;justify-content:space-between;align-items:baseline;margin:1.2rem 0 .5rem;gap:1rem}
+.card-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--ink);line-height:1.2}
+.card-price{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold);white-space:nowrap}
+.card-loc{font-size:.72rem;letter-spacing:.06em;color:var(--muted)}
+.card-specs{display:flex;gap:1.2rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.card-specs b{color:var(--ink);font-weight:500}
+@media(max-width:980px){.grid{grid-template-columns:1fr 1fr}.collection{padding:0 24px 4rem}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+
+/* ===== ABOUT ===== */
+.about{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.about-img{position:relative;min-height:520px;overflow:hidden}
+.about-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-body{padding:6rem 3.4rem;display:flex;flex-direction:column;justify-content:center;background:var(--ink);color:#e9dcc4}
+.about-body h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.15;color:var(--white);margin:1rem 0 1.4rem}
+.about-body p{color:rgba(255,255,255,.66);line-height:1.85;font-weight:300;margin-bottom:1.1rem;font-size:.94rem}
+.about-body .eyebrow{color:#d4b483}
+.btn-light{align-self:flex-start;margin-top:1.4rem;display:inline-flex;align-items:center;gap:.7rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white);border:1px solid rgba(255,255,255,.4);border-radius:40px;padding:.9rem 1.8rem;transition:.25s}
+.btn-light:hover{background:var(--white);color:var(--ink)}
+@media(max-width:900px){.about{grid-template-columns:1fr}.about-img{min-height:340px}.about-body{padding:3rem 24px}}
+
+/* ===== FOOTER ===== */
+footer{background:var(--paper);border-top:1px solid var(--line);padding:5rem 60px 2.4rem;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:3rem}
+.f-brand .logo{color:var(--ink);display:inline-block;margin-bottom:1.2rem}
+.f-brand p{color:var(--muted);font-size:.85rem;line-height:1.75;max-width:300px;font-weight:300}
+.f-brand .agent{margin-top:1.6rem}
+.f-brand .agent .serif{font-size:1.1rem;color:var(--ink)}
+.f-brand .agent small{display:block;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:.2rem}
+.f-col h4{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem}
+.f-col ul{list-style:none}
+.f-col li{margin-bottom:.65rem}
+.f-col a{color:var(--muted);font-size:.84rem;transition:color .2s}
+.f-col a:hover{color:var(--ink)}
+.f-bottom{border-top:1px solid var(--line);padding:1.4rem 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.7rem;letter-spacing:.08em;color:var(--muted)}
+@media(max-width:900px){footer{grid-template-columns:1fr;padding:3rem 24px 2rem}.f-bottom{padding:1.4rem 24px}}
+
+/* ===== WHATSAPP ===== */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:99;width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.22);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:26px;height:26px;fill:#fff}
+
+/* ===== MODAL ===== */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,20,9,.72);z-index:200;align-items:center;justify-content:center;padding:1.2rem}
+.modal-overlay.open{display:flex}
+.modal{background:var(--paper);max-width:820px;width:100%;max-height:90vh;overflow-y:auto;position:relative}
+.modal-img{width:100%;height:320px;object-fit:cover}
+.modal-body{padding:2.4rem 2.6rem}
+.modal-badge{display:inline-block;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);padding:.35rem .9rem;margin-bottom:1rem}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;margin-bottom:.4rem}
+.modal-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold);margin-bottom:1.4rem}
+.modal-specs{display:flex;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:1.6rem}
+.modal-spec{flex:1;text-align:center;padding:1rem 0;border-right:1px solid var(--line)}
+.modal-spec:last-child{border-right:none}
+.modal-spec .v{font-family:'Cormorant Garamond',serif;font-size:1.4rem}
+.modal-spec .k{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.modal-desc{color:var(--muted);line-height:1.8;font-size:.9rem;font-weight:300;margin-bottom:1.8rem}
+.modal-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.modal-actions a{flex:1 1 220px;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.2rem;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;transition:.2s}
+.btn-wa{background:#25d366;color:#fff}.btn-wa:hover{background:#1da855}
+.btn-listing{border:1px solid var(--ink);color:var(--ink)}.btn-listing:hover{background:var(--ink);color:#fff}
+.modal-close{position:absolute;top:1rem;right:1rem;width:38px;height:38px;border:none;background:rgba(28,20,9,.55);color:#fff;cursor:pointer;font-size:1.1rem}
+.modal-close:hover{background:var(--ink)}
+</style>
+</head>
+<body>
+
+<a class="labs-badge" href="labs.html">Labs · Versão <b>B</b></a>
+
+<div class="rail left" id="rail-l"><span>Hig Negócios · Vale do Paraíba</span></div>
+<div class="rail right" id="rail-r"><span>CRECI-SP · São José dos Campos</span></div>
+
+<nav id="nav" class="over-hero">
+  <a href="index-b.html" class="logo">HIG <i>Negócios</i> <b>Imob.</b></a>
+  <ul class="nav-links">
+    <li><a href="imoveis-b.html">Imóveis</a></li>
+    <li><a href="sobre-b.html">Sobre</a></li>
+    <li><a href="contato-b.html">Contato</a></li>
+  </ul>
+  <a href="contato-b.html" class="nav-cta">Agendar Visita</a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-dropdown">
+    <a href="imoveis-b.html">Imóveis</a>
+    <a href="sobre-b.html">Sobre</a>
+    <a href="contato-b.html">Contato</a>
+    <a href="contato-b.html">Agendar Visita</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-idx">01 — Vale do Paraíba</div>
+  <div class="hero-inner">
+    <span class="eyebrow" style="color:#d4b483">Hig Negócios Imobiliários</span>
+    <h1>Encontre o lar<br>que <i>merece</i> a<br>sua história</h1>
+    <p>Casas onde vidas inteiras acontecem — selecionadas com cuidado, no coração do Vale do Paraíba.</p>
+    <div class="hero-actions">
+      <a href="imoveis-b.html" class="btn-pill">Ver Imóveis →</a>
+      <a href="contato-b.html" class="btn-underline">Falar com Alexandra</a>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <span class="serif">Alexandra Higashi</span>
+    <small>Corretora · CRECI-SP</small>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="cell"><div class="num">180+</div><div class="lbl">Imóveis Negociados</div></div>
+  <div class="cell"><div class="num">15</div><div class="lbl">Anos de Mercado</div></div>
+  <div class="cell"><div class="num">R$1.2Bi</div><div class="lbl">em Transações</div></div>
+  <div class="cell"><div class="num">98%</div><div class="lbl">Clientes Satisfeitos</div></div>
+</div>
+
+<div class="shead">
+  <div>
+    <span class="eyebrow">Destaque do mês</span>
+    <h2>Imóvel em evidência</h2>
+  </div>
+  <div class="right">Uma seleção especial dos imóveis mais exclusivos do Vale do Paraíba.</div>
+</div>
+
+<div class="featured">
+  <div class="featured-img">
+    <img src="images/site_home_featured.jpg" alt="Casa em Condomínio · São José dos Campos" loading="lazy">
+    <div class="featured-tag">Exclusivo</div>
+  </div>
+  <div class="featured-info">
+    <span class="eyebrow">Residencial · Alto Padrão</span>
+    <div class="serif-title">Casa em Condomínio<br>Bosque das Colinas</div>
+    <div class="loc">São José dos Campos, SP</div>
+    <div class="spec-row">
+      <div class="s"><div class="v">510</div><div class="k">m² Área</div></div>
+      <div class="s"><div class="v">4</div><div class="k">Quartos</div></div>
+      <div class="s"><div class="v">6</div><div class="k">Banheiros</div></div>
+      <div class="s"><div class="v">4</div><div class="k">Vagas</div></div>
+    </div>
+    <div class="featured-price">Sob consulta</div>
+    <button class="btn-ink" onclick="openFeaturedModal()">Ver Detalhes →</button>
+  </div>
+</div>
+
+<div class="shead">
+  <div>
+    <span class="eyebrow">Portfólio</span>
+    <h2>Imóveis disponíveis</h2>
+  </div>
+  <div class="right">Curadoria exclusiva de propriedades no Vale do Paraíba.</div>
+</div>
+
+<div class="collection">
+  <div class="grid" id="grid"></div>
+</div>
+
+<div class="about">
+  <div class="about-img"><img src="images/site_about_img.jpg" alt="Vale do Paraíba"></div>
+  <div class="about-body">
+    <span class="eyebrow">Nossa história</span>
+    <h2>15 anos conectando<br>famílias aos<br>seus lugares</h2>
+    <p>Há mais de 15 anos conectamos famílias aos melhores imóveis do Vale do Paraíba. Conhecemos cada bairro, cada microclima e cada oportunidade que esta região extraordinária oferece.</p>
+    <p>Nossa equipe acompanha você em cada etapa — da busca à entrega das chaves — com transparência, cuidado e dedicação que só quem ama o que faz consegue oferecer.</p>
+    <a href="sobre-b.html" class="btn-light">Conhecer a Equipe →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="f-brand">
+    <span class="logo">HIG <i>Negócios</i> <b>Imob.</b></span>
+    <p>Especialistas em imóveis de alto padrão no Vale do Paraíba, São Paulo. Conectando você ao lugar onde quer viver.</p>
+    <div class="agent">
+      <span class="serif">Alexandra Higashi</span>
+      <small>Corretora · CRECI-SP</small>
+    </div>
+  </div>
+  <div class="f-col">
+    <h4>Regiões</h4>
+    <ul>
+      <li><a href="imoveis-b.html">São José dos Campos</a></li>
+      <li><a href="imoveis-b.html">Taubaté</a></li>
+      <li><a href="imoveis-b.html">Pindamonhangaba</a></li>
+      <li><a href="imoveis-b.html">Guaratinguetá</a></li>
+      <li><a href="imoveis-b.html">Jacareí</a></li>
+      <li><a href="imoveis-b.html">Caçapava</a></li>
+    </ul>
+  </div>
+  <div class="f-col">
+    <h4>Contato</h4>
+    <ul>
+      <li><a href="https://wa.me/5512999999999">WhatsApp</a></li>
+      <li><a href="mailto:contato@hignegociosimobiliarios.com.br">E-mail</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="labs.html">Labs — comparar versões</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="f-bottom">
+  <span>© 2026 Hig Negócios Imobiliários · Vale do Paraíba, SP · Todos os direitos reservados</span>
+  <span>CRECI-SP 000000-J</span>
+</div>
+
+<a class="wa-float" href="https://wa.me/5512999999999" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img id="modal-img" class="modal-img" src="" alt="">
+    <div class="modal-body">
+      <div class="modal-badge" id="modal-badge"></div>
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-price" id="modal-price"></div>
+      <div class="modal-specs" id="modal-specs"></div>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-actions">
+        <a id="modal-listing" class="btn-listing" href="imovel-b.html">Ver Anúncio Completo →</a>
+        <a id="modal-wa" class="btn-wa" href="#" target="_blank">Agendar pelo WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/listings.js"></script>
+<script>
+window.addEventListener('scroll',()=>{
+  const s=window.scrollY>60;
+  document.getElementById('nav').classList.toggle('scrolled',s);
+  document.getElementById('rail-l').classList.toggle('scrolled-rail',s);
+  document.getElementById('rail-r').classList.toggle('scrolled-rail',s);
+});
+
+const PROPS = window.LISTINGS_ORDER.map(slug => window.LISTINGS[slug]);
+const grid = document.getElementById('grid');
+PROPS.forEach((p,i)=>{
+  grid.innerHTML += `<div class="card" onclick="openModal(${i})">
+    <div class="card-img">
+      <img src="${p.cover}" alt="${p.title}" loading="lazy">
+      <div class="card-badge">${p.badge||''}</div>
+    </div>
+    <div class="card-head">
+      <div class="card-title">${p.title}</div>
+      <div class="card-price">${p.price}</div>
+    </div>
+    <div class="card-loc">${p.location}</div>
+    <div class="card-specs">
+      <span><b>${p.area}</b> m²</span>
+      <span><b>${p.q}</b> quartos</span>
+      <span><b>${p.b}</b> ban.</span>
+      <span><b>${p.v}</b> vagas</span>
+    </div>
+  </div>`;
+});
+
+function openModal(i){
+  const p = PROPS[i];
+  document.getElementById('modal-img').src = p.cover;
+  document.getElementById('modal-badge').textContent = p.badge||'';
+  document.getElementById('modal-title').textContent = p.title;
+  document.getElementById('modal-price').textContent = p.price;
+  document.getElementById('modal-desc').textContent = p.desc;
+  document.getElementById('modal-wa').href = 'https://wa.me/5512999999999?text=' + encodeURIComponent(p.wa);
+  const listingBtn = document.getElementById('modal-listing');
+  if(p.listed){listingBtn.href = 'imovel-b.html?id=' + p.slug;listingBtn.style.display = '';}
+  else{listingBtn.style.display = 'none';}
+  document.getElementById('modal-specs').innerHTML = `
+    <div class="modal-spec"><div class="v">${p.area}</div><div class="k">m² Total</div></div>
+    <div class="modal-spec"><div class="v">${p.q}</div><div class="k">Quartos</div></div>
+    <div class="modal-spec"><div class="v">${p.b}</div><div class="k">Banheiros</div></div>
+    <div class="modal-spec"><div class="v">${p.v}</div><div class="k">Vagas</div></div>`;
+  document.querySelector('.modal-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.querySelector('.modal-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function openFeaturedModal(){
+  document.getElementById('modal-img').src='images/site_home_featured.jpg';
+  document.getElementById('modal-badge').textContent='Exclusivo';
+  document.getElementById('modal-title').textContent='Casa em Condomínio · Bosque das Colinas';
+  document.getElementById('modal-price').textContent='Sob consulta';
+  document.getElementById('modal-desc').textContent='Residência de alto padrão no Condomínio Bosque das Colinas, em São José dos Campos. 510 m² construídos · 4 suítes · piscina privativa · área gourmet · garagem para 4 veículos. Entre em contato para mais informações.';
+  document.getElementById('modal-wa').href='https://wa.me/5512999999999?text='+encodeURIComponent('Olá! Tenho interesse na Casa em Condomínio Bosque das Colinas em São José dos Campos. Podemos agendar uma visita?');
+  document.getElementById('modal-listing').style.display='none';
+  document.getElementById('modal-specs').innerHTML='<div class="modal-spec"><div class="v">510</div><div class="k">m² Total</div></div><div class="modal-spec"><div class="v">4</div><div class="k">Quartos</div></div><div class="modal-spec"><div class="v">6</div><div class="k">Banheiros</div></div><div class="modal-spec"><div class="v">4</div><div class="k">Vagas</div></div>';
+  document.querySelector('.modal-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+document.addEventListener('keydown',e=>e.key==='Escape'&&closeModal());
+
+(function(){
+  var btn=document.querySelector('.hamburger');
+  var dd=document.querySelector('.nav-dropdown');
+  if(!btn||!dd)return;
+  btn.addEventListener('click',function(e){e.stopPropagation();btn.classList.toggle('open');dd.classList.toggle('open');});
+  document.addEventListener('click',function(){btn.classList.remove('open');dd.classList.remove('open');});
+  dd.addEventListener('click',function(e){e.stopPropagation()});
+})();
+</script>
+</body>
+</html>

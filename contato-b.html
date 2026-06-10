@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contato — Hig Negócios Imobiliários</title>
+<meta name="description" content="Fale com Alexandra Higashi. Hig Negócios Imobiliários — imóveis de alto padrão no Vale do Paraíba, SP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#f0e8d6;--paper:#f7f3ec;--paper-2:#efe7d9;--ink:#1c1409;--brown:#5b3c1f;--gold:#9a6b2f;--muted:#8a7060;--line:rgba(28,20,9,.14);--white:#fff}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.serif{font-family:'Cormorant Garamond',serif;font-weight:300}
+.eyebrow{font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.labs-badge{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:300;background:var(--ink);color:#e9dcc4;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;padding:5px 16px;border-radius:0 0 4px 4px}
+.labs-badge b{color:var(--gold);font-weight:500}
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 60px;background:var(--paper);border-bottom:1px solid var(--line)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.logo b{font-weight:300}.logo i{font-style:normal;color:var(--gold)}
+.nav-links{display:flex;gap:2.6rem;list-style:none}
+.nav-links a{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-cta{display:inline-flex;align-items:center;gap:.6rem;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);border:1px solid var(--line);border-radius:40px;padding:.7rem 1.4rem;transition:.25s}
+.nav-cta:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.hamburger{display:none;flex-direction:column;gap:5px;width:44px;height:44px;align-items:center;justify-content:center;background:none;border:none;cursor:pointer}
+.hamburger span{width:22px;height:1.5px;background:var(--ink);transition:.3s}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}.hamburger.open span:nth-child(2){opacity:0}.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-dropdown{display:none;position:absolute;top:100%;right:40px;background:var(--ink);min-width:200px;padding:.6rem 0;border-top:2px solid var(--gold)}
+.nav-dropdown.open{display:block}
+.nav-dropdown a{display:block;padding:.75rem 1.4rem;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.nav-dropdown a:hover{background:rgba(154,107,47,.22);color:var(--white)}
+@media(max-width:900px){nav{padding:14px 24px}.nav-links,.nav-cta{display:none}.hamburger{display:flex}}
+.page-hero{position:relative;height:54vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
+.page-hero .bg{position:absolute;inset:0;background:url('images/site_contact_hero.jpg') center/cover;transform:scale(1.04)}
+.page-hero .bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,20,9,.32),rgba(28,20,9,.68))}
+.page-hero .inner{position:relative;z-index:2;padding:0 60px 3.6rem;color:var(--white);max-width:780px}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.2rem,4.6vw,4rem);line-height:1.08;margin-top:1rem}
+.page-hero .idx{position:absolute;top:120px;left:60px;color:rgba(255,255,255,.6);font-size:.66rem;letter-spacing:.3em}
+.page-hero .idx::before{content:'';display:block;width:54px;height:1px;background:rgba(255,255,255,.4);margin-bottom:14px}
+@media(max-width:900px){.page-hero .inner{padding:0 24px 2.2rem}.page-hero .idx{display:none}}
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;border-bottom:1px solid var(--line)}
+.contact-left{padding:5rem 3.6rem;border-right:1px solid var(--line)}
+.contact-left h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.9rem;margin:.8rem 0 2rem}
+.method{display:block;padding:1.5rem 0;border-top:1px solid var(--line)}
+.method:last-of-type{border-bottom:1px solid var(--line)}
+.method .k{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+.method .v{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--ink)}
+.method .d{font-size:.82rem;color:var(--muted);margin-top:.3rem}
+.hours{margin-top:2.4rem}
+.hours .ht{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.hours-row{display:flex;justify-content:space-between;font-size:.84rem;padding:.5rem 0;border-bottom:1px solid var(--line)}
+.hours-row:last-child{border-bottom:none}
+.hours-row .day{color:var(--ink)}.hours-row .time{color:var(--muted)}
+.contact-right{padding:5rem 3.6rem}
+.form-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;margin-bottom:.5rem}
+.form-sub{font-size:.84rem;color:var(--muted);margin-bottom:2.2rem;line-height:1.7}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.2rem}
+.form-label{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.form-input,.form-select,.form-textarea{font-family:'Inter',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;border:none;border-bottom:1px solid var(--line);padding:.6rem 0;outline:none;transition:border-color .2s;width:100%;appearance:none;-webkit-appearance:none}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold)}
+.form-textarea{height:90px;resize:vertical}
+.form-submit{width:100%;background:var(--ink);color:var(--white);border:none;border-radius:40px;padding:1.1rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:background .2s;margin-top:.6rem}
+.form-submit:hover{background:var(--gold)}
+.form-note{font-size:.74rem;color:var(--muted);margin-top:1rem;text-align:center;line-height:1.5}
+@media(max-width:900px){.contact{grid-template-columns:1fr}.contact-left,.contact-right{padding:3rem 24px;border-right:none}.contact-left{border-bottom:1px solid var(--line)}.form-row{grid-template-columns:1fr}}
+/* FAQ */
+.faq{padding:5.5rem 60px;max-width:900px;margin:0 auto}
+.faq h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.8rem,3vw,2.6rem);margin:.8rem 0 2.4rem}
+.faq-item{border-top:1px solid var(--line)}
+.faq-item:last-child{border-bottom:1px solid var(--line)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:1.5rem 0;cursor:pointer;font-size:1rem;color:var(--ink);font-weight:500}
+.faq-q svg{width:18px;height:18px;stroke:var(--gold);stroke-width:1.6;fill:none;flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-q svg{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--muted);line-height:1.85;font-weight:300;font-size:.9rem}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:1.5rem}
+@media(max-width:900px){.faq{padding:4rem 24px}}
+footer{background:var(--paper);border-top:1px solid var(--line);padding:5rem 60px 2.4rem;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:3rem}
+.f-brand .logo{display:inline-block;margin-bottom:1.2rem}
+.f-brand p{color:var(--muted);font-size:.85rem;line-height:1.75;max-width:300px;font-weight:300}
+.f-col h4{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem}
+.f-col ul{list-style:none}.f-col li{margin-bottom:.65rem}
+.f-col a{color:var(--muted);font-size:.84rem;transition:color .2s}.f-col a:hover{color:var(--ink)}
+.f-bottom{border-top:1px solid var(--line);padding:1.4rem 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.7rem;color:var(--muted)}
+@media(max-width:900px){footer{grid-template-columns:1fr;padding:3rem 24px 2rem}.f-bottom{padding:1.4rem 24px}}
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:99;width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.22)}
+.wa-float svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+<a class="labs-badge" href="labs.html">Labs · Versão <b>B</b></a>
+<nav id="nav">
+  <a href="index-b.html" class="logo">HIG <i>Negócios</i> <b>Imob.</b></a>
+  <ul class="nav-links"><li><a href="imoveis-b.html">Imóveis</a></li><li><a href="sobre-b.html">Sobre</a></li><li><a href="contato-b.html" class="active">Contato</a></li></ul>
+  <a href="contato-b.html" class="nav-cta">Agendar Visita</a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-dropdown"><a href="imoveis-b.html">Imóveis</a><a href="sobre-b.html">Sobre</a><a href="contato-b.html">Contato</a><a href="contato-b.html">Agendar Visita</a></div>
+</nav>
+
+<section class="page-hero">
+  <div class="bg"></div>
+  <div class="idx">04 — Contato</div>
+  <div class="inner"><span class="eyebrow" style="color:#d4b483">Fale com a Hig</span><h1>Vamos encontrar o imóvel<br>certo para você</h1></div>
+</section>
+
+<section class="contact">
+  <div class="contact-left">
+    <span class="eyebrow">Como prefere se comunicar?</span>
+    <h2>Estamos por perto</h2>
+    <a class="method" href="https://wa.me/5512999999999" target="_blank">
+      <div class="k">WhatsApp</div><div class="v">(12) 9 9999-9999</div><div class="d">Resposta em até 2 horas no horário comercial</div>
+    </a>
+    <a class="method" href="mailto:contato@hignegociosimobiliarios.com.br">
+      <div class="k">E-mail</div><div class="v">contato@hignegociosimobiliarios.com.br</div><div class="d">Para propostas e documentação</div>
+    </a>
+    <a class="method" href="https://instagram.com/alexandrahigashi" target="_blank">
+      <div class="k">Instagram</div><div class="v">@alexandrahigashi</div><div class="d">Acompanhe os lançamentos e novidades</div>
+    </a>
+    <div class="hours">
+      <div class="ht">Horário de atendimento</div>
+      <div class="hours-row"><span class="day">Segunda – Sexta</span><span class="time">9h – 18h</span></div>
+      <div class="hours-row"><span class="day">Sábado</span><span class="time">9h – 13h</span></div>
+      <div class="hours-row"><span class="day">Domingo</span><span class="time">Somente WhatsApp</span></div>
+    </div>
+  </div>
+  <div class="contact-right">
+    <div class="form-title">Agendar Visita ou Tirar Dúvidas</div>
+    <div class="form-sub">Preencha o formulário e entraremos em contato em até 2 horas no horário comercial.</div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Nome completo *</label><input class="form-input" id="fc-nome" placeholder="Seu nome"></div>
+      <div class="form-group"><label class="form-label">WhatsApp *</label><input class="form-input" id="fc-wa" placeholder="(12) 9 9999-9999"></div>
+    </div>
+    <div class="form-group"><label class="form-label">E-mail</label><input class="form-input" id="fc-email" placeholder="seu@email.com"></div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Interesse</label><select class="form-select" id="fc-interesse"><option value="">Selecione uma opção</option><option>Comprar imóvel</option><option>Alugar imóvel</option><option>Vender meu imóvel</option><option>Investimento imobiliário</option><option>Outro assunto</option></select></div>
+      <div class="form-group"><label class="form-label">Cidade de interesse</label><select class="form-select" id="fc-cidade"><option value="">Qualquer cidade</option><option>São José dos Campos</option><option>Taubaté</option><option>Pindamonhangaba</option><option>Guaratinguetá</option><option>Lorena</option><option>Jacareí</option><option>Caçapava</option></select></div>
+    </div>
+    <div class="form-group"><label class="form-label">Faixa de valor</label><select class="form-select" id="fc-valor"><option value="">Não definido</option><option>Até R$ 500.000</option><option>R$ 500k – R$ 1M</option><option>R$ 1M – R$ 2M</option><option>Acima de R$ 2M</option></select></div>
+    <div class="form-group"><label class="form-label">Mensagem</label><textarea class="form-textarea" id="fc-msg" placeholder="Conte mais sobre o que você procura..."></textarea></div>
+    <button class="form-submit" onclick="enviarFormContato()">Enviar pelo WhatsApp →</button>
+    <div class="form-note">Ao enviar, você será direcionado ao WhatsApp com a mensagem preenchida. Seus dados não são armazenados.</div>
+  </div>
+</section>
+
+<section class="faq">
+  <span class="eyebrow">Perguntas frequentes</span>
+  <h2>Dúvidas comuns</h2>
+  <div class="faq-item open">
+    <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Como funciona o processo de compra de um imóvel?<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    <div class="faq-a">Começamos com uma conversa para entender suas necessidades. Depois selecionamos imóveis compatíveis, agendamos visitas e acompanhamos toda a negociação, documentação e financiamento até a entrega das chaves. Você nunca fica sozinho no processo.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Vocês trabalham com financiamento bancário?<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    <div class="faq-a">Sim! Auxiliamos na simulação e escolha do melhor banco, além de acompanhar todo o processo de aprovação do crédito. Temos parcerias com os principais bancos e correspondentes bancários da região.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Vocês também ajudam quem quer vender um imóvel?<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    <div class="faq-a">Com certeza. Fazemos avaliação gratuita do seu imóvel, criamos materiais de divulgação profissionais e cuidamos de todas as negociações. Nosso objetivo é obter o melhor valor no menor tempo possível.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Qual é a comissão cobrada?<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    <div class="faq-a">Seguimos a tabela do CRECI-SP. A comissão padrão para venda é de 6% sobre o valor do imóvel, paga pelo vendedor. Para o comprador, não há custo adicional além do preço do imóvel e as taxas cartoriais normais.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Atendem quais cidades do Vale do Paraíba?<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    <div class="faq-a">Atendemos São José dos Campos, Taubaté, Pindamonhangaba, Guaratinguetá, Lorena, Jacareí e Caçapava. Para outras cidades da região, consulte-nos — podemos indicar parceiros de confiança.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-brand"><span class="logo">HIG <i>Negócios</i> <b>Imob.</b></span><p>Especialistas em imóveis de alto padrão no Vale do Paraíba, São Paulo.</p></div>
+  <div class="f-col"><h4>Navegação</h4><ul><li><a href="index-b.html">Início</a></li><li><a href="imoveis-b.html">Imóveis</a></li><li><a href="sobre-b.html">Sobre</a></li><li><a href="contato-b.html">Contato</a></li></ul></div>
+  <div class="f-col"><h4>Contato</h4><ul><li><a href="https://wa.me/5512999999999">WhatsApp</a></li><li><a href="mailto:contato@hignegociosimobiliarios.com.br">E-mail</a></li><li><a href="labs.html">Labs — comparar versões</a></li></ul></div>
+</footer>
+<div class="f-bottom"><span>© 2026 Hig Negócios Imobiliários · Vale do Paraíba, SP</span><span>CRECI-SP</span></div>
+
+<a class="wa-float" href="https://wa.me/5512999999999" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<script>
+function enviarFormContato(){
+  var nome=document.getElementById('fc-nome').value.trim();
+  var wa=document.getElementById('fc-wa').value.trim();
+  var interesse=document.getElementById('fc-interesse').value;
+  var cidade=document.getElementById('fc-cidade').value;
+  var valor=document.getElementById('fc-valor').value;
+  var msg=document.getElementById('fc-msg').value.trim();
+  if(!nome){alert('Por favor, informe seu nome.');return;}
+  var texto='Olá Alexandra! Meu nome é '+nome+(wa?' · WhatsApp: '+wa:'')+'.';
+  if(interesse) texto+='\nInteresse: '+interesse;
+  if(cidade) texto+='\nCidade: '+cidade;
+  if(valor) texto+='\nFaixa: '+valor;
+  if(msg) texto+='\n\n'+msg;
+  window.open('https://wa.me/5512999999999?text='+encodeURIComponent(texto),'_blank');
+}
+(function(){var btn=document.querySelector('.hamburger');var dd=document.querySelector('.nav-dropdown');if(!btn||!dd)return;
+btn.addEventListener('click',function(e){e.stopPropagation();btn.classList.toggle('open');dd.classList.toggle('open');});
+document.addEventListener('click',function(){btn.classList.remove('open');dd.classList.remove('open');});
+dd.addEventListener('click',function(e){e.stopPropagation()});})();
+</script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title id="page-title">Imóvel — Hig Negócios Imobiliários</title>
+<meta id="page-desc" name="description" content="Imóvel de alto padrão no Vale do Paraíba. Hig Negócios Imobiliários.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#f0e8d6;--paper:#f7f3ec;--paper-2:#efe7d9;--ink:#1c1409;--brown:#5b3c1f;--gold:#9a6b2f;--muted:#8a7060;--line:rgba(28,20,9,.14);--white:#fff}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.serif{font-family:'Cormorant Garamond',serif;font-weight:300}
+.eyebrow{font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.labs-badge{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:300;background:var(--ink);color:#e9dcc4;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;padding:5px 16px;border-radius:0 0 4px 4px}
+.labs-badge b{color:var(--gold);font-weight:500}
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 60px;background:var(--paper);border-bottom:1px solid var(--line)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.logo b{font-weight:300}.logo i{font-style:normal;color:var(--gold)}
+.nav-links{display:flex;gap:2.6rem;list-style:none}
+.nav-links a{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{display:inline-flex;align-items:center;gap:.6rem;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);border:1px solid var(--line);border-radius:40px;padding:.7rem 1.4rem;transition:.25s}
+.nav-cta:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.hamburger{display:none;flex-direction:column;gap:5px;width:44px;height:44px;align-items:center;justify-content:center;background:none;border:none;cursor:pointer}
+.hamburger span{width:22px;height:1.5px;background:var(--ink);transition:.3s}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}.hamburger.open span:nth-child(2){opacity:0}.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-dropdown{display:none;position:absolute;top:100%;right:40px;background:var(--ink);min-width:200px;padding:.6rem 0;border-top:2px solid var(--gold)}
+.nav-dropdown.open{display:block}
+.nav-dropdown a{display:block;padding:.75rem 1.4rem;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.nav-dropdown a:hover{background:rgba(154,107,47,.22);color:var(--white)}
+@media(max-width:900px){nav{padding:14px 24px}.nav-links,.nav-cta{display:none}.hamburger{display:flex}}
+/* GALLERY */
+.gallery-wrap{padding:90px 0 0}
+.breadcrumb{padding:1.6rem 60px .4rem;font-size:.7rem;letter-spacing:.1em;color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.gallery{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:8px;height:64vh;min-height:440px;padding:1rem 60px 0}
+.gallery-main{position:relative;grid-row:1/3;overflow:hidden;cursor:pointer}
+.gallery-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.gallery-main:hover img{transform:scale(1.03)}
+.gallery-thumb{position:relative;overflow:hidden;cursor:pointer}
+.gallery-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gallery-btn{position:absolute;bottom:1.2rem;left:1.2rem;background:rgba(247,243,236,.94);color:var(--ink);border:none;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;padding:.7rem 1.3rem;cursor:pointer;transition:.2s}
+.gallery-btn:hover{background:var(--white)}
+.gallery-more{position:absolute;inset:0;background:rgba(28,20,9,.55);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.5rem}
+@media(max-width:760px){.gallery{grid-template-columns:1fr;grid-template-rows:1fr;height:46vh;padding:1rem 16px 0}.gallery-thumb{display:none}.gallery-main{grid-row:auto}.breadcrumb{padding:1.4rem 16px .2rem}}
+/* DETAIL LAYOUT */
+.detail{display:grid;grid-template-columns:1.7fr 1fr;gap:0;padding:3.5rem 60px 5rem;align-items:start}
+.detail-main{padding-right:3.6rem;border-right:1px solid var(--line)}
+.prop-badge{display:inline-block;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);padding:.35rem .9rem;margin-bottom:1rem}
+.prop-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,3.6vw,3rem);line-height:1.12;margin-bottom:.6rem}
+.prop-loc{font-size:.85rem;color:var(--muted);margin-bottom:2rem}
+.prop-specs{display:flex;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:3rem}
+.prop-spec{flex:1;padding:1.4rem 0;text-align:center;border-right:1px solid var(--line)}
+.prop-spec:last-child{border-right:none}
+.prop-spec-val{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--ink)}
+.prop-spec-lbl{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.7rem;margin:0 0 1.2rem}
+.prop-desc p{color:var(--muted);line-height:1.9;font-weight:300;margin-bottom:1.1rem;font-size:.94rem}
+.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1.5rem;margin:1.4rem 0 3rem}
+.feature-item{display:flex;align-items:flex-start;gap:.7rem;font-size:.88rem;color:var(--ink);font-weight:300;line-height:1.5}
+.feature-item svg{width:16px;height:16px;stroke:var(--gold);stroke-width:2;fill:none;flex-shrink:0;margin-top:3px}
+.map-block{margin-top:3rem}
+.map-placeholder{height:280px;background:linear-gradient(135deg,#2a1e10,#1c1409);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:rgba(255,255,255,.25);font-size:1.1rem;letter-spacing:.08em;margin-top:1.2rem}
+@media(max-width:900px){.detail{grid-template-columns:1fr;padding:2.6rem 24px 4rem}.detail-main{padding-right:0;border-right:none}.features-grid{grid-template-columns:1fr}}
+/* CONTACT CARD */
+.contact-card{position:sticky;top:110px;margin-left:3.6rem;background:var(--paper-2);border:1px solid var(--line);padding:2.4rem}
+.cc-price{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold)}
+.cc-price-note{font-size:.78rem;color:var(--muted);margin:.4rem 0 1.8rem;line-height:1.5}
+.contact-divider{height:1px;background:var(--line);margin:1.4rem 0}
+.cc-agent{display:flex;align-items:center;gap:1rem;margin-bottom:1.6rem}
+.cc-agent img{width:54px;height:54px;border-radius:50%;object-fit:cover}
+.cc-agent .n{font-family:'Cormorant Garamond',serif;font-size:1.2rem}
+.cc-agent .r{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.cc-input{width:100%;font-family:'Inter',sans-serif;font-size:.86rem;color:var(--ink);background:transparent;border:none;border-bottom:1px solid var(--line);padding:.6rem 0;margin-bottom:1rem;outline:none}
+.cc-input:focus{border-color:var(--gold)}
+.cc-textarea{height:70px;resize:vertical}
+.btn-wa{display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%;background:#25d366;color:#fff;padding:1rem;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;margin-top:.4rem;transition:background .2s}
+.btn-wa:hover{background:#1da855}
+.btn-send{width:100%;background:var(--ink);color:#fff;border:none;border-radius:40px;padding:1rem;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;margin-top:.8rem;transition:background .2s}
+.btn-send:hover{background:var(--gold)}
+@media(max-width:900px){.contact-card{position:static;margin-left:0;margin-top:2.5rem}}
+/* SIMILAR */
+.similar-section{padding:5rem 60px;border-top:1px solid var(--line)}
+.similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem}
+.mini-card{display:flex;flex-direction:column}
+.mini-card-img{position:relative;height:220px;overflow:hidden}
+.mini-card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.mini-card:hover .mini-card-img img{transform:scale(1.05)}
+.mini-card-body{padding:1rem 0}
+.mini-card-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:.3rem}
+.mini-card-loc{font-size:.74rem;color:var(--muted);margin-bottom:.5rem}
+.mini-card-price{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold)}
+@media(max-width:900px){.similar-section{padding:3.5rem 24px}.similar-grid{grid-template-columns:1fr}}
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:var(--paper);z-index:400;overflow-y:auto}
+.lightbox.open{display:block}
+.lightbox-head{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);padding:1.4rem 60px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.lightbox-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem}
+.lightbox-title small{display:block;font-family:'Inter',sans-serif;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+.lightbox-close{background:none;border:1px solid var(--line);width:42px;height:42px;cursor:pointer;font-size:1.1rem;color:var(--ink)}
+.lightbox-grid{columns:3;column-gap:8px;padding:8px 60px 4rem}
+.lightbox-tile{position:relative;break-inside:avoid;margin-bottom:8px;cursor:pointer}
+.lightbox-tile img{width:100%;display:block}
+.lightbox-tile-num{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(28,20,9,.8));color:#fff;font-size:.66rem;padding:1.4rem .8rem .6rem;opacity:0;transition:opacity .2s}
+.lightbox-tile:hover .lightbox-tile-num{opacity:1}
+@media(max-width:900px){.lightbox-grid{columns:1;padding:8px 16px 3rem}.lightbox-head{padding:1.2rem 16px}}
+/* ZOOM */
+.zoom{display:none;position:fixed;inset:0;background:rgba(20,14,5,.96);z-index:500;align-items:center;justify-content:center;flex-direction:column}
+.zoom.open{display:flex}
+.zoom img{max-width:90vw;max-height:80vh;object-fit:contain}
+.zoom-caption{color:#fff;font-size:.85rem;margin-top:1rem}
+.zoom-counter{color:rgba(255,255,255,.5);font-size:.75rem;margin-top:.3rem}
+.zoom-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:none;color:#fff;width:54px;height:54px;cursor:pointer;font-size:1.5rem}
+.zoom-prev{left:2rem}.zoom-next{right:2rem}
+.zoom-close{position:absolute;top:1.6rem;right:1.6rem;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer}
+footer{background:var(--paper);border-top:1px solid var(--line);padding:5rem 60px 2.4rem;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:3rem}
+.f-brand .logo{display:inline-block;margin-bottom:1.2rem}
+.f-brand p{color:var(--muted);font-size:.85rem;line-height:1.75;max-width:300px;font-weight:300}
+.f-col h4{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem}
+.f-col ul{list-style:none}.f-col li{margin-bottom:.65rem}
+.f-col a{color:var(--muted);font-size:.84rem}.f-col a:hover{color:var(--ink)}
+.f-bottom{border-top:1px solid var(--line);padding:1.4rem 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.7rem;color:var(--muted)}
+@media(max-width:900px){footer{grid-template-columns:1fr;padding:3rem 24px 2rem}.f-bottom{padding:1.4rem 24px}}
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:99;width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.22)}
+.wa-float svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+<a class="labs-badge" href="labs.html">Labs · Versão <b>B</b></a>
+<nav id="nav">
+  <a href="index-b.html" class="logo">HIG <i>Negócios</i> <b>Imob.</b></a>
+  <ul class="nav-links"><li><a href="imoveis-b.html">Imóveis</a></li><li><a href="sobre-b.html">Sobre</a></li><li><a href="contato-b.html">Contato</a></li></ul>
+  <a href="contato-b.html" class="nav-cta">Agendar Visita</a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-dropdown"><a href="imoveis-b.html">Imóveis</a><a href="sobre-b.html">Sobre</a><a href="contato-b.html">Contato</a><a href="contato-b.html">Agendar Visita</a></div>
+</nav>
+
+<div class="gallery-wrap">
+  <div class="breadcrumb"><a href="index-b.html">Início</a> · <a href="imoveis-b.html">Imóveis</a> · <span id="bc-title">Imóvel</span></div>
+  <div class="gallery" id="gallery"></div>
+</div>
+
+<div class="detail">
+  <div class="detail-main">
+    <div class="prop-badge" id="prop-badge"></div>
+    <h1 class="prop-title" id="prop-title"></h1>
+    <div class="prop-loc" id="prop-loc-text"></div>
+    <div class="prop-specs" id="prop-specs"></div>
+    <h2 class="section-title">Descrição</h2>
+    <div class="prop-desc" id="prop-desc"></div>
+    <h2 class="section-title" id="features-heading">Características</h2>
+    <div class="features-grid" id="features-grid"></div>
+    <div class="map-block">
+      <h2 class="section-title">Localização</h2>
+      <div class="prop-loc" id="map-loc-text"></div>
+      <div class="map-placeholder">Mapa — Vale do Paraíba, São Paulo</div>
+    </div>
+  </div>
+  <aside>
+    <div class="contact-card">
+      <div class="cc-price" id="prop-price"></div>
+      <div class="cc-price-note" id="prop-price-note">Entre em contato para informações</div>
+      <a class="btn-wa" id="btn-wa" href="#" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <div class="contact-divider"></div>
+      <div class="cc-agent">
+        <img src="images/agent.jpg" alt="Alexandra Higashi">
+        <div><div class="n">Alexandra Higashi</div><div class="r">Corretora · CRECI-SP</div></div>
+      </div>
+      <input class="cc-input" id="ic-nome" placeholder="Seu nome">
+      <input class="cc-input" id="ic-wa" placeholder="Seu WhatsApp">
+      <textarea class="cc-input cc-textarea" id="ic-msg" placeholder="Mensagem (opcional)"></textarea>
+      <button class="btn-send" onclick="solicitarImovel()">Solicitar Informações →</button>
+    </div>
+  </aside>
+</div>
+
+<section class="similar-section">
+  <span class="eyebrow">Continue explorando</span>
+  <h2 class="section-title">Imóveis Similares</h2>
+  <div class="similar-grid" id="similar-grid"></div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-head">
+    <div class="lightbox-title" id="lightbox-title"></div>
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  </div>
+  <div class="lightbox-grid" id="lightbox-grid"></div>
+</div>
+
+<div class="zoom" id="zoom">
+  <button class="zoom-close" onclick="closeZoom()">✕</button>
+  <button class="zoom-nav zoom-prev" onclick="zoomStep(-1)">‹</button>
+  <img id="zoom-img" src="" alt="">
+  <div class="zoom-caption" id="zoom-caption"></div>
+  <div class="zoom-counter" id="zoom-counter"></div>
+  <button class="zoom-nav zoom-next" onclick="zoomStep(1)">›</button>
+</div>
+
+<footer>
+  <div class="f-brand"><span class="logo">HIG <i>Negócios</i> <b>Imob.</b></span><p>Especialistas em imóveis de alto padrão no Vale do Paraíba, São Paulo.</p></div>
+  <div class="f-col"><h4>Navegação</h4><ul><li><a href="index-b.html">Início</a></li><li><a href="imoveis-b.html">Imóveis</a></li><li><a href="sobre-b.html">Sobre</a></li><li><a href="contato-b.html">Contato</a></li></ul></div>
+  <div class="f-col"><h4>Contato</h4><ul><li><a href="https://wa.me/5512999999999">WhatsApp</a></li><li><a href="mailto:contato@hignegociosimobiliarios.com.br">E-mail</a></li><li><a href="labs.html">Labs — comparar versões</a></li></ul></div>
+</footer>
+<div class="f-bottom"><span>© 2026 Hig Negócios Imobiliários · Vale do Paraíba, SP</span><span>CRECI-SP</span></div>
+
+<a class="wa-float" href="https://wa.me/5512999999999" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<script src="js/listings.js"></script>
+<script>
+const LISTING = window.getListingFromQuery('urbanova-paratehy');
+const PHOTOS = (LISTING && LISTING.photos && LISTING.photos.length) ? LISTING.photos : [{src: LISTING.cover, caption: LISTING.title}];
+let zoomIdx = 0;
+(function init(){
+  if(!LISTING) return;
+  const $ = id => document.getElementById(id);
+  $('page-title').textContent = LISTING.title + ' — Hig Negócios Imobiliários';
+  $('page-desc').setAttribute('content', LISTING.desc);
+  $('bc-title').textContent = LISTING.title;
+  $('prop-badge').textContent = LISTING.badge;
+  $('prop-title').textContent = LISTING.title;
+  $('prop-loc-text').textContent = LISTING.locationFull || LISTING.location;
+  $('map-loc-text').textContent = LISTING.locationFull || LISTING.location;
+  const specs = [
+    {val: LISTING.area, lbl: 'm² construído'},
+    LISTING.terrain ? {val: LISTING.terrain, lbl: 'm² terreno'} : null,
+    {val: LISTING.suites || LISTING.q, lbl: LISTING.suites ? 'Suítes' : 'Quartos'},
+    {val: LISTING.v, lbl: 'Vagas'}
+  ].filter(Boolean);
+  $('prop-specs').innerHTML = specs.map(s =>
+    `<div class="prop-spec"><div class="prop-spec-val">${s.val}</div><div class="prop-spec-lbl">${s.lbl}</div></div>`
+  ).join('');
+  const paras = LISTING.descParas && LISTING.descParas.length ? LISTING.descParas : [LISTING.desc];
+  $('prop-desc').innerHTML = paras.map(p => `<p>${p}</p>`).join('');
+  if(LISTING.features && LISTING.features.length){
+    $('features-grid').innerHTML = LISTING.features.map(f =>
+      `<div class="feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>${f}</div>`
+    ).join('');
+  } else {
+    $('features-heading').style.display = 'none';
+    $('features-grid').style.display = 'none';
+  }
+  $('prop-price').textContent = LISTING.price;
+  if(LISTING.priceNote) $('prop-price-note').textContent = LISTING.priceNote;
+  $('btn-wa').href = 'https://wa.me/5512999999999?text=' + encodeURIComponent(LISTING.wa);
+  const gallery = $('gallery');
+  const totalPhotos = PHOTOS.length;
+  const main = PHOTOS[0];
+  const moreCount = Math.max(0, totalPhotos - 3);
+  const galleryBtnLabel = totalPhotos === 1 ? 'Ampliar foto' : `Ver todas as fotos (${totalPhotos})`;
+  if (totalPhotos === 1) {
+    gallery.style.gridTemplateColumns = '1fr';
+    gallery.style.gridTemplateRows = '1fr';
+    gallery.innerHTML = `
+      <div class="gallery-main" onclick="openLightbox(0)" style="grid-row:1/2">
+        <img src="${main.src}" alt="${main.caption}">
+        <button class="gallery-btn" onclick="event.stopPropagation();openLightbox(0)">${galleryBtnLabel}</button>
+      </div>`;
+  } else if (totalPhotos === 2) {
+    gallery.style.gridTemplateRows = '1fr';
+    const thumb1 = PHOTOS[1];
+    gallery.innerHTML = `
+      <div class="gallery-main" onclick="openLightbox(0)">
+        <img src="${main.src}" alt="${main.caption}">
+        <button class="gallery-btn" onclick="event.stopPropagation();openLightbox(0)">${galleryBtnLabel}</button>
+      </div>
+      <div class="gallery-thumb" onclick="openLightbox(1)"><img src="${thumb1.src}" alt="${thumb1.caption}"></div>`;
+  } else {
+    const thumb1 = PHOTOS[1];
+    const thumb2 = PHOTOS[2];
+    gallery.innerHTML = `
+      <div class="gallery-main" onclick="openLightbox(0)">
+        <img src="${main.src}" alt="${main.caption}">
+        <button class="gallery-btn" onclick="event.stopPropagation();openLightbox(0)">${galleryBtnLabel}</button>
+      </div>
+      <div class="gallery-thumb" onclick="openLightbox(1)"><img src="${thumb1.src}" alt="${thumb1.caption}"></div>
+      <div class="gallery-thumb" onclick="openLightbox(2)">
+        <img src="${thumb2.src}" alt="${thumb2.caption}">
+        ${moreCount > 0 ? `<div class="gallery-more">+ ${moreCount} fotos</div>` : ''}
+      </div>`;
+  }
+  $('lightbox-title').innerHTML = `${LISTING.title}<small id="lightbox-subtitle">${LISTING.location} · ${totalPhotos} foto${totalPhotos !== 1 ? 's' : ''}</small>`;
+  $('lightbox-grid').innerHTML = PHOTOS.map((p,i)=>`
+    <div class="lightbox-tile" onclick="openZoom(${i})">
+      <img src="${p.src}" alt="${p.caption}" loading="lazy">
+      <div class="lightbox-tile-num">${String(i+1).padStart(2,'0')} · ${p.caption}</div>
+    </div>`).join('');
+  const others = window.LISTINGS_ORDER
+    .filter(slug => slug !== LISTING.slug)
+    .slice(0, 3)
+    .map(slug => window.LISTINGS[slug]);
+  $('similar-grid').innerHTML = others.map(L => {
+    const href = L.listed ? `imovel-b.html?id=${L.slug}` : 'imoveis-b.html';
+    return `<a href="${href}" style="text-decoration:none">
+      <div class="mini-card">
+        <div class="mini-card-img"><img src="${L.cover}" alt="${L.title}"></div>
+        <div class="mini-card-body">
+          <div class="mini-card-title">${L.title}</div>
+          <div class="mini-card-loc">${L.location} · ${L.area} m² · ${L.q} quartos</div>
+          <div class="mini-card-price">${L.price}</div>
+        </div>
+      </div>
+    </a>`;
+  }).join('');
+})();
+function openLightbox(startIdx){
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+  if(typeof startIdx==='number'){openZoom(startIdx);}
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+function openZoom(i){
+  zoomIdx = i;
+  document.getElementById('zoom-img').src = PHOTOS[i].src;
+  document.getElementById('zoom-caption').textContent = PHOTOS[i].caption;
+  document.getElementById('zoom-counter').textContent = (i+1)+' / '+PHOTOS.length;
+  document.getElementById('zoom').classList.add('open');
+}
+function closeZoom(){document.getElementById('zoom').classList.remove('open');}
+function zoomStep(delta){zoomIdx = (zoomIdx + delta + PHOTOS.length) % PHOTOS.length;openZoom(zoomIdx);}
+document.getElementById('zoom').addEventListener('click',e=>{if(e.target.id==='zoom') closeZoom();});
+document.addEventListener('keydown',e=>{
+  const zoomOpen = document.getElementById('zoom').classList.contains('open');
+  const lbOpen = document.getElementById('lightbox').classList.contains('open');
+  if(e.key==='Escape'){zoomOpen?closeZoom():lbOpen&&closeLightbox();}
+  if(zoomOpen){if(e.key==='ArrowRight') zoomStep(1);if(e.key==='ArrowLeft') zoomStep(-1);}
+});
+function solicitarImovel(){
+  var nome=document.getElementById('ic-nome').value.trim();
+  var wa=document.getElementById('ic-wa').value.trim();
+  var msg=document.getElementById('ic-msg').value.trim();
+  var base=LISTING?LISTING.wa:'Olá! Tenho interesse em um imóvel.';
+  var texto=base+(nome?'\nMeu nome: '+nome:'')+(wa?'\nWhatsApp: '+wa:'')+(msg?'\n\n'+msg:'');
+  window.open('https://wa.me/5512999999999?text='+encodeURIComponent(texto),'_blank');
+}
+(function(){var btn=document.querySelector('.hamburger');var dd=document.querySelector('.nav-dropdown');if(!btn||!dd)return;
+btn.addEventListener('click',function(e){e.stopPropagation();btn.classList.toggle('open');dd.classList.toggle('open');});
+document.addEventListener('click',function(){btn.classList.remove('open');dd.classList.remove('open');});
+dd.addEventListener('click',function(e){e.stopPropagation()});})();
+</script>
+</body>
+</html>

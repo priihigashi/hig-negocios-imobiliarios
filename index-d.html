@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hig Negócios Imobiliários — Versão D · Estilo de Vida</title>
+<meta name="description" content="Não vendemos imóveis — ajudamos você a encontrar o estilo de vida que procura no Vale do Paraíba. Hig Negócios Imobiliários.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============ VERSION D — "Estilo de Vida" (Spot Dev vibe) ============ */
+:root{
+  --paper:#fbf8f2;--paper-2:#f1ebdf;--ink:#1c1409;--brown:#5b3c1f;--gold:#9a6b2f;
+  --green:#5d6b4a;--muted:#8a7060;--line:rgba(28,20,9,.12);--white:#fff;--sand:#f0e8d6;
+}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.serif{font-family:'Cormorant Garamond',serif;font-weight:300}
+.eyebrow{font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.labs-badge{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:300;background:var(--ink);color:#e9dcc4;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;padding:5px 16px;border-radius:0 0 4px 4px}
+.labs-badge b{color:var(--gold);font-weight:500}
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px 56px;transition:.35s;border-bottom:1px solid transparent}
+nav.scrolled{background:var(--paper);padding:14px 56px;border-bottom:1px solid var(--line)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--white)}
+.logo i{font-style:normal;color:#e7c98f}
+nav.scrolled .logo{color:var(--ink)}nav.scrolled .logo i{color:var(--gold)}
+.nav-links{display:flex;gap:2.4rem;list-style:none}
+.nav-links a{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:500;transition:color .2s}
+nav.scrolled .nav-links a{color:var(--muted)}
+.nav-links a:hover{color:var(--white)}nav.scrolled .nav-links a:hover{color:var(--ink)}
+.nav-cta{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--ink);background:var(--white);border-radius:40px;padding:.7rem 1.4rem;transition:.25s}
+.nav-cta:hover{background:var(--gold);color:var(--white)}
+.hamburger{display:none;flex-direction:column;gap:5px;width:44px;height:44px;align-items:center;justify-content:center;background:none;border:none;cursor:pointer}
+.hamburger span{width:22px;height:1.5px;background:var(--white);transition:.3s}
+nav.scrolled .hamburger span{background:var(--ink)}
+.nav-dropdown{display:none;position:absolute;top:100%;right:40px;background:var(--ink);min-width:200px;padding:.6rem 0;border-top:2px solid var(--gold)}
+.nav-dropdown.open{display:block}
+.nav-dropdown a{display:block;padding:.75rem 1.4rem;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+@media(max-width:900px){nav,nav.scrolled{padding:16px 22px}.nav-links,.nav-cta{display:none}.hamburger{display:flex}}
+/* HERO */
+.hero{height:96vh;min-height:600px;position:relative;display:flex;align-items:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/site_home_hero.jpg') center/cover}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,20,9,.42),rgba(28,20,9,.32) 45%,rgba(28,20,9,.6))}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:920px;margin:0 auto;padding:0 24px;color:var(--white)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.06;margin:1.4rem 0 1.4rem}
+.hero h1 i{font-style:italic;color:#e7c98f}
+.hero p{color:rgba(255,255,255,.82);font-size:1.05rem;line-height:1.75;max-width:560px;margin:0 auto 2.4rem;font-weight:300}
+.hero-actions{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap}
+.btn-fill{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--ink);background:var(--white);border-radius:40px;padding:1rem 2.2rem;transition:.25s}
+.btn-fill:hover{background:var(--gold);color:var(--white)}
+.btn-ghost{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--white);border:1px solid rgba(255,255,255,.55);border-radius:40px;padding:1rem 2.2rem;transition:.25s}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+/* INTRO */
+.intro{padding:6rem 56px 2rem;text-align:center;max-width:820px;margin:0 auto}
+.intro h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;margin:1rem 0}
+.intro p{color:var(--muted);line-height:1.85;font-weight:300;font-size:1rem}
+@media(max-width:900px){.intro{padding:4rem 22px 1rem}}
+/* LIFESTYLE CHOOSER */
+.life{padding:3rem 56px 6rem}
+.life-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.life-card{position:relative;height:460px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end}
+.life-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.life-card:hover img{transform:scale(1.06)}
+.life-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,20,9,.05),rgba(28,20,9,.78))}
+.life-card .lc{position:relative;z-index:2;padding:2.2rem;color:var(--white)}
+.life-card .lc .num{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#e7c98f}
+.life-card .lc h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:2rem;line-height:1.1;margin:.8rem 0 .6rem}
+.life-card .lc p{color:rgba(255,255,255,.85);font-size:.86rem;line-height:1.6;font-weight:300;margin-bottom:1rem}
+.life-card .lc .go{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid #e7c98f;padding-bottom:3px}
+@media(max-width:900px){.life{padding:2rem 22px 4rem}.life-grid{grid-template-columns:1fr}.life-card{height:380px}}
+/* AMENITIES */
+.amen{padding:6rem 56px;background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.amen-head{text-align:center;max-width:680px;margin:0 auto 3.4rem}
+.amen-head h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,4vw,3rem);margin:.8rem 0}
+.amen-head p{color:var(--muted);line-height:1.8;font-weight:300}
+.amen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.amen-card{background:var(--white);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 30px rgba(28,20,9,.05)}
+.amen-card .ai{height:180px;position:relative;overflow:hidden}
+.amen-card .ai img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.amen-card .ab{padding:1.6rem 1.8rem 2rem}
+.amen-card .ico{font-size:1.4rem;margin-bottom:.6rem}
+.amen-card h4{font-size:1.02rem;font-weight:600;margin-bottom:.5rem}
+.amen-card p{color:var(--muted);font-size:.86rem;line-height:1.65;font-weight:300}
+@media(max-width:900px){.amen{padding:4rem 22px}.amen-grid{grid-template-columns:1fr}}
+/* FACTS */
+.facts{padding:6rem 56px}
+.facts-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
+.fact{border:1px solid var(--line);padding:2.6rem;display:flex;flex-direction:column;gap:.6rem}
+.fact .eyebrow{margin-bottom:.6rem}
+.fact .big{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:300;line-height:1}
+.fact-rows{margin-top:1rem}
+.fact-row{display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--line);font-size:.86rem}
+.fact-row:last-child{border-bottom:none}
+.fact-row span:first-child{color:var(--muted)}
+.fact-row span:last-child{color:var(--ink);font-weight:500}
+@media(max-width:900px){.facts{padding:4rem 22px}.facts-grid{grid-template-columns:1fr}}
+/* PROPERTIES */
+.props{padding:2rem 56px 6rem}
+.props-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.4rem;flex-wrap:wrap;gap:1rem}
+.props-head h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,4vw,3rem)}
+.props-head a{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.card{cursor:pointer;display:flex;flex-direction:column;background:var(--white);box-shadow:0 8px 30px rgba(28,20,9,.05)}
+.card-img{position:relative;height:240px;overflow:hidden}
+.card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.card:hover .card-img img{transform:scale(1.05)}
+.card-badge{position:absolute;top:1rem;left:1rem;background:rgba(251,248,242,.94);color:var(--ink);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;padding:.4rem .8rem}
+.card-body{padding:1.4rem 1.6rem 1.6rem}
+.card-price{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);margin-bottom:.3rem}
+.card-title{font-size:.92rem;font-weight:500;margin-bottom:.2rem}
+.card-loc{font-size:.74rem;color:var(--muted);margin-bottom:1rem}
+.card-specs{display:flex;gap:1rem;border-top:1px solid var(--line);padding-top:.9rem;font-size:.7rem;color:var(--muted)}
+.card-specs b{color:var(--ink)}
+@media(max-width:980px){.grid{grid-template-columns:1fr 1fr}.props{padding:2rem 22px 4rem}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+/* CTA */
+.cta{padding:7rem 56px;text-align:center;background:var(--ink);color:#e9dcc4}
+.cta h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.2rem,5vw,4rem);color:var(--white);line-height:1.08;margin:1rem 0 1rem}
+.cta h2 i{font-style:italic;color:#e7c98f}
+.cta p{color:rgba(255,255,255,.66);max-width:520px;margin:0 auto 2.4rem;line-height:1.8;font-weight:300}
+.cta .btn-fill{background:var(--white)}
+.cta .eyebrow{color:#e7c98f}
+@media(max-width:900px){.cta{padding:4.5rem 22px}}
+footer{background:var(--paper);border-top:1px solid var(--line);padding:4.5rem 56px 2rem;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:3rem}
+.f-brand .logo{color:var(--ink);display:inline-block;margin-bottom:1rem}
+.f-brand p{color:var(--muted);font-size:.84rem;line-height:1.75;max-width:300px;font-weight:300}
+.f-col h4{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
+.f-col ul{list-style:none}.f-col li{margin-bottom:.6rem}
+.f-col a{color:var(--muted);font-size:.82rem}.f-col a:hover{color:var(--ink)}
+.f-bottom{border-top:1px solid var(--line);padding:1.4rem 56px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.68rem;color:var(--muted)}
+@media(max-width:900px){footer{grid-template-columns:1fr;padding:3rem 22px 2rem}.f-bottom{padding:1.4rem 22px}}
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:99;width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.22)}
+.wa-float svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+<a class="labs-badge" href="labs.html">Labs · Versão <b>D</b></a>
+<nav id="nav">
+  <a href="index-d.html" class="logo">HIG <i>Negócios</i></a>
+  <ul class="nav-links">
+    <li><a href="#estilos">Estilos de Vida</a></li>
+    <li><a href="#imoveis">Imóveis</a></li>
+    <li><a href="labs.html">Labs</a></li>
+  </ul>
+  <a href="https://wa.me/5512999999999" class="nav-cta">Falar com Alexandra</a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-dropdown"><a href="#estilos">Estilos de Vida</a><a href="#imoveis">Imóveis</a><a href="labs.html">Labs</a><a href="https://wa.me/5512999999999">WhatsApp</a></div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <span class="eyebrow" style="color:#e7c98f">Hig Negócios · Vale do Paraíba</span>
+    <h1>Qual vida você<br>quer <i>viver</i>?</h1>
+    <p>Não vendemos imóveis. Ajudamos você a encontrar o estilo de vida que procura — e a casa certa para vivê-lo, no Vale do Paraíba.</p>
+    <div class="hero-actions">
+      <a href="#estilos" class="btn-fill">Escolher meu estilo</a>
+      <a href="#imoveis" class="btn-ghost">Ver imóveis</a>
+    </div>
+  </div>
+</section>
+
+<div class="intro">
+  <span class="eyebrow">Comece pelo que importa</span>
+  <h2>A casa é o cenário. O que você procura é uma vida.</h2>
+  <p>Vida saudável e ao ar livre? Energia da cidade a poucos minutos? Ou um refúgio tranquilo com vista para o verde? Escolha o ritmo — nós encontramos o imóvel que combina com ele.</p>
+</div>
+
+<section class="life" id="estilos">
+  <div class="life-grid">
+    <div class="life-card" onclick="location.href='imoveis-b.html'">
+      <img src="images/urb_07_varanda.jpg" alt="Vida saudável e ao ar livre">
+      <div class="lc">
+        <div class="num">01 — Bem-estar</div>
+        <h3>Vida Saudável</h3>
+        <p>Perto de parques, ciclovias, academias e feiras de orgânicos. Varandas amplas, áreas verdes e piscina para o dia a dia ativo.</p>
+        <span class="go">Ver imóveis para esta vida →</span>
+      </div>
+    </div>
+    <div class="life-card" onclick="location.href='imoveis-b.html'">
+      <img src="images/urb_01_fachada.jpg" alt="Vida urbana">
+      <div class="lc">
+        <div class="num">02 — Cidade</div>
+        <h3>Vida Urbana</h3>
+        <p>A energia de São José dos Campos no seu ritmo — shoppings, gastronomia, escolas e trabalho a poucos minutos de casa.</p>
+        <span class="go">Ver imóveis para esta vida →</span>
+      </div>
+    </div>
+    <div class="life-card" onclick="location.href='imoveis-b.html'">
+      <img src="images/site_about_img.jpg" alt="Refúgio tranquilo">
+      <div class="lc">
+        <div class="num">03 — Sossego</div>
+        <h3>Refúgio Tranquilo</h3>
+        <p>Silêncio, vista para o verde e ar puro do Vale. Condomínios reservados para quem quer desacelerar sem abrir mão do conforto.</p>
+        <span class="go">Ver imóveis para esta vida →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="amen">
+  <div class="amen-head">
+    <span class="eyebrow">O que você ganha por perto</span>
+    <h2>Uma região feita para viver bem</h2>
+    <p>O Vale do Paraíba reúne natureza, infraestrutura e qualidade de vida. Veja o que está ao redor dos nossos imóveis.</p>
+  </div>
+  <div class="amen-grid">
+    <div class="amen-card"><div class="ai"><img src="images/urb_09_piscina_noturna.jpg" alt="Academia e bem-estar"></div><div class="ab"><div class="ico">🏃</div><h4>Academia & Bem-estar</h4><p>Studios, crossfit e espaços fitness nos melhores condomínios e a poucos minutos de casa.</p></div></div>
+    <div class="amen-card"><div class="ai"><img src="images/site_listings_hero.jpg" alt="Feiras e gastronomia"></div><div class="ab"><div class="ico">🍓</div><h4>Feiras & Gastronomia</h4><p>Feiras de orgânicos, hortifrútis e uma cena gastronômica que cresce a cada ano na região.</p></div></div>
+    <div class="amen-card"><div class="ai"><img src="images/site_about_img.jpg" alt="Parques e ciclovias"></div><div class="ab"><div class="ico">🌳</div><h4>Parques & Ciclovias</h4><p>Parque da Cidade, Vicentina Aranha e quilômetros de ciclovias para viver ao ar livre.</p></div></div>
+    <div class="amen-card"><div class="ai"><img src="images/urb_12_escritorio.jpg" alt="Escolas e trabalho"></div><div class="ab"><div class="ico">🎓</div><h4>Escolas & Trabalho</h4><p>Polo tecnológico do país, com escolas de referência, universidades e centros de inovação.</p></div></div>
+    <div class="amen-card"><div class="ai"><img src="images/urb_08_varanda_jantar.jpg" alt="Vista e natureza"></div><div class="ab"><div class="ico">⛰️</div><h4>Vista & Natureza</h4><p>Entre a Serra da Mantiqueira e a Serra do Mar — paisagens que emolduram o seu dia.</p></div></div>
+    <div class="amen-card"><div class="ai"><img src="images/urb_00_fachada_2.jpg" alt="Segurança e condomínio"></div><div class="ab"><div class="ico">🔒</div><h4>Segurança & Condomínio</h4><p>Condomínios fechados com portaria 24h, biometria e lazer completo para a família.</p></div></div>
+  </div>
+</section>
+
+<section class="facts">
+  <div class="facts-grid">
+    <div class="fact">
+      <span class="eyebrow">A Hig em números</span>
+      <div class="big">15 anos</div>
+      <div class="fact-rows">
+        <div class="fact-row"><span>Imóveis negociados</span><span>180+</span></div>
+        <div class="fact-row"><span>Em transações</span><span>R$ 1.2 Bi</span></div>
+        <div class="fact-row"><span>Clientes satisfeitos</span><span>98%</span></div>
+        <div class="fact-row"><span>Cidades atendidas</span><span>7+</span></div>
+      </div>
+    </div>
+    <div class="fact">
+      <span class="eyebrow">Atendimento</span>
+      <div class="big">Pessoal</div>
+      <div class="fact-rows">
+        <div class="fact-row"><span>Resposta no WhatsApp</span><span>Até 2 horas</span></div>
+        <div class="fact-row"><span>Consultoria</span><span>Sem compromisso</span></div>
+        <div class="fact-row"><span>Acompanhamento</span><span>Da busca às chaves</span></div>
+        <div class="fact-row"><span>Avaliação de imóvel</span><span>Gratuita</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="props" id="imoveis">
+  <div class="props-head">
+    <div><span class="eyebrow">Portfólio</span><h2>Imóveis em destaque</h2></div>
+    <a href="imoveis-b.html">Ver todos →</a>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="cta">
+  <span class="eyebrow">Vamos conversar</span>
+  <h2>Me conta a vida que você<br><i>quer viver</i></h2>
+  <p>A gente encontra a casa. Fale com a Alexandra e comece pelo estilo de vida — o imóvel é consequência.</p>
+  <a href="https://wa.me/5512999999999" class="btn-fill">Falar com Alexandra →</a>
+</section>
+
+<footer>
+  <div class="f-brand">
+    <span class="logo">HIG <i>Negócios</i></span>
+    <p>Especialistas em imóveis de alto padrão no Vale do Paraíba, São Paulo. Conectando você ao estilo de vida que procura.</p>
+  </div>
+  <div class="f-col"><h4>Estilos</h4><ul><li><a href="#estilos">Vida Saudável</a></li><li><a href="#estilos">Vida Urbana</a></li><li><a href="#estilos">Refúgio Tranquilo</a></li><li><a href="#imoveis">Todos os imóveis</a></li></ul></div>
+  <div class="f-col"><h4>Contato</h4><ul><li><a href="https://wa.me/5512999999999">WhatsApp</a></li><li><a href="mailto:contato@hignegociosimobiliarios.com.br">E-mail</a></li><li><a href="https://instagram.com/alexandrahigashi">Instagram</a></li><li><a href="labs.html">Labs — comparar versões</a></li></ul></div>
+</footer>
+<div class="f-bottom"><span>© 2026 Hig Negócios Imobiliários · Vale do Paraíba, SP</span><span>CRECI-SP 000000-J</span></div>
+
+<a class="wa-float" href="https://wa.me/5512999999999" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<script src="js/listings.js"></script>
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);});
+(function(){
+  var grid=document.getElementById('grid');
+  window.LISTINGS_ORDER.slice(0,6).forEach(function(slug){
+    var L=window.LISTINGS[slug];
+    var go=L.listed?("location.href='imovel-b.html?id="+slug+"'"):("window.open('https://wa.me/5512999999999?text="+encodeURIComponent(L.wa)+"','_blank')");
+    grid.innerHTML+='<div class="card" onclick="'+go+'">'
+      +'<div class="card-img"><img src="'+L.cover+'" alt="'+L.title+'" loading="lazy"><div class="card-badge">'+(L.listed?(L.badge||''):'Consulte')+'</div></div>'
+      +'<div class="card-body"><div class="card-price">'+L.price+'</div><div class="card-title">'+L.title+'</div><div class="card-loc">'+L.location+'</div>'
+      +'<div class="card-specs"><span><b>'+L.area+'</b> m²</span><span><b>'+L.q+'</b> quartos</span><span><b>'+L.b+'</b> ban.</span><span><b>'+L.v+'</b> vagas</span></div></div></div>';
+  });
+})();
+(function(){var btn=document.querySelector('.hamburger');var dd=document.querySelector('.nav-dropdown');if(!btn||!dd)return;
+btn.addEventListener('click',function(e){e.stopPropagation();dd.classList.toggle('open');});
+document.addEventListener('click',function(){dd.classList.remove('open');});
+dd.addEventListener('click',function(e){e.stopPropagation()});})();
+</script>
+</body>
+</html>
