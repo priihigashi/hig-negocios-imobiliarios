@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://priihigashi.github.io/hig-negocios-imobiliarios/sitemap.xml
