@@ -182,3 +182,43 @@ echo "Open tracker 1qJnILSR_XOgRaPdTHYy1Qx1gnSyzQTj2E04u8kErfYw — Tasks tab: S
 2. **Which version** (A/B/C/D) is the direction (unblocks C7/C8).
 3. Real **client testimonials** (unblocks C3) — or approve hiding the section.
 4. Sign-off on **bairros copy** accuracy (C6).
+
+---
+
+## F. HIGH-DESIGN / UX AUDIT + MOTION (2026-06-10)
+
+### F1. Per-version design/UX read
+- **Version B (Atelier):** strongest editorial minimalism; nav goes solid on inner pages (good), transparent
+  over the home hero (legibility marginal over bright sky — gradient saves it). Side rails hidden <1024px ✓.
+  *Action:* keep; consider darkening hero gradient top by ~8%.
+- **Version C (Editorial Noir):** most "high-design" / luxe. Risk: muted body `#9a8a73` on `#100b04` is
+  borderline for small text. *Action:* lighten body to ~`#b3a489` (or +1px size) to clear WCAG AA 4.5:1. No hero image → parallax n/a; uses reveal.
+- **Version D (Estilo de Vida):** best UX *concept* (lifestyle selector). Emoji amenity icons read less
+  premium than the rest. *Action:* swap emoji → thin SVG line icons.
+- **Live A:** warm, dense, good info scent now (bairros/steps/depoimentos). Static by choice; apply motion only if promoted.
+
+### F2. Motion layer SHIPPED — `js/anim.js`
+Dependency-free; self-injects CSS; **no-JS safe** (markup visible without it) and **prefers-reduced-motion safe**.
+Three effects: reveal-on-scroll (staggered), subtle hero parallax (`.hero-bg` translateY), count-up stats
+(preserves prefix/suffix e.g. `R$1.2Bi`). Wired into B/C/D + inner `-b` (NOT live A).
+- *Acceptance (verified 2026-06-10):* index-b → `reveal:11 in:11 still-hidden:0` after settle; 0 console errors on B/C/D.
+- `Verify:` `grep -l 'js/anim.js' index-b.html index-c.html index-d.html imoveis-b.html imovel-b.html sobre-b.html contato-b.html` → all 7.
+- `Verify:` load any prototype with DevTools → no element stuck at `opacity:0` after 3s; `prefers-reduced-motion` → everything visible instantly.
+
+### F3. Curated animation/parallax references (source: OPC "🔖 Inspiration Links" sheet `1q0_v9qYDXKURo59xoS-WISFdHbZWIdc9ukdCDbdDaUQ` + prior cross-log) — logged in **💡 Inspirações**
+| Ref | Borrow for Hig |
+|---|---|
+| LUMEN (jerora98) | scroll-reveal pacing, fine particles, radial glow, serif-italic accent — **Version C ambiance** |
+| gradient.pages.dev | obsidian→transparent bottom fade on hero/sections |
+| creativeocean fluid hover | liquid hover on **property card tiles → detail** |
+| 3D Geometric Aura (russell-henderson) | scroll-pin signature moment (heavy; later) |
+| 49 North v2 | vertical→horizontal parallax signature scroll |
+
+### F4. Motion/UX backlog (added to Tasks tab)
+- ✅ reveal-on-scroll + hero parallax + count-up (`anim.js`) on prototypes — **done 2026-06-10**
+- ☐ Fluid/spotlight hover on property cards (LUMEN/creativeocean)
+- ☐ Section bottom gradient fades (gradient.pages.dev)
+- ☐ Side-dot scroll nav on Version C (LUMEN)
+- ☐ Swap emoji → SVG line icons on Version D amenities
+- ☐ WCAG AA contrast fix for Version C muted body text
+- ☐ (later) scroll-pin signature element + 49 North directional parallax once a direction is locked
