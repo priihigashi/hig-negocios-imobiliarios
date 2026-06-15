@@ -101,7 +101,7 @@ nav.scrolled .hamburger span{background:var(--ink)}
 /* ===== FEATURED ===== */
 .featured{display:grid;grid-template-columns:1.5fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .featured-img{position:relative;min-height:560px;overflow:hidden}
-.featured-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.featured-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 80%}
 .featured-tag{position:absolute;top:1.6rem;left:1.6rem;background:rgba(247,243,236,.92);color:var(--ink);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;padding:.5rem 1rem}
 .featured-info{padding:4rem 3.4rem;display:flex;flex-direction:column;justify-content:center;background:var(--paper-2)}
 .featured-info .serif-title{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;line-height:1.15;margin:.9rem 0 .6rem}
@@ -121,7 +121,7 @@ nav.scrolled .hamburger span{background:var(--ink)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem 2rem}
 .card{cursor:pointer;display:flex;flex-direction:column}
 .card-img{position:relative;height:300px;overflow:hidden}
-.card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 80%;transition:transform .7s ease}
 .card:hover .card-img img{transform:scale(1.05)}
 .card-badge{position:absolute;top:1rem;left:1rem;background:rgba(247,243,236,.92);color:var(--ink);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;padding:.4rem .8rem}
 .card-head{display:flex;justify-content:space-between;align-items:baseline;margin:1.2rem 0 .5rem;gap:1rem}
@@ -136,7 +136,7 @@ nav.scrolled .hamburger span{background:var(--ink)}
 /* ===== ABOUT ===== */
 .about{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
 .about-img{position:relative;min-height:520px;overflow:hidden}
-.about-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
 .about-body{padding:6rem 3.4rem;display:flex;flex-direction:column;justify-content:center;background:var(--ink);color:#e9dcc4}
 .about-body h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.15;color:var(--white);margin:1rem 0 1.4rem}
 .about-body p{color:rgba(255,255,255,.66);line-height:1.85;font-weight:300;margin-bottom:1.1rem;font-size:.94rem}

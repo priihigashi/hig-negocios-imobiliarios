@@ -55,7 +55,17 @@ nav.scrolled{background:rgba(248,246,242,.96);backdrop-filter:blur(12px);box-sha
 .nav-links a:hover{opacity:1}
 .nav-cta{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--bg);background:var(--ink);padding:.6rem 1.4rem;border-radius:var(--r);transition:.2s}
 .nav-cta:hover{background:var(--gold);color:var(--bg)}
-@media(max-width:768px){.nav-links{display:none}.nav-cta{display:none}}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--bg);transition:.3s}
+nav.scrolled .nav-burger span{background:var(--ink)}
+.nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-drawer{display:none;position:fixed;inset:0;top:68px;background:rgba(248,246,242,.97);backdrop-filter:blur(16px);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem}
+.nav-drawer.open{display:flex}
+.nav-drawer a{font-size:1.4rem;font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:.08em;color:var(--ink)}
+.nav-drawer .nav-cta{font-family:'Inter',sans-serif;font-size:.62rem;margin-top:.8rem}
+@media(max-width:768px){.nav-links{display:none}.nav-cta{display:none}.nav-burger{display:flex}}
 
 /* ---- HERO ---- */
 .hero{position:relative;height:100svh;min-height:560px;display:flex;align-items:flex-end;overflow:hidden}
@@ -204,8 +214,19 @@ footer{background:var(--ink2);padding:5rem 6vw 3rem;color:var(--bg)}
       <a href="#contato">Contato</a>
     </div>
     <a href="https://wa.me/5512999999999" class="nav-cta" target="_blank">Agendar visita</a>
+    <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-drawer" id="drawer">
+  <a href="#imoveis">Imóveis</a>
+  <a href="#bairros">Bairros</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#processo">Processo</a>
+  <a href="#contato">Contato</a>
+  <a href="https://wa.me/5512999999999" class="btn btn-gold nav-cta" target="_blank">Agendar visita</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -293,11 +314,11 @@ footer{background:var(--ink2);padding:5rem 6vw 3rem;color:var(--bg)}
 <section class="stats">
   <div class="stats-inner">
     <div class="stat-item" data-reveal data-reveal-delay="1">
-      <p class="stat-num">20+</p>
+      <p class="stat-num">15+</p>
       <p class="stat-label">Anos no mercado</p>
     </div>
     <div class="stat-item" data-reveal data-reveal-delay="2">
-      <p class="stat-num">150+</p>
+      <p class="stat-num">180+</p>
       <p class="stat-label">Imóveis negociados</p>
     </div>
     <div class="stat-item" data-reveal data-reveal-delay="3">
@@ -370,8 +391,8 @@ footer{background:var(--ink2);padding:5rem 6vw 3rem;color:var(--bg)}
   </div>
   <div class="agent-body" data-reveal>
     <span class="eyebrow">Quem cuida do seu imóvel</span>
-    <h2>Alexandra Higashi — <em>20 anos</em> conectando famílias ao imóvel certo.</h2>
-    <p>Com mais de duas décadas de experiência exclusiva no mercado de alto padrão de São José dos Campos, Alexandra construiu uma reputação baseada em discrição, conhecimento profundo do mercado local e relacionamentos de longo prazo.</p>
+    <h2>Alexandra Higashi — <em>15 anos</em> conectando famílias ao imóvel certo.</h2>
+    <p>Com mais de quinze anos de experiência exclusiva no mercado de alto padrão de São José dos Campos, Alexandra construiu uma reputação baseada em discrição, conhecimento profundo do mercado local e relacionamentos de longo prazo.</p>
     <p style="font-size:.8rem;color:var(--muted);margin-bottom:0;margin-top:.4rem">CRECI · Atendimento por hora marcada</p>
     <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
       <a href="https://wa.me/5512999999999" class="btn btn-gold" target="_blank">WhatsApp</a>
@@ -416,7 +437,7 @@ footer{background:var(--ink2);padding:5rem 6vw 3rem;color:var(--bg)}
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2024 Hig Negócios Imobiliários · São José dos Campos, SP</p>
+    <p>© 2025 Hig Negócios Imobiliários · São José dos Campos, SP</p>
     <p><a href="labs.html" style="color:rgba(248,246,242,.3);transition:.2s">Labs</a></p>
   </div>
 </footer>
@@ -429,6 +450,24 @@ footer{background:var(--ink2);padding:5rem 6vw 3rem;color:var(--bg)}
   window.addEventListener('scroll', function(){
     nav.classList.toggle('scrolled', window.scrollY > 40);
   }, {passive:true});
+
+  /* MOBILE BURGER */
+  var burger = document.getElementById('burger');
+  var drawer = document.getElementById('drawer');
+  burger.addEventListener('click', function(){
+    var open = drawer.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      drawer.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+    });
+  });
 
   /* Property grid — show dummy cards from LISTINGS */
   var grid = document.getElementById('prop-grid');

@@ -69,7 +69,7 @@ nav.scrolled{background:rgba(16,11,4,.92);backdrop-filter:blur(10px);padding:16p
 /* EDITORIAL FEATURE */
 .efeature{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
 .efeature-img{position:relative;min-height:620px;overflow:hidden}
-.efeature-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+.efeature-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 80%;filter:saturate(.92)}
 .efeature-num{position:absolute;top:2rem;left:2rem;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--ink);mix-blend-mode:difference}
 .efeature-body{padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center}
 .efeature-body h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:2.8rem;line-height:1.1;margin:1.2rem 0 .6rem}
@@ -86,7 +86,7 @@ nav.scrolled{background:rgba(16,11,4,.92);backdrop-filter:blur(10px);padding:16p
 .prow:hover{background:var(--bg-2)}
 .prow .idx{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--muted)}
 .prow .thumb{display:flex;align-items:center;gap:1.4rem}
-.prow .thumb img{width:84px;height:64px;object-fit:cover;flex-shrink:0}
+.prow .thumb img{width:84px;height:64px;object-fit:cover;object-position:center 80%;flex-shrink:0}
 .prow .ti{font-family:'Cormorant Garamond',serif;font-size:1.5rem;line-height:1.15}
 .prow .loc{font-size:.74rem;color:var(--muted);margin-top:.2rem}
 .prow .specs{font-size:.74rem;letter-spacing:.06em;color:var(--muted)}
@@ -99,7 +99,7 @@ nav.scrolled{background:rgba(16,11,4,.92);backdrop-filter:blur(10px);padding:16p
 .about h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,4vw,3.2rem);line-height:1.12;margin:1rem 0 1.4rem}
 .about p{color:var(--muted);line-height:1.9;font-weight:300;margin-bottom:1.1rem}
 .about-photo{position:relative;min-height:440px;overflow:hidden}
-.about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
 @media(max-width:900px){.about{grid-template-columns:1fr;padding:4rem 22px;gap:2.4rem}.about-photo{min-height:320px}}
 /* CTA */
 .cta{padding:8rem 56px;text-align:center}
