@@ -38,6 +38,10 @@ header p{color:var(--muted);max-width:620px;line-height:1.8;font-weight:300}
 .vbody h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.7rem;margin:.6rem 0 .5rem}
 .vbody .style{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
 .vbody p{color:var(--muted);line-height:1.75;font-weight:300;font-size:.9rem;margin:.6rem 0 1rem}
+.vscope{font-size:.72rem;line-height:1.5;font-weight:500;padding:.55rem .8rem;border-radius:6px;margin:.3rem 0 1rem}
+.vscope.full{background:rgba(63,125,79,.12);color:#2f5d3a}
+.vscope.home{background:rgba(154,107,47,.13);color:#7a5320}
+.vscope.exp{background:rgba(28,20,9,.07);color:#6a584a}
 .vfeat{list-style:none;margin:.4rem 0 1.4rem;display:flex;flex-wrap:wrap;gap:.5rem}
 .vfeat li{font-size:.66rem;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);padding:.3rem .7rem;border-radius:30px}
 .vinspo{font-size:.72rem;color:var(--muted);margin-bottom:1.4rem}
@@ -71,7 +75,7 @@ footer{border-top:1px solid var(--line);padding:2.4rem 56px;display:flex;justify
   <span class="eyebrow">Laboratório de versões</span>
   <h1>Escolha a direção do<br>novo site da Hig</h1>
   <p>Cada versão usa a mesma marca, o mesmo conteúdo e os mesmos imóveis — muda só a direção de design. Abra, compare lado a lado e me diga qual fala mais com você. Conforme novas versões forem criadas, elas aparecem aqui.</p>
-  <div class="meta-line"><span>Marca: <b>Hig Negócios Imobiliários</b></span><span>Região: <b>Vale do Paraíba, SP</b></span><span>Versões: <b id="vcount">4</b></span></div>
+  <div class="meta-line"><span>Marca: <b>Hig Negócios Imobiliários</b></span><span>Região: <b>Vale do Paraíba, SP</b></span><span>Versões: <b id="vcount">6</b></span></div>
 </header>
 
 <section class="versions">
@@ -81,6 +85,7 @@ footer{border-top:1px solid var(--line);padding:2.4rem 56px;display:flex;justify
     <div class="vbody">
       <span class="style">Versão A · Atual</span>
       <h2>Original — Sand & Gold</h2>
+      <div class="vscope full">✓ Jornada completa — 5 páginas próprias · Início · Imóveis · Imóvel · Sobre · Contato</div>
       <p>A versão que está no ar hoje. Hero cheio, cards quentes, paleta areia e dourado. Ponto de partida para comparação.</p>
       <ul class="vfeat"><li>5 páginas</li><li>Hero cheio</li><li>Cards quentes</li><li>Modal de imóvel</li></ul>
       <div class="vinspo">Base atual do site.</div>
@@ -96,6 +101,7 @@ footer{border-top:1px solid var(--line);padding:2.4rem 56px;display:flex;justify
     <div class="vbody">
       <span class="style">Versão B · Arquitetura Minimalista</span>
       <h2>Atelier — Linhas finas</h2>
+      <div class="vscope full">✓ Jornada completa — 5 páginas próprias (-b) · única outra versão com Imóveis/Imóvel/Sobre/Contato próprios</div>
       <p>Heroes full-bleed com tipografia refinada, muito respiro, fios de cabelo, rótulos em caixa-alta, botões circulares e rótulos verticais nas laterais. Limpa e moderna.</p>
       <ul class="vfeat"><li>5 páginas completas</li><li>Hairlines</li><li>Botões circulares</li><li>Rótulos verticais</li></ul>
       <div class="vinspo">Inspiração: <a href="https://architectural-bureau.webflow.io" target="_blank">Architectural Bureau</a></div>
@@ -114,6 +120,7 @@ footer{border-top:1px solid var(--line);padding:2.4rem 56px;display:flex;justify
     <div class="vbody">
       <span class="style">Versão C · Editorial Noir</span>
       <h2>Editorial — Fundo escuro</h2>
+      <div class="vscope home">⚠ Só homepage — ao clicar num imóvel, cai nas páginas da Versão B (visual muda)</div>
       <p>Direção editorial sofisticada sobre fundo quase preto, títulos enormes em serifa, grade visível, listagem de imóveis em formato de revista e acentos dourados. Imponente e exclusiva.</p>
       <ul class="vfeat"><li>Home (protótipo)</li><li>Fundo escuro</li><li>Tipografia grande</li><li>Lista editorial</li></ul>
       <div class="vinspo">Inspiração: <a href="https://lmtd-space-v2.webflow.io" target="_blank">LMTD Space v2</a></div>
@@ -128,6 +135,7 @@ footer{border-top:1px solid var(--line);padding:2.4rem 56px;display:flex;justify
     <div class="vbody">
       <span class="style">Versão C2 · Editorial + HIG em movimento</span>
       <h2>Editorial — Letras HIG gigantes</h2>
+      <div class="vscope home">⚠ Só homepage — ao clicar num imóvel, cai nas páginas da Versão B (visual muda)</div>
       <p>Versão C com o efeito que faltava: letras <b>HIG</b> gigantes rolando no fundo, cortadas nas bordas conforme passam — exatamente o efeito do template LMTD Space v2 que você pediu.</p>
       <ul class="vfeat"><li>Marquee HIG</li><li>Letras cortadas</li><li>Anton</li><li>Lista editorial</li></ul>
       <div class="vinspo">Inspiração: <a href="https://lmtd-space-v2.webflow.io" target="_blank">LMTD Space v2</a></div>
@@ -142,6 +150,7 @@ footer{border-top:1px solid var(--line);padding:2.4rem 56px;display:flex;justify
     <div class="vbody">
       <span class="style">Versão D · Estilo de Vida</span>
       <h2>Lifestyle — Venda a vida</h2>
+      <div class="vscope home">⚠ Só homepage — Imóveis/Imóvel usam as páginas da Versão B (visual muda)</div>
       <p>Não vende imóvel, vende o estilo de vida: a pessoa escolhe <b>Vida Saudável</b>, <b>Vida Urbana</b> ou <b>Refúgio Tranquilo</b> e o site mostra os imóveis que combinam. Seções de amenidades (academia, feiras, parques, vista) e clima leve e arejado.</p>
       <ul class="vfeat"><li>Home (protótipo)</li><li>Seletor de estilo de vida</li><li>Cards de amenidades</li><li>Claro & arejado</li></ul>
       <div class="vinspo">Inspiração: <a href="https://spot-dev.webflow.io" target="_blank">Spot Dev</a></div>
@@ -156,6 +165,7 @@ footer{border-top:1px solid var(--line);padding:2.4rem 56px;display:flex;justify
     <div class="vbody">
       <span class="style">Versão E · Premium Clean (Ikon Property)</span>
       <h2>Clean premium — fundo claro, detalhes refinados</h2>
+      <div class="vscope home">⚠ Só homepage — Imóveis/Imóvel/Sobre/Contato usam as páginas da Versão B; tem link p/ a galeria v2</div>
       <p>Fundo areia claro, tipografia grande em serifa, grid de imóveis com hover suave, stats bar escura, bairros de SJC, seção de processo 4 passos e perfil da agente. Oposto das versões C/D — mais parecido com o estilo limpo e premium do Ikon Property UK.</p>
       <ul class="vfeat"><li>Fundo claro</li><li>Grid de imóveis</li><li>Stats bar</li><li>4 passos</li><li>Bairros</li><li>Perfil da agente</li></ul>
       <div class="vinspo">Inspiração: <a href="https://www.ikonproperty.co.uk" target="_blank">Ikon Property</a> · <a href="https://webflow.com/made-in-webflow/website/ikon-property-4bd950" target="_blank">Webflow</a></div>
@@ -170,6 +180,7 @@ footer{border-top:1px solid var(--line);padding:2.4rem 56px;display:flex;justify
     <div class="vbody">
       <span class="style">Experimento · Galeria v1 (tela cheia)</span>
       <h2>Galeria — tela cheia</h2>
+      <div class="vscope exp">⚗ Experimento de galeria — não é uma versão de site; testa só o passo "ver as fotos"</div>
       <p>Galeria imersiva em <b>tela cheia</b> com parallax para as 30 fotos da casa em Urbanova. Setas, arraste, scroll e teclado. (Minha 1ª versão — diverge do template.)</p>
       <ul class="vfeat"><li>1 imóvel (Urbanova)</li><li>Tela cheia</li><li>Parallax</li><li>30 fotos</li></ul>
       <div class="vinspo">Inspiração: <a href="https://parallax-image-gallery-swiper.webflow.io" target="_blank">Parallax Image Gallery (Swiper)</a></div>
@@ -184,6 +195,7 @@ footer{border-top:1px solid var(--line);padding:2.4rem 56px;display:flex;justify
     <div class="vbody">
       <span class="style">Experimento · Galeria v2 (fiel ao template)</span>
       <h2>Galeria — carrossel central</h2>
+      <div class="vscope exp">⚗ Experimento de galeria — candidato a virar o passo "ver as fotos" na página do imóvel</div>
       <p>Versão <b>fiel ao template</b> que você pediu: carrossel central com prévias laterais esmaecidas, foto que desliza <i>dentro</i> da moldura, número + título em Anton. Fundo escuro, tom Higashi.</p>
       <ul class="vfeat"><li>Carrossel central</li><li>Anton</li><li>Parallax na moldura</li><li>30 fotos</li></ul>
       <div class="vinspo">Inspiração: <a href="https://parallax-image-gallery-swiper.webflow.io" target="_blank">Parallax Image Gallery (Swiper)</a></div>
@@ -198,6 +210,7 @@ footer{border-top:1px solid var(--line);padding:2.4rem 56px;display:flex;justify
     <div class="vbody">
       <span class="style">Experimento · Abertura animada (intro)</span>
       <h2>Intro / loading de abertura</h2>
+      <div class="vscope exp">⚗ Experimento de abertura — efeito de entrada que se aplica por cima de qualquer versão</div>
       <p>A abertura que toca quando alguém entra no site (acima da dobra): nome da marca surgindo, contador 0–100%, e a cortina que sobe revelando o hero com leve zoom (sensação de vídeo). Inspirado nos templates que você mandou.</p>
       <ul class="vfeat"><li>Loading 0–100%</li><li>Cortina que sobe</li><li>Ken-burns no hero</li><li>Pular intro</li></ul>
       <div class="vinspo">Inspiração: <a href="https://loftgarden-loading-animation.webflow.io" target="_blank">Loft Garden</a> + <a href="https://www.studio-messa.com" target="_blank">Studio Messa</a></div>
